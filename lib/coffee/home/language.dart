@@ -14,17 +14,26 @@ class languageSelect extends StatefulWidget {
 }
 
 class _languageSelectState extends State<languageSelect> {
-  String selectedLanguage = 'English';
   int selectedRating = 5;
 
   // Define a list of languages
-  final List<String> languages = [
-    'English',
-    'Hindi',
-    'Nepali',
-    'Malay',
-    'Arabic',
-  ];
+  // final List<String> languages = [
+  //   'English',
+
+  Map<String, int> languageRatings = {
+    'English': 0,
+    'Hindi': 0,
+    'Nepali': 0,
+    'Malay': 0,
+    'Arabic': 0,
+  };
+  Map<String, bool> languageCheckboxes = {
+    'English': false,
+    'Hindi': false,
+    'Nepali': false,
+    'Malay': false,
+    'Arabic': false,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -32,91 +41,145 @@ class _languageSelectState extends State<languageSelect> {
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            DotStepper(
-              lineConnectorsEnabled: false,
-              dotCount: 9,
-              activeStep: widget.active_index,
-              dotRadius: 20.0,
-              shape: Shape.pipe,
-              spacing: 10.0,
-            ),
-            Container(
-                alignment: Alignment.topLeft,
-                height: 80,
-                width: 140,
-                child: Image.asset('assets/images/ditya.jpg')),
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              'Select Company Category!',
-              style: GoogleFonts.acme(
-                  fontSize: 24, color: Color.fromARGB(255, 15, 43, 75)),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Center(
-              child: DropdownButton<String>(
-                focusColor: Color.fromARGB(255, 2, 51, 92),
-                value: selectedLanguage,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    selectedLanguage = newValue!;
-                  });
-                },
-                items: languages.map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+        padding: const EdgeInsets.all(10),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              DotStepper(
+                lineConnectorsEnabled: false,
+                dotCount: 9,
+                activeStep: widget.active_index,
+                dotRadius: 20.0,
+                shape: Shape.pipe,
+                spacing: 10.0,
               ),
-            ),
-            SizedBox(height: 20),
-            Text('Rate $selectedLanguage:'),
-            Slider(
-              value: selectedRating.toDouble(),
-              onChanged: (double newValue) {
-                setState(() {
-                  selectedRating = newValue.round();
-                });
-              },
-              min: 1,
-              max: 5,
-              divisions: 4,
-              label: selectedRating.toString(),
-            ),
-            Text('Rating: $selectedRating'),
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
-                    Color.fromARGB(255, 2, 51, 92),
+              Container(
+                  alignment: Alignment.topLeft,
+                  height: 80,
+                  width: 140,
+                  child: Image.asset('assets/images/ditya.jpg')),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                'Select Language!',
+                style: GoogleFonts.lato(
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 15, 43, 75),
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text('Rate Your Language Skills',
+                  style: GoogleFonts.lato(fontSize: 18)),
+              SizedBox(height: 20),
+              for (var language in languageRatings.keys)
+                LanguageRatingItem(
+                  language: language,
+                  rating: languageRatings[language]!,
+                  isChecked: languageCheckboxes[language]!,
+                  onRatingChanged: (rating) {
+                    setState(() {
+                      languageRatings[language] = rating;
+                    });
+                  },
+                  onCheckboxChanged: (isChecked) {
+                    setState(() {
+                      languageCheckboxes[language] = isChecked;
+                    });
+                  },
+                ),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.all(15),
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CompanySelect(active_index: 5),
+                        ));
+                  },
+                  child: Center(child: Text("Next")),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(
+                      Color.fromARGB(255, 2, 51, 92),
+                    ),
                   ),
                 ),
-                onPressed: () {
-                  setState(() {
-                    widget.active_index++;
-                  });
-
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              CompanySelect(active_index: 5)));
-                },
-                child: Center(child: Text('Next')),
-              ),
-            ),
-          ],
+              )
+            ],
+          ),
         ),
       ),
+    );
+  }
+}
+
+class LanguageRatingItem extends StatefulWidget {
+  final String language;
+  final int rating;
+  final bool isChecked;
+  final ValueChanged<int> onRatingChanged;
+  final ValueChanged<bool> onCheckboxChanged;
+
+  LanguageRatingItem({
+    required this.language,
+    required this.rating,
+    required this.isChecked,
+    required this.onRatingChanged,
+    required this.onCheckboxChanged,
+  });
+
+  @override
+  _LanguageRatingItemState createState() => _LanguageRatingItemState();
+}
+
+class _LanguageRatingItemState extends State<LanguageRatingItem> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Row(
+          children: <Widget>[
+            Checkbox(
+              fillColor: MaterialStatePropertyAll(
+                Color.fromARGB(255, 2, 51, 92),
+              ),
+              value: widget.isChecked,
+              onChanged: (isChecked) {
+                widget.onCheckboxChanged(isChecked ?? false);
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 100),
+              child: Text(
+                widget.language,
+                style: TextStyle(
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            for (int i = 1; i <= 5; i++)
+              IconButton(
+                splashRadius: 0.0001,
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(minWidth: 22, maxWidth: 25),
+                onPressed: () {
+                  widget.onRatingChanged(i);
+                },
+                icon: Icon(
+                  i <= widget.rating ? Icons.star : Icons.star_border,
+                  size: 25,
+                  color: Colors.orange,
+                ),
+              ),
+          ],
+        ),
+      ],
     );
   }
 }

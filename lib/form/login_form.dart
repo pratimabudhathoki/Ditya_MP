@@ -1,9 +1,7 @@
 import 'package:coffee_shop/coffee/home/multiStepper.dart';
-import 'package:coffee_shop/coffee/home/persoanlDetail.dart';
 
 import 'package:coffee_shop/form/registrationForm.dart';
 
-import 'package:coffee_shop/otp/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -68,14 +66,13 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 15),
                         child: SizedBox(
-                          height: 55,
+                          height: 46,
                           child: TextFormField(
                             controller: _numberController,
                             decoration: InputDecoration(
                               label: const Text('Mobile Number'),
                               labelStyle: TextStyle(
                                   color: Color.fromARGB(255, 2, 51, 92)),
-                              hintText: ' Mobile Number',
                               enabledBorder: OutlineInputBorder(
                                 borderSide:
                                     const BorderSide(color: Colors.grey),
@@ -106,14 +103,13 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 55,
+                        height: 46,
                         child: TextFormField(
                           controller: _passwordController,
                           decoration: InputDecoration(
                             label: const Text('Password'),
                             labelStyle: TextStyle(
                                 color: Color.fromARGB(255, 2, 51, 92)),
-                            hintText: ' Password',
                             enabledBorder: OutlineInputBorder(
                               borderSide: const BorderSide(color: Colors.grey),
                               borderRadius: BorderRadius.circular(10),
@@ -163,24 +159,27 @@ class LoginScreen extends StatelessWidget {
                       //   },
                       // ),
                       SizedBox(height: 20.0),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MUltiStepperpage()));
-                          _submitForm();
-                        },
-                        child: Center(
-                          child: Text(
-                            'Login',
-                            // style: GoogleFonts.arapey(
-                            //     fontSize: 20, fontWeight: FontWeight.w500),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MUltiStepperpage()));
+                            _submitForm();
+                          },
+                          child: Center(
+                            child: Text(
+                              'Login',
+                              // style: GoogleFonts.arapey(
+                              //     fontSize: 20, fontWeight: FontWeight.w500),
+                            ),
                           ),
-                        ),
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStatePropertyAll(
-                            Color.fromARGB(255, 2, 51, 92),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                              Color.fromARGB(255, 2, 51, 92),
+                            ),
                           ),
                         ),
                       ),

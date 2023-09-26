@@ -39,8 +39,10 @@ class _BankDetailState extends State<BankDetail> {
                 child: Image.asset('assets/images/ditya.jpg')),
             Text(
               'Bank Details!',
-              style: GoogleFonts.acme(
-                  fontSize: 25, color: Color.fromARGB(255, 15, 43, 75)),
+              style: GoogleFonts.lato(
+                  fontSize: 25,
+                  color: Color.fromARGB(255, 15, 43, 75),
+                  fontWeight: FontWeight.bold),
             ),
             Padding(
               padding: const EdgeInsets.all(16),

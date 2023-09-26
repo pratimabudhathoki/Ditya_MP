@@ -50,8 +50,10 @@ class _CompanySelectState extends State<CompanySelect> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 'Select Company Category!',
-                style: GoogleFonts.acme(
-                    fontSize: 24, color: Color.fromARGB(255, 15, 43, 75)),
+                style: GoogleFonts.lato(
+                    fontSize: 20,
+                    color: Color.fromARGB(255, 15, 43, 75),
+                    fontWeight: FontWeight.bold),
               ),
             ),
             Padding(

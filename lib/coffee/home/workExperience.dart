@@ -42,8 +42,10 @@ class _WorkExperienceState extends State<WorkExperience> {
                 child: Image.asset('assets/images/ditya.jpg')),
             Text(
               "Work Experience",
-              style: GoogleFonts.acme(
-                  fontSize: 25, color: Color.fromARGB(255, 15, 43, 75)),
+              style: GoogleFonts.lato(
+                  fontSize: 20,
+                  color: Color.fromARGB(255, 15, 43, 75),
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 30,

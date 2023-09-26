@@ -62,8 +62,10 @@ class _MyWidgetState extends State<PhotoUpload> {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   "Photo Upload",
-                  style: GoogleFonts.acme(
-                      fontSize: 20, color: Color.fromARGB(255, 15, 43, 75)),
+                  style: GoogleFonts.lato(
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 15, 43, 75),
+                      fontWeight: FontWeight.bold),
                 ),
               ),
               Row(

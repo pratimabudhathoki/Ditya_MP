@@ -110,14 +110,13 @@ class _RegestrationPageState extends State<RegestrationPage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SizedBox(
-                                height: 55,
+                                height: 46,
                                 child: TextFormField(
                                   controller: _nameController,
                                   decoration: InputDecoration(
                                     label: const Text('Name'),
                                     labelStyle: const TextStyle(
                                         color: Color.fromARGB(255, 2, 51, 92)),
-                                    hintText: ' name',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide:
                                           const BorderSide(color: Colors.grey),
@@ -150,14 +149,13 @@ class _RegestrationPageState extends State<RegestrationPage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SizedBox(
-                                height: 55,
+                                height: 46,
                                 child: TextFormField(
                                   controller: _numberController,
                                   decoration: InputDecoration(
                                     label: const Text('Mobile Number'),
                                     labelStyle: const TextStyle(
                                         color: Color.fromARGB(255, 2, 51, 92)),
-                                    hintText: ' Mobile Number',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide:
                                           const BorderSide(color: Colors.grey),
@@ -190,14 +188,13 @@ class _RegestrationPageState extends State<RegestrationPage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SizedBox(
-                                height: 55,
+                                height: 46,
                                 child: TextFormField(
                                   controller: _passwordController,
                                   decoration: InputDecoration(
                                     label: const Text('Password'),
                                     labelStyle: const TextStyle(
                                         color: Color.fromARGB(255, 2, 51, 92)),
-                                    hintText: ' Password',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide:
                                           const BorderSide(color: Colors.grey),
@@ -230,14 +227,13 @@ class _RegestrationPageState extends State<RegestrationPage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: SizedBox(
-                                height: 55,
+                                height: 46,
                                 child: TextFormField(
                                   controller: _confirmpasswordController,
                                   decoration: InputDecoration(
                                     label: const Text('Confirm Password'),
                                     labelStyle: const TextStyle(
                                         color: Color.fromARGB(255, 2, 51, 92)),
-                                    hintText: ' Confirm Passworf',
                                     enabledBorder: OutlineInputBorder(
                                       borderSide:
                                           const BorderSide(color: Colors.grey),
@@ -268,12 +264,12 @@ class _RegestrationPageState extends State<RegestrationPage> {
                               ),
                             ),
                             const SizedBox(
-                              height: 20,
+                              height: 30,
                             ),
                             Padding(
                               padding: const EdgeInsets.all(10),
                               child: SizedBox(
-                                height: 40,
+                                height: 35,
                                 child: ElevatedButton(
                                     onPressed: () {
                                       Navigator.push(

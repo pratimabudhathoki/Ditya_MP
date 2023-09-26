@@ -73,8 +73,10 @@ class _EducationDetailState extends State<EducationDetail> {
                 child: Image.asset('assets/images/ditya.jpg')),
             Text(
               "Education Document",
-              style: GoogleFonts.acme(
-                  fontSize: 25, color: Color.fromARGB(255, 15, 43, 75)),
+              style: GoogleFonts.lato(
+                  fontSize: 25,
+                  color: Color.fromARGB(255, 15, 43, 75),
+                  fontWeight: FontWeight.bold),
             ),
             SizedBox(
               height: 15,
@@ -148,7 +150,7 @@ class _EducationDetailState extends State<EducationDetail> {
             DropdownButtonHideUnderline(
               child: DropdownButton<String>(
                 isDense: true,
-                value: "",
+                value: delault,
                 // isExpanded: true,
                 menuMaxHeight: 300,
                 items: [
@@ -277,7 +279,7 @@ class _EducationDetailState extends State<EducationDetail> {
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     menuMaxHeight: 200,
-                    value: 'Select Sector',
+                    value: selectedSector,
                     onChanged: (String? newValue) {
                       setState(() {
                         selectedSector = newValue!;
@@ -315,9 +317,7 @@ class _EducationDetailState extends State<EducationDetail> {
                     ),
                   ),
                   onPressed: () {
-                    if (delault == "") {
-                      print("select corse");
-                    }
+                    if (delault == "") {}
                   },
                   child: Center(child: Text('Submit'))),
             )

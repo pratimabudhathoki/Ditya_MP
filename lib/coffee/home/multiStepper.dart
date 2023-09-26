@@ -1,6 +1,7 @@
 import 'package:coffee_shop/coffee/home/CompanySelect.dart';
 import 'package:coffee_shop/coffee/home/Educationdetail.dart';
 import 'package:coffee_shop/coffee/home/bank/bankDetail.dart';
+import 'package:coffee_shop/coffee/home/cv/radiobutton.dart';
 import 'package:coffee_shop/coffee/home/cv/resume.dart';
 import 'package:coffee_shop/coffee/home/language.dart';
 import 'package:coffee_shop/coffee/home/passportUpload.dart';
@@ -34,9 +35,13 @@ class _MultiStepperState extends State<MUltiStepperpage> {
   final TextEditingController _MaritalStatus = TextEditingController();
   final TextEditingController _height = TextEditingController();
   final TextEditingController _Weight = TextEditingController();
+  final TextEditingController _Spouse = TextEditingController();
+
   int active_index = 0;
   int total_index = 8;
 
+//marinal status
+  String selectedValue = 'Marital Status'; // Initial value
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +80,7 @@ class _MultiStepperState extends State<MUltiStepperpage> {
     return Form(
       key: _formKey,
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView(
           children: [
             DotStepper(
@@ -85,232 +90,394 @@ class _MultiStepperState extends State<MUltiStepperpage> {
               shape: Shape.pipe,
               spacing: 5,
             ),
-            Text('Steps ${active_index + 1} to $total_index'),
+            // Text('Steps ${active_index + 1} to $total_index'),
             Text(
               'Personal Information',
               style: GoogleFonts.crimsonText(
                   fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            Text("Name"),
-            TextFormField(
-              controller: _firstNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Please enter your first name';
-                }
-                return null;
-              },
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6, left: 10, top: 6),
+              child: Text(
+                "Name",
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
             ),
-            Text('Middle Name'),
-            TextFormField(
-              controller: _middleNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _firstNameController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'FirstName',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter your first name';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Please enter your first name';
-                }
-                return null;
-              },
-            ),
-            Text('last Name'),
-            TextFormField(
-              controller: _lastNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+                ),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, top: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      height: 45,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _middleNameController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Middle Name',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter your last name';
-                }
-                return null;
-              },
-            ),
-            Text('Permanet address'),
-            TextFormField(
-              controller: _permanentAddressController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter your parmanent address';
-                }
-                return null;
-              },
+                ),
+              ],
             ),
-            Text('Temporary Name'),
-            TextFormField(
-              controller: _temporaryAddressController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(10)),
+                  height: 45,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: TextFormField(
+                      controller: _lastNameController,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Last Name',
+                        hintStyle: TextStyle(fontSize: 15),
+                      ),
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter temporary address';
-                }
-                return null;
-              },
+                ),
+              ),
             ),
-            Text(' fathers Name'),
-            TextFormField(
-              controller: _fatherName,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
+            RadioBUtton(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5, left: 10),
+              child: Text(
+                "Address",
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
+            ),
+            Row(
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _permanentAddressController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Permanent Address',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter your permanent address';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+                ),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _temporaryAddressController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Temporary Address',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your temporary address';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter father name';
-                }
-                return null;
-              },
-            ),
-            Text('Spouses Name'),
-            TextFormField(
-              controller: _motherName,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter spouse name';
-                }
-                return null;
-              },
+                ),
+              ],
             ),
-            Text('Marital Status'),
-            TextFormField(
-              controller: _MaritalStatus,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 5, left: 10, top: 10),
+              child: Text(
+                'Family detail',
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
+            ),
+            Row(
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _fatherName,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'FatherName',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your father name';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+                ),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _motherName,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Mother Name',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your mother name';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Please enter your first name';
-                }
-                return null;
-              },
-            ),
-            Text('Height'),
-            TextFormField(
-              controller: _height,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter Height';
-                }
-                return null;
-              },
+                ),
+              ],
             ),
-            Text('Weight'),
-            TextFormField(
-              controller: _Weight,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
+
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                child: Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: TextFormField(
+                      controller: _Spouse,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Spouses Name',
+                        hintStyle: TextStyle(fontSize: 15),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'enter your spouses name';
+                        }
+                        return null;
+                      },
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
-                    ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter Weight';
-                }
-                return null;
-              },
+                ),
+              ),
             ),
+            Row(
+              children: [
+                Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(10) // Add a border
+                      ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: DropdownButtonHideUnderline(
+                      child: DropdownButton<String>(
+                        value: selectedValue,
+                        onChanged: (newValue) {
+                          setState(() {
+                            selectedValue = newValue!;
+                          });
+                        },
+                        items: <String>['Marital Status', 'Married', 'Single']
+                            .map<DropdownMenuItem<String>>(
+                          (String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          },
+                        ).toList(),
+                      ),
+                    ),
+                  ),
+                ),
+                // Flexible(
+                //   child: Padding(
+                //     padding:
+                //         const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                //     child: Container(
+                //       height: 45,
+                //       decoration: BoxDecoration(
+                //           border: Border.all(),
+                //           borderRadius: BorderRadius.circular(10)),
+                //       child: Padding(
+                //         padding: const EdgeInsets.only(left: 10),
+                //         child: TextFormField(
+                //           controller: _MaritalStatus,
+                //           decoration: InputDecoration(
+                //             border: InputBorder.none,
+                //             hintText: 'Martinal Status',
+                //             hintStyle: TextStyle(fontSize: 15),
+                //           ),
+                //           validator: (value) {
+                //             if (value!.isEmpty) {
+                //               return 'enter your martinal status';
+                //             }
+                //             return null;
+                //           },
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        right: 10, top: 10, bottom: 10, left: 20),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          controller: _height,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Height',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your height';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                child: Container(
+                  height: 45,
+                  decoration: BoxDecoration(
+                      border: Border.all(),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 10),
+                    child: TextFormField(
+                      keyboardType: TextInputType.number,
+                      controller: _Weight,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Weight',
+                        hintStyle: TextStyle(fontSize: 15),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'enter your weight';
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
             Padding(
               padding: const EdgeInsets.all(15),
               child: ElevatedButton(
