@@ -162,28 +162,35 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                 ),
               ],
             ),
-            Flexible(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
-                child: Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
-                  height: 45,
+
+            Row(
+              children: [
+                Flexible(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: TextFormField(
-                      controller: _lastNameController,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Last Name',
-                        hintStyle: TextStyle(fontSize: 15),
+                    padding:
+                        const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      height: 45,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _lastNameController,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Last Name',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
+
             RadioBUtton(),
             Padding(
               padding: const EdgeInsets.only(bottom: 5, left: 10),
@@ -196,6 +203,7 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                 ),
               ),
             ),
+
             Row(
               children: [
                 Flexible(
@@ -328,33 +336,38 @@ class _MultiStepperState extends State<MUltiStepperpage> {
               ],
             ),
 
-            Flexible(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
-                child: Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
+            Row(
+              children: [
+                Flexible(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: TextFormField(
-                      controller: _Spouse,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Spouses Name',
-                        hintStyle: TextStyle(fontSize: 15),
+                    padding:
+                        const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          controller: _Spouse,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Spouses Name',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your spouses name';
+                            }
+                            return null;
+                          },
+                        ),
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'enter your spouses name';
-                        }
-                        return null;
-                      },
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
             Row(
               children: [
@@ -387,35 +400,6 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                     ),
                   ),
                 ),
-                // Flexible(
-                //   child: Padding(
-                //     padding:
-                //         const EdgeInsets.only(right: 10, top: 10, bottom: 10),
-                //     child: Container(
-                //       height: 45,
-                //       decoration: BoxDecoration(
-                //           border: Border.all(),
-                //           borderRadius: BorderRadius.circular(10)),
-                //       child: Padding(
-                //         padding: const EdgeInsets.only(left: 10),
-                //         child: TextFormField(
-                //           controller: _MaritalStatus,
-                //           decoration: InputDecoration(
-                //             border: InputBorder.none,
-                //             hintText: 'Martinal Status',
-                //             hintStyle: TextStyle(fontSize: 15),
-                //           ),
-                //           validator: (value) {
-                //             if (value!.isEmpty) {
-                //               return 'enter your martinal status';
-                //             }
-                //             return null;
-                //           },
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ),
                 Flexible(
                   child: Padding(
                     padding: const EdgeInsets.only(
@@ -448,34 +432,39 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                 ),
               ],
             ),
-            Flexible(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 10, top: 10, bottom: 10),
-                child: Container(
-                  height: 45,
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(10)),
+            Row(
+              children: [
+                Flexible(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: TextFormField(
-                      keyboardType: TextInputType.number,
-                      controller: _Weight,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Weight',
-                        hintStyle: TextStyle(fontSize: 15),
+                    padding:
+                        const EdgeInsets.only(right: 10, top: 10, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          keyboardType: TextInputType.number,
+                          controller: _Weight,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Weight',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'enter your weight';
+                            }
+                            return null;
+                          },
+                        ),
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'enter your weight';
-                        }
-                        return null;
-                      },
                     ),
                   ),
                 ),
-              ),
+              ],
             ),
 
             Padding(
@@ -496,7 +485,7 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -20,6 +20,7 @@ class _PassportUploadState extends State<PassportUpload> {
   XFile? image;
 
   final ImagePicker picker = ImagePicker();
+
   Future getImage() async {
     var img = await picker.pickImage(source: ImageSource.gallery);
 
@@ -27,6 +28,10 @@ class _PassportUploadState extends State<PassportUpload> {
       image = img;
     });
   }
+
+  //drop down of calander
+  DateTime SelectedDate = DateTime.now();
+  DateTime SelectedExpiryDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -116,112 +121,251 @@ class _PassportUploadState extends State<PassportUpload> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 5),
-                      child: Text("Password Number"),
-                    ),
-                    TextFormField(
-                      // controller: _firstNameController,
-                      decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 7, 7, 7),
-                              width: 1,
-                            ),
-                          )),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter your password Number';
-                        }
-                        return null;
-                      },
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 5),
-                      child: Text("DOB"),
-                    ),
-                    TextFormField(
-                      // controller: _firstNameController,
-                      decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 7, 7, 7),
-                              width: 1,
-                            ),
-                          )),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter Date of birth(AD)';
-                        }
-                        return null;
-                      },
-                    ),
-                    Text('Issued Date'),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 5),
-                      child: TextFormField(
-                        // controller: _firstNameController,
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(vertical: 10),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.grey),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 7, 7, 7),
-                                width: 1,
-                              ),
-                            )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Enter Issue Date';
-                          }
-                          return null;
-                        },
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 5, left: 10),
+                    child: Text(
+                      "Password Number",
+                      style: GoogleFonts.lato(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 2, 51, 92),
                       ),
                     ),
-                    Text('Expiry Date'),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5, bottom: 5),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(vertical: 10),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.grey),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 7, 7, 7),
-                                width: 1,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 5),
+                          child: Container(
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: 'Passport Number',
+                                  hintStyle: TextStyle(fontSize: 15),
+                                ),
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'Please enter your Password Number';
+                                  }
+                                  return null;
+                                },
                               ),
-                            )),
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Enter your expiry date';
-                          }
-                          return null;
-                        },
+                            ),
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 5),
+                          child: Container(
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                  border: InputBorder.none,
+                                  hintText: ' DOB',
+                                  hintStyle: TextStyle(fontSize: 15),
+                                ),
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return 'Please enter Date of bitrh';
+                                  }
+                                  return null;
+                                },
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
+                    child: Text(
+                      "Issued Date",
+                      style: GoogleFonts.lato(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 2, 51, 92),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 5),
+                          child: Container(
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextFormField(
+                                keyboardType: TextInputType.none,
+                                decoration: InputDecoration(
+                                  suffixIcon: InkWell(
+                                      onTap: () async {
+                                        DateTime? datepicked =
+                                            await showDatePicker(
+                                          context: context,
+                                          initialDate: SelectedDate,
+                                          firstDate: DateTime(1890),
+                                          lastDate: DateTime(2025),
+                                          builder: (context, child) {
+                                            return Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  height: 490,
+                                                  width: 550,
+                                                  child: child!,
+                                                )
+                                              ],
+                                            );
+                                            // return Theme(
+                                            //     data: Theme.of(context)
+                                            //         .copyWith(
+                                            //             colorScheme:
+                                            //                 ColorScheme.light(
+                                            //       primary: Color.fromARGB(
+                                            //           255, 2, 51, 92),
+                                            //       onPrimary: Colors.white,
+                                            //       onSurface: Colors.black,
+                                            //     )),
+                                            //     child: child!);
+                                          },
+                                        );
+                                        if (datepicked != null) {
+                                          setState(() {
+                                            SelectedDate = datepicked;
+                                          });
+                                        }
+                                      },
+                                      child: Icon(Icons.arrow_drop_down)),
+                                  border: InputBorder.none,
+                                  hintText:
+                                      '${SelectedDate.year}-${SelectedDate.month}-${SelectedDate.day}',
+                                  hintStyle: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return ' enter Issued Date';
+                                  }
+                                  return null;
+                                },
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
+                    child: Text(
+                      "Expiry Date",
+                      style: GoogleFonts.lato(
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 2, 51, 92),
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 5),
+                          child: Container(
+                            height: 45,
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: TextFormField(
+                                keyboardType: TextInputType.none,
+                                decoration: InputDecoration(
+                                  suffixIcon: InkWell(
+                                      onTap: () async {
+                                        DateTime? expirydatepicked =
+                                            await showDatePicker(
+                                          context: context,
+                                          initialDate: SelectedExpiryDate,
+                                          firstDate: DateTime(1890),
+                                          lastDate: DateTime(2025),
+                                          builder: (context, child) {
+                                            return Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  height: 490,
+                                                  width: 550,
+                                                  child: child!,
+                                                )
+                                              ],
+                                            );
+                                            // return Theme(
+                                            //     data: Theme.of(context)
+                                            //         .copyWith(
+                                            //             colorScheme:
+                                            //                 ColorScheme.light(
+                                            //       primary: Color.fromARGB(
+                                            //           255, 2, 51, 92),
+                                            //       onPrimary: Colors.white,
+                                            //       onSurface: Colors.black,
+                                            //     )),
+                                            //     child: child!);
+                                          },
+                                        );
+                                        if (expirydatepicked != null) {
+                                          setState(() {
+                                            SelectedExpiryDate =
+                                                expirydatepicked;
+                                          });
+                                        }
+                                      },
+                                      child: Icon(Icons.arrow_drop_down)),
+                                  border: InputBorder.none,
+                                  hintText:
+                                      '${SelectedExpiryDate.year}-${SelectedExpiryDate.month}-${SelectedExpiryDate.day}',
+                                  hintStyle: TextStyle(
+                                      fontSize: 15, color: Colors.black),
+                                ),
+                                validator: (value) {
+                                  if (value!.isEmpty) {
+                                    return ' enter expiry Date';
+                                  }
+                                  return null;
+                                },
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.all(10),
