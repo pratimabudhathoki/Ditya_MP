@@ -44,115 +44,181 @@ class _BankDetailState extends State<BankDetail> {
                   color: Color.fromARGB(255, 15, 43, 75),
                   fontWeight: FontWeight.bold),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, bottom: 5),
-                    child: Text("Bank Name"),
-                  ),
-                  TextFormField(
-                    // controller: _firstNameController,
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(vertical: 10),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 7, 7, 7),
-                            width: 1,
-                          ),
-                        )),
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Enter your Bank Name';
-                      }
-                      return null;
-                    },
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, bottom: 5),
-                    child: Text("Branch"),
-                  ),
-                  TextFormField(
-                    // controller: _firstNameController,
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(vertical: 10),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.grey),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 7, 7, 7),
-                            width: 1,
-                          ),
-                        )),
-                    validator: (value) {
-                      if (value!.isEmpty) {
-                        return 'Enter Branch Name';
-                      }
-                      return null;
-                    },
-                  ),
-                  Text('Account Name'),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, bottom: 5),
-                    child: TextFormField(
-                      // controller: _firstNameController,
-                      decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 7, 7, 7),
-                              width: 1,
-                            ),
-                          )),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter your Account Number';
-                        }
-                        return null;
-                      },
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5, left: 10, top: 20),
+                  child: Text(
+                    "Bank Name",
+                    style: GoogleFonts.lato(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 2, 51, 92),
                     ),
                   ),
-                  Text('Acount Number'),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, bottom: 5),
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                          contentPadding: EdgeInsets.symmetric(vertical: 10),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(color: Colors.grey),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                              color: Color.fromARGB(255, 7, 7, 7),
-                              width: 1,
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: ' Bank Name',
+                                hintStyle: TextStyle(fontSize: 15),
+                              ),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'Please enter your Bank Name';
+                                }
+                                return null;
+                              },
                             ),
-                          )),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Enter your expiry date';
-                        }
-                        return null;
-                      },
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5, left: 10, top: 10),
+                  child: Text(
+                    "Branch",
+                    style: GoogleFonts.lato(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 2, 51, 92),
                     ),
                   ),
-                ],
-              ),
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Bank Branch',
+                                hintStyle: TextStyle(fontSize: 15),
+                              ),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'Please enter your Bank Branch';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5, left: 10, top: 10),
+                  child: Text(
+                    "Account Name",
+                    style: GoogleFonts.lato(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 2, 51, 92),
+                    ),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: ' Account Name',
+                                hintStyle: TextStyle(fontSize: 15),
+                              ),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'Please enter your Account Name';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5, left: 10, top: 10),
+                  child: Text(
+                    "Account Number",
+                    style: GoogleFonts.lato(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 2, 51, 92),
+                    ),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5, bottom: 10),
+                        child: Container(
+                          height: 45,
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Account Number',
+                                hintStyle: TextStyle(fontSize: 15),
+                              ),
+                              validator: (value) {
+                                if (value!.isEmpty) {
+                                  return 'Please enter your Account Number';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(15),
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(

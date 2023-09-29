@@ -29,9 +29,11 @@ class _PassportUploadState extends State<PassportUpload> {
     });
   }
 
-  //drop down of calander
+  //drop down of Expiry calander
   DateTime SelectedDate = DateTime.now();
   DateTime SelectedExpiryDate = DateTime.now();
+  //drop down of DOB calander
+  DateTime DOBselectDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -124,16 +126,31 @@ class _PassportUploadState extends State<PassportUpload> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5, left: 10),
-                    child: Text(
-                      "Password Number",
-                      style: GoogleFonts.lato(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 2, 51, 92),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 5, left: 10),
+                        child: Text(
+                          "Password Number",
+                          style: GoogleFonts.lato(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 2, 51, 92),
+                          ),
+                        ),
                       ),
-                    ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 5, left: 35),
+                        child: Text(
+                          "DOB",
+                          style: GoogleFonts.lato(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Color.fromARGB(255, 2, 51, 92),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -176,14 +193,46 @@ class _PassportUploadState extends State<PassportUpload> {
                             child: Padding(
                               padding: const EdgeInsets.only(left: 10),
                               child: TextFormField(
+                                keyboardType: TextInputType.none,
                                 decoration: InputDecoration(
+                                  suffixIcon: InkWell(
+                                      onTap: () async {
+                                        DateTime? DOBpicked =
+                                            await showDatePicker(
+                                          context: context,
+                                          initialDate: DateTime.now(),
+                                          firstDate: DateTime(1890),
+                                          lastDate: DateTime(2025),
+                                          builder: (context, child) {
+                                            return Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  height: 490,
+                                                  width: 550,
+                                                  child: child!,
+                                                )
+                                              ],
+                                            );
+                                          },
+                                        );
+                                        if (DOBpicked != null) {
+                                          setState(() {
+                                            DOBselectDate = DOBpicked;
+                                          });
+                                        }
+                                      },
+                                      child: Icon(Icons.arrow_drop_down)),
                                   border: InputBorder.none,
-                                  hintText: ' DOB',
-                                  hintStyle: TextStyle(fontSize: 15),
+                                  hintText:
+                                      '${DOBselectDate.year}-${DOBselectDate.month}-${DOBselectDate.day}',
+                                  hintStyle: TextStyle(
+                                      fontSize: 14, color: Colors.black),
                                 ),
                                 validator: (value) {
                                   if (value!.isEmpty) {
-                                    return 'Please enter Date of bitrh';
+                                    return ' enter Date of Birth';
                                   }
                                   return null;
                                 },

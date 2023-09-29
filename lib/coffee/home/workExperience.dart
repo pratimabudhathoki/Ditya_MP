@@ -61,86 +61,136 @@ class _WorkExperienceState extends State<WorkExperience> {
               height: 14,
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 5),
-              child: Text("Company Name"),
+              padding: const EdgeInsets.only(bottom: 5, left: 10, top: 10),
+              child: Text(
+                "Company Name",
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
             ),
-            TextFormField(
-              // controller: _firstNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+            Row(
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 5, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Company Name',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter Company Name';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter Name of Company';
-                }
-                return null;
-              },
+                  ),
+                ),
+              ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 5),
-              child: Text("Position"),
+              padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
+              child: Text(
+                "Position",
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
             ),
-            TextFormField(
-              // controller: _firstNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+            Row(
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 5, bottom: 10),
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Position',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter your Positon';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter your Position';
-                }
-                return null;
-              },
+                  ),
+                ),
+              ],
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 5, bottom: 5),
-              child: Text("Work Description"),
+              padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
+              child: Text(
+                "Work Description",
+                style: GoogleFonts.lato(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 2, 51, 92),
+                ),
+              ),
             ),
-            TextFormField(
-              maxLines: 6,
-              // controller: _firstNameController,
-              decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 10),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 7, 7, 7),
-                      width: 1,
+            Row(
+              children: [
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 5, bottom: 10),
+                    child: Container(
+                      height: 150,
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Work Description',
+                            hintStyle: TextStyle(fontSize: 15),
+                          ),
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Please enter Description';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
                     ),
-                  )),
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Enter your Work Description ';
-                }
-                return null;
-              },
+                  ),
+                ),
+              ],
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Padding(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(15),
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(
