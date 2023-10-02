@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:im_stepper/stepper.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class languageSelect extends StatefulWidget {
   int active_index = 4;
@@ -14,27 +15,18 @@ class languageSelect extends StatefulWidget {
 }
 
 class _languageSelectState extends State<languageSelect> {
-  int selectedRating = 5;
-
   // Define a list of languages
   // final List<String> languages = [
   //   'English',
 
-  Map<String, int> languageRatings = {
-    'English': 0,
-    'Hindi': 0,
-    'Nepali': 0,
-    'Malay': 0,
-    'Arabic': 0,
-  };
-  Map<String, bool> languageCheckboxes = {
-    'English': false,
-    'Hindi': false,
-    'Nepali': false,
-    'Malay': false,
-    'Arabic': false,
-  };
-
+  List<Map> categories = [
+    {"language": "English", "isChecked": false},
+    {"language": "Hindi", "isChecked": false},
+    {"language": "Nepali", "isChecked": false},
+    {"language": "Malay", "isChecked": false},
+    {"language": "Arabic", "isChecked": false},
+  ];
+  double rating = 3.0; // Initial rating value, can be between 1 and 5
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,22 +67,107 @@ class _languageSelectState extends State<languageSelect> {
               Text('Rate Your Language Skills',
                   style: GoogleFonts.lato(fontSize: 18)),
               SizedBox(height: 20),
-              for (var language in languageRatings.keys)
-                LanguageRatingItem(
-                  language: language,
-                  rating: languageRatings[language]!,
-                  isChecked: languageCheckboxes[language]!,
-                  onRatingChanged: (rating) {
+              Column(
+                  children: categories.map((favorite) {
+                return CheckboxListTile(
+                  checkboxShape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6)),
+                  activeColor: Color.fromARGB(255, 2, 51, 92),
+                  title: Text(favorite['language']),
+                  value: favorite['isChecked'],
+                  onChanged: (value) {
                     setState(() {
-                      languageRatings[language] = rating;
+                      favorite['isChecked'] = value;
                     });
                   },
-                  onCheckboxChanged: (isChecked) {
-                    setState(() {
-                      languageCheckboxes[language] = isChecked;
-                    });
-                  },
-                ),
+                );
+              }).toList()),
+              Wrap
+              (
+                  children: categories.map((favorite) {
+                if (favorite['isChecked'] == true) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Card(
+                      color: Color.fromARGB(255, 227, 236, 240),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(9.0),
+                                  child: Text(
+                                    favorite['language'],
+                                    style: GoogleFonts.lato(
+                                        fontSize: 17,
+                                        color: Color.fromARGB(255, 15, 43, 75),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: InkWell(
+                                    onTap: () {
+                                      setState(() {
+                                        favorite['isChecked'] =
+                                            !favorite['isChecked'];
+                                      });
+                                    },
+                                    child: Icon(Icons.delete_rounded,
+                                        color:
+                                            Color.fromARGB(255, 187, 66, 57)),
+                                  ),
+                                )
+                              ]),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Reading',
+                                  style: GoogleFonts.kanit(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Writing',
+                                  style: GoogleFonts.kanit(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5, bottom: 8),
+                            child: Text(
+                              'Speaking',
+                              style: GoogleFonts.kanit(
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                } else {
+                  return Container();
+                }
+              }).toList()),
               SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(15),
@@ -109,77 +186,11 @@ class _languageSelectState extends State<languageSelect> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class LanguageRatingItem extends StatefulWidget {
-  final String language;
-  final int rating;
-  final bool isChecked;
-  final ValueChanged<int> onRatingChanged;
-  final ValueChanged<bool> onCheckboxChanged;
-
-  LanguageRatingItem({
-    required this.language,
-    required this.rating,
-    required this.isChecked,
-    required this.onRatingChanged,
-    required this.onCheckboxChanged,
-  });
-
-  @override
-  _LanguageRatingItemState createState() => _LanguageRatingItemState();
-}
-
-class _LanguageRatingItemState extends State<LanguageRatingItem> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Checkbox(
-              fillColor: MaterialStatePropertyAll(
-                Color.fromARGB(255, 2, 51, 92),
-              ),
-              value: widget.isChecked,
-              onChanged: (isChecked) {
-                widget.onCheckboxChanged(isChecked ?? false);
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 100),
-              child: Text(
-                widget.language,
-                style: TextStyle(
-                  fontSize: 15,
-                ),
-              ),
-            ),
-            for (int i = 1; i <= 5; i++)
-              IconButton(
-                splashRadius: 0.0001,
-                padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(minWidth: 22, maxWidth: 25),
-                onPressed: () {
-                  widget.onRatingChanged(i);
-                },
-                icon: Icon(
-                  i <= widget.rating ? Icons.star : Icons.star_border,
-                  size: 25,
-                  color: Colors.orange,
-                ),
-              ),
-          ],
-        ),
-      ],
     );
   }
 }
