@@ -39,6 +39,7 @@ class _languageSelectState extends State<languageSelect> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               DotStepper(
+                tappingEnabled: false,
                 lineConnectorsEnabled: false,
                 dotCount: 9,
                 activeStep: widget.active_index,

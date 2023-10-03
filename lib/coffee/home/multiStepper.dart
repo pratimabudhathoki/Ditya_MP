@@ -83,13 +83,17 @@ class _MultiStepperState extends State<MUltiStepperpage> {
         padding: const EdgeInsets.only(left: 10, right: 10),
         child: ListView(
           children: [
-            DotStepper(
-              dotCount: 9,
-              activeStep: active_index,
-              dotRadius: 20.0,
-              shape: Shape.pipe,
-              spacing: 5,
-            ),
+            _stepper(
+                active_index,
+                false,
+                false,
+                9,
+                20.0,
+                Shape.pipe,
+                10.0,
+                FixedDotDecoration(
+                  color: Color.fromARGB(255, 2, 51, 92),
+                )),
             // Text('Steps ${active_index + 1} to $total_index'),
             Text(
               'Personal Information',
@@ -533,5 +537,28 @@ class _MultiStepperState extends State<MUltiStepperpage> {
 
   Widget NinthStep() {
     return EducationDetail(active_index: 8);
+  }
+
+  DotStepper _stepper(
+      int activeStep,
+      bool tappingEnabled,
+      boolineConnectorsEnabled,
+      int dotCount,
+      double dotRadius,
+      Shape shape,
+      double spacing,
+      FixedDotDecoration color) {
+    return DotStepper(
+      activeStep: active_index,
+      tappingEnabled: false,
+      lineConnectorsEnabled: false,
+      dotCount: 9,
+      dotRadius: 20.0,
+      shape: Shape.pipe,
+      spacing: 10.0,
+      indicatorDecoration: IndicatorDecoration(
+        color: Color.fromARGB(255, 2, 51, 92),
+      ),
+    );
   }
 }

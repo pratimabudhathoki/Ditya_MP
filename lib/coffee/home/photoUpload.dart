@@ -47,6 +47,7 @@ class _MyWidgetState extends State<PhotoUpload> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               DotStepper(
+                tappingEnabled: false,
                 dotCount: 9,
                 activeStep: widget.active_index,
                 dotRadius: 20.0,

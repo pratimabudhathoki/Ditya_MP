@@ -25,6 +25,7 @@ class _BankDetailState extends State<BankDetail> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             DotStepper(
+              tappingEnabled: false,
               lineConnectorsEnabled: false,
               dotCount: 8,
               activeStep: widget.active_index,

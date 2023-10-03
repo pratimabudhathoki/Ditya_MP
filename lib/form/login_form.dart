@@ -10,16 +10,6 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController _numberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  void _submitForm() {
-    if (_formKey.currentState!.validate()) {
-      // Form is valid, perform login or any other action here
-      // You can access the input values using _emailController.text and _passwordController.text
-      // For simplicity, let's just print the input values for now.
-      print('Number: ${_numberController.text}');
-      print('Password: ${_passwordController.text}');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,110 +54,65 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 15),
-                        child: SizedBox(
-                          height: 46,
-                          child: TextFormField(
-                            controller: _numberController,
-                            decoration: InputDecoration(
-                              label: const Text('Mobile Number'),
-                              labelStyle: TextStyle(
-                                  color: Color.fromARGB(255, 2, 51, 92)),
-                              enabledBorder: OutlineInputBorder(
-                                borderSide:
-                                    const BorderSide(color: Colors.grey),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Color.fromARGB(255, 2, 51, 92),
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              errorBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Colors.red,
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                            validator: (value) {
-                              if (value!.isEmpty) {
-                                return 'Please enter your Confirm Password';
-                              }
-                              return null;
-                            },
-                          ),
+                        padding: const EdgeInsets.only(
+                          bottom: 15,
                         ),
-                      ),
-                      SizedBox(
-                        height: 46,
                         child: TextFormField(
-                          controller: _passwordController,
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          keyboardType: TextInputType.number,
+                          controller: _numberController,
                           decoration: InputDecoration(
-                            label: const Text('Password'),
+                            contentPadding: EdgeInsets.only(top: 25, left: 8),
+                            isDense: true,
+                            label: const Text('Mobile Number'),
                             labelStyle: TextStyle(
                                 color: Color.fromARGB(255, 2, 51, 92)),
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.grey),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Color.fromARGB(255, 2, 51, 92),
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            errorBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
-                                color: Colors.red,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10)),
                           ),
                           validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Please enter your Confirm Password';
+                            if (value!.isEmpty || value.length < 10) {
+                              return 'Please enter your Number';
                             }
                             return null;
                           },
                         ),
                       ),
-                      // TextFormField(
-                      //   controller: _passwordController,
-                      //   decoration: InputDecoration(
-                      //     labelText: 'Password',
-                      //     labelStyle: TextStyle(color: Color.fromARGB(255, 2, 51, 92)),
-                      //     focusedBorder: UnderlineInputBorder(
-                      //       borderSide:
-                      //           BorderSide(color: Color.fromARGB(255, 2, 51, 92)),
-                      //     ),
-                      //     hintText: ' Password',
-                      //     hintStyle: TextStyle(fontSize: 12),
-                      //   ),
-                      //   obscureText: true,
-                      //   validator: (value) {
-                      //     if (value!.isEmpty) {
-                      //       return 'Please enter your password';
-                      //     }
-                      //     // You can add more password validation rules if needed
-                      //     return null;
-                      //   },
-                      // ),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        controller: _passwordController,
+                        decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(top: 25, left: 8),
+                            isDense: true,
+                            label: const Text('Password'),
+                            labelStyle: TextStyle(
+                                color: Color.fromARGB(255, 2, 51, 92)),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                        validator: (value) {
+                          if (value!.isEmpty) {
+                            return 'Please enter your Password';
+                          } else if (value.length <= 6) {
+                            return 'Password must be greater then 6 digit';
+                          }
+                          return null;
+                        },
+                      ),
                       SizedBox(height: 20.0),
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MUltiStepperpage()));
-                            _submitForm();
+                            if (_formKey.currentState!.validate()) {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => MUltiStepperpage(),
+                                  ));
+                            }
                           },
                           child: Center(
                             child: Text(

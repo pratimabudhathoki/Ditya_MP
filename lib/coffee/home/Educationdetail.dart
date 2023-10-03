@@ -59,6 +59,7 @@ class _EducationDetailState extends State<EducationDetail> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             DotStepper(
+              tappingEnabled: false,
               lineConnectorsEnabled: false,
               dotCount: 9,
               activeStep: widget.active_index,

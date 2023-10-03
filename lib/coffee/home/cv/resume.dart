@@ -38,6 +38,7 @@ class _CvUploadState extends State<CvUpload> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             DotStepper(
+             tappingEnabled: false,
               lineConnectorsEnabled: false,
               dotCount: 9,
               activeStep: widget.active_index,

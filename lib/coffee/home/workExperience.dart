@@ -28,6 +28,7 @@ class _WorkExperienceState extends State<WorkExperience> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             DotStepper(
+              tappingEnabled: false,
               lineConnectorsEnabled: false,
               dotCount: 9,
               activeStep: widget.active_index,
