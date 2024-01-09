@@ -1,4 +1,4 @@
-import 'package:coffee_shop/coffee/home/Educationdetail.dart';
+import 'package:coffee_shop/register/home/Educationdetail.dart';
 import 'package:csc_picker/model/select_status_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';

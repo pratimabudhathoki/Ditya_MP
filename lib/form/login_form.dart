@@ -1,5 +1,5 @@
-import 'package:coffee_shop/coffee/home/multiStepper.dart';
-import 'package:coffee_shop/coffee/home/persoanlDetail.dart';
+import 'package:coffee_shop/register/home/multiStepper.dart';
+import 'package:coffee_shop/register/home/persoanlDetail.dart';
 
 import 'package:coffee_shop/form/registrationForm.dart';
 

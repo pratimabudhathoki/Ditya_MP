@@ -1,4 +1,4 @@
-import 'package:coffee_shop/coffee/home/bank/bankDetail.dart';
+import 'package:coffee_shop/register/home/bank/bankDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

@@ -1,4 +1,4 @@
-import 'package:coffee_shop/coffee/home/photoUpload.dart';
+import 'package:coffee_shop/register/home/photoUpload.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

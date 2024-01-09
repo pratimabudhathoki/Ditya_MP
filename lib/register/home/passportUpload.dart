@@ -1,4 +1,4 @@
-import 'package:coffee_shop/coffee/home/cv/resume.dart';
+import 'package:coffee_shop/register/home/cv/resume.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';

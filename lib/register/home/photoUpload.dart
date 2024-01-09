@@ -1,4 +1,4 @@
-import 'package:coffee_shop/coffee/home/passportUpload.dart';
+import 'package:coffee_shop/register/home/passportUpload.dart';
 import 'package:flutter/material.dart';
 import 'package:im_stepper/stepper.dart';
 import 'package:image_picker/image_picker.dart';
