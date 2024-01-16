@@ -54,7 +54,11 @@ class _PersonalInfoFormState extends State<PersonalInfoForm> {
           PrimaryTextField(
               controller: _lastNameController, label: "Date of birth"),
           const Gap(16.0),
-          ElevatedButton(onPressed: () {}, child: const Text("Next"))
+          // ElevatedButton(onPressed: () {}, child: const Text("Next")),
+
+  const Gap(16.0),
+
+          
           // PrimaryTextField(controller: _lastNameController, label: "Full name"),
           // PrimaryTextField(controller: _lastNameController, label: "Full name"),
 

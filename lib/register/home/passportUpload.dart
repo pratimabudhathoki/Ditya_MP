@@ -104,7 +104,7 @@ class _PassportUploadState extends State<PassportUpload> {
             const Gap(12.0),
              PrimaryTextField(controller:TextEditingController(), label: "Issue date"),
              const Gap(12.0),
-             ElevatedButton(onPressed: (){}, child: const Text("Next"))
+            //  ElevatedButton(onPressed: (){}, child: const Text("Next"))
           ],
         ),
       );

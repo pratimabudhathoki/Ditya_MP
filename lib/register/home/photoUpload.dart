@@ -135,7 +135,7 @@ class _MyWidgetState extends State<PhotoUpload> {
             ],
           ),
           const Gap(AppSize.pagePadding),
-          ElevatedButton(onPressed: () {}, child: const Text("Next"))
+          // ElevatedButton(onPressed: () {}, child: const Text("Next"))
         ],
       ),
     );

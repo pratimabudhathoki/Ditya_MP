@@ -89,7 +89,7 @@ class _CvUploadState extends State<CvUpload> {
             ],
           ),
           const Gap(AppSize.pagePadding),
-          ElevatedButton(onPressed: (){}, child: const Text("Next"))
+          // ElevatedButton(onPressed: (){}, child: const Text("Next"))
         ],
       ),
     );

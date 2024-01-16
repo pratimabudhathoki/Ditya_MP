@@ -11,6 +11,7 @@ import 'package:coffee_shop/register/home/photoUpload.dart';
 import 'package:coffee_shop/register/home/workExperience.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:im_stepper/stepper.dart';
 
@@ -37,7 +38,6 @@ class _MultiStepperState extends State<MUltiStepperpage> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-     
           Container(
             color: AppColors.primary,
             child: SafeArea(
@@ -67,7 +67,7 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                 activeStepBorderColor: AppColors.primary,
                 activeStepColor: AppColors.secondary,
                 stepColor: AppColors.primary,
-                onStepReached: (index){
+                onStepReached: (index) {
                   setState(() {
                     activeIndex = index;
                   });
@@ -76,42 +76,35 @@ class _MultiStepperState extends State<MUltiStepperpage> {
             ),
           ),
           const Gap(AppSize.pagePadding),
-           Expanded(
+          Expanded(
               child: SingleChildScrollView(
             child: forms[activeIndex],
           ))
         ],
       ),
+      bottomNavigationBar: InkWell(
+        onTap: (){
+        if(activeIndex==3){
+         return context.go('/');
+          // return;
+        }
+          setState(() {
+            activeIndex++;
+          });
+        },
+        child: Container(
+            height: 60.0,
+            alignment: Alignment.center,
+            width: double.maxFinite,
+            color: AppColors.primary,
+            child: Text(
+              "Next",
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+            )),
+      ),
     );
-  }
-
-
-
-
-
-  Widget FifthStep() {
-    return languageSelect(
-      active_index: 4,
-    );
-  }
-
-  Widget SixthStep() {
-    return CompanySelect(
-      active_index: 5,
-    );
-  }
-
-  Widget SeventhStep() {
-    return BankDetail(
-      active_index: 6,
-    );
-  }
-
-  Widget EigthStep() {
-    return WorkExperience(active_index: 7);
-  }
-
-  Widget NinthStep() {
-    return EducationDetail(active_index: 8);
   }
 }
