@@ -1,15 +1,20 @@
+import 'package:coffee_shop/core/widgets/primary_text_field.dart';
+import 'package:coffee_shop/core/widgets/widgets.dart';
 import 'package:coffee_shop/register/home/cv/resume.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:im_stepper/stepper.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../core/constants/constants.dart';
+
 class PassportUpload extends StatefulWidget {
-  int active_index = 2;
-  PassportUpload({super.key, required this.active_index});
+  
+  PassportUpload({super.key});
 
   @override
   State<PassportUpload> createState() => _PassportUploadState();
@@ -37,412 +42,72 @@ class _PassportUploadState extends State<PassportUpload> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              DotStepper(
-                tappingEnabled: false,
-                lineConnectorsEnabled: false,
-                dotCount: 9,
-                activeStep: widget.active_index,
-                dotRadius: 20.0,
-                shape: Shape.pipe,
-                spacing: 10.0,
+    return Padding(
+         padding: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+           
+           FormHeadline(title: "Password Upload"),
+              const Gap(AppSize.pagePadding),
+            DottedBorder(
+              borderType: BorderType.RRect,
+              dashPattern: const [5, 5],
+              color: Colors.grey,
+              strokeWidth: 2,
+              child: Image.asset(
+                "assets/images/defaultImage.jpg",
+                height: 200.0,
+                width: 200.0,
+                fit: BoxFit.cover,
               ),
-              Container(
-                  alignment: Alignment.topLeft,
-                  height: 80,
-                  width: 100,
-                  child: Image.asset('assets/images/ditya.jpg')),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: Text(
-                  "Password Upload With Detail",
-                  style: GoogleFonts.lato(
-                      fontSize: 20,
-                      color: Color.fromARGB(255, 15, 43, 75),
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Center(
-                child: DottedBorder(
-                  borderType: BorderType.RRect,
-                  dashPattern: [10, 10],
-                  color: Colors.grey,
-                  strokeWidth: 2,
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 315,
-                    width: 300,
-                    child: Image.asset(
-                      "assets/images/defaultImage.jpg",
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25, bottom: 20),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          getImage();
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 2, 51, 92),
-                              border: Border.all(style: BorderStyle.solid)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Choose File",
-                              style: GoogleFonts.lora(color: Colors.white),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(style: BorderStyle.solid)),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Upload your scanned password",
-                              style: GoogleFonts.lora(),
-                            ),
-                          )),
-                    ],
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 5, left: 10),
-                        child: Text(
-                          "Password Number",
-                          style: GoogleFonts.lato(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 2, 51, 92),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 5, left: 35),
-                        child: Text(
-                          "DOB",
-                          style: GoogleFonts.lato(
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 2, 51, 92),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Flexible(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 25, bottom: 20),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        getImage();
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 2, 51, 92),
+                            border: Border.all(style: BorderStyle.solid)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Container(
-                            height: 45,
-                            decoration: BoxDecoration(
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: TextFormField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: 'Passport Number',
-                                  hintStyle: TextStyle(fontSize: 15),
-                                ),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Please enter your Password Number';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Choose File",
+                            style: GoogleFonts.lora(color: Colors.white),
                           ),
                         ),
-                      ),
-                      Flexible(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 20, right: 5),
-                          child: Container(
-                            height: 45,
-                            decoration: BoxDecoration(
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: TextFormField(
-                                keyboardType: TextInputType.none,
-                                decoration: InputDecoration(
-                                  suffixIcon: InkWell(
-                                      onTap: () async {
-                                        DateTime? DOBpicked =
-                                            await showDatePicker(
-                                          context: context,
-                                          initialDate: DateTime.now(),
-                                          firstDate: DateTime(1890),
-                                          lastDate: DateTime(2025),
-                                          builder: (context, child) {
-                                            return Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 490,
-                                                  width: 550,
-                                                  child: child!,
-                                                )
-                                              ],
-                                            );
-                                          },
-                                        );
-                                        if (DOBpicked != null) {
-                                          setState(() {
-                                            DOBselectDate = DOBpicked;
-                                          });
-                                        }
-                                      },
-                                      child: Icon(Icons.arrow_drop_down)),
-                                  border: InputBorder.none,
-                                  hintText:
-                                      '${DOBselectDate.year}-${DOBselectDate.month}-${DOBselectDate.day}',
-                                  hintStyle: TextStyle(
-                                      fontSize: 14, color: Colors.black),
-                                ),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return ' enter Date of Birth';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
-                    child: Text(
-                      "Issued Date",
-                      style: GoogleFonts.lato(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 2, 51, 92),
                       ),
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Flexible(
+                    Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(style: BorderStyle.solid)),
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Container(
-                            height: 45,
-                            decoration: BoxDecoration(
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: TextFormField(
-                                keyboardType: TextInputType.none,
-                                decoration: InputDecoration(
-                                  suffixIcon: InkWell(
-                                      onTap: () async {
-                                        DateTime? datepicked =
-                                            await showDatePicker(
-                                          context: context,
-                                          initialDate: SelectedDate,
-                                          firstDate: DateTime(1890),
-                                          lastDate: DateTime(2025),
-                                          builder: (context, child) {
-                                            return Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 490,
-                                                  width: 550,
-                                                  child: child!,
-                                                )
-                                              ],
-                                            );
-                                            // return Theme(
-                                            //     data: Theme.of(context)
-                                            //         .copyWith(
-                                            //             colorScheme:
-                                            //                 ColorScheme.light(
-                                            //       primary: Color.fromARGB(
-                                            //           255, 2, 51, 92),
-                                            //       onPrimary: Colors.white,
-                                            //       onSurface: Colors.black,
-                                            //     )),
-                                            //     child: child!);
-                                          },
-                                        );
-                                        if (datepicked != null) {
-                                          setState(() {
-                                            SelectedDate = datepicked;
-                                          });
-                                        }
-                                      },
-                                      child: Icon(Icons.arrow_drop_down)),
-                                  border: InputBorder.none,
-                                  hintText:
-                                      '${SelectedDate.year}-${SelectedDate.month}-${SelectedDate.day}',
-                                  hintStyle: TextStyle(
-                                      fontSize: 15, color: Colors.black),
-                                ),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return ' enter Issued Date';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Upload your password",
+                            style: GoogleFonts.lora(),
                           ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 5, left: 10, top: 5),
-                    child: Text(
-                      "Expiry Date",
-                      style: GoogleFonts.lato(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 2, 51, 92),
-                      ),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Flexible(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Container(
-                            height: 45,
-                            decoration: BoxDecoration(
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: TextFormField(
-                                keyboardType: TextInputType.none,
-                                decoration: InputDecoration(
-                                  suffixIcon: InkWell(
-                                      onTap: () async {
-                                        DateTime? expirydatepicked =
-                                            await showDatePicker(
-                                          context: context,
-                                          initialDate: SelectedExpiryDate,
-                                          firstDate: DateTime(1890),
-                                          lastDate: DateTime(2025),
-                                          builder: (context, child) {
-                                            return Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 490,
-                                                  width: 550,
-                                                  child: child!,
-                                                )
-                                              ],
-                                            );
-                                            // return Theme(
-                                            //     data: Theme.of(context)
-                                            //         .copyWith(
-                                            //             colorScheme:
-                                            //                 ColorScheme.light(
-                                            //       primary: Color.fromARGB(
-                                            //           255, 2, 51, 92),
-                                            //       onPrimary: Colors.white,
-                                            //       onSurface: Colors.black,
-                                            //     )),
-                                            //     child: child!);
-                                          },
-                                        );
-                                        if (expirydatepicked != null) {
-                                          setState(() {
-                                            SelectedExpiryDate =
-                                                expirydatepicked;
-                                          });
-                                        }
-                                      },
-                                      child: Icon(Icons.arrow_drop_down)),
-                                  border: InputBorder.none,
-                                  hintText:
-                                      '${SelectedExpiryDate.year}-${SelectedExpiryDate.month}-${SelectedExpiryDate.day}',
-                                  hintStyle: TextStyle(
-                                      fontSize: 15, color: Colors.black),
-                                ),
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return ' enter expiry Date';
-                                  }
-                                  return null;
-                                },
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(
-                      Color.fromARGB(255, 2, 51, 92),
-                    ),
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      widget.active_index++;
-                    });
-
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CvUpload(active_index: 3),
-                        ));
-                  },
-                  child: Center(child: Text('Next')),
+                        )),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+            PrimaryTextField(controller: TextEditingController(), label: "Password Number"),
+            const Gap(12.0),
+             PrimaryTextField(controller:TextEditingController(), label: "Issue date"),
+             const Gap(12.0),
+             ElevatedButton(onPressed: (){}, child: const Text("Next"))
+          ],
         ),
-      ),
-    );
+      );
+    
   }
 }

@@ -1,6 +1,5 @@
 import 'package:coffee_shop/core/widgets/primary_text_field.dart';
 import 'package:coffee_shop/register/home/multiStepper.dart';
-import 'package:coffee_shop/register/home/persoanlDetail.dart';
 
 import 'package:coffee_shop/form/signup_screen.dart';
 import 'package:coffee_shop/src/landing_screen.dart';
@@ -75,7 +74,11 @@ class LoginScreen extends StatelessWidget {
                     const Gap(12.0),
                     ElevatedButton(
                         onPressed: () {
-                          context.go('/');
+                          // context.go('/');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MUltiStepperpage()));
                         },
                         child: const Text("Log In")),
                     const Gap(12.0),
