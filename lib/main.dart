@@ -1,3 +1,4 @@
+import 'package:coffee_shop/core/config/routing.dart';
 import 'package:coffee_shop/core/config/theme.dart';
 import 'package:coffee_shop/form/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: lightTheme,
-        home: LoginScreen());
+        routerConfig: goRouter,
+        
+        );
   }
 }
 

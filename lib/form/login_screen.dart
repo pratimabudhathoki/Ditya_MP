@@ -7,6 +7,7 @@ import 'package:coffee_shop/src/landing_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/config/colors.dart';
@@ -74,14 +75,9 @@ class LoginScreen extends StatelessWidget {
                     const Gap(12.0),
                     ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(
-                              builder: (context) => const LandingScreen(),
-                            ),
-                            (route)=>false,
-                          );
+                          context.go('/');
                         },
-                        child: const Text("Login")),
+                        child: const Text("Log In")),
                     const Gap(12.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
