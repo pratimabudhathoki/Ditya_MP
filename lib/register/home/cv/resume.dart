@@ -32,13 +32,13 @@ class _CvUploadState extends State<CvUpload> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+      padding: const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const FormHeadline(title: "Resume Upload"),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           DottedBorder(
             color:
                 const Color.fromARGB(255, 83, 83, 83), 
@@ -88,7 +88,7 @@ class _CvUploadState extends State<CvUpload> {
                   )),
             ],
           ),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           // ElevatedButton(onPressed: (){}, child: const Text("Next"))
         ],
       ),

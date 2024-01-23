@@ -1,5 +1,5 @@
 import 'package:coffee_shop/core/config/colors.dart';
-import 'package:coffee_shop/core/constants/app_size.dart';
+import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/register/home/CompanySelect.dart';
 import 'package:coffee_shop/register/home/Educationdetail.dart';
 import 'package:coffee_shop/register/home/bank/bankDetail.dart';
@@ -75,7 +75,7 @@ class _MultiStepperState extends State<MUltiStepperpage> {
               ),
             ),
           ),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           Expanded(
               child: SingleChildScrollView(
             child: forms[activeIndex],

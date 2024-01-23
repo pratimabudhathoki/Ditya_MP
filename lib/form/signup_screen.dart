@@ -1,5 +1,5 @@
 import 'package:coffee_shop/core/config/colors.dart';
-import 'package:coffee_shop/core/constants/app_size.dart';
+import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
 import 'package:coffee_shop/form/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +39,7 @@ class _RegestrationPageState extends State<RegestrationPage> {
                 height: height * 0.10,
                 alignment: Alignment.bottomLeft,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 child: Text(
                   "Create your account",
                   style: Theme.of(context)
@@ -51,13 +51,13 @@ class _RegestrationPageState extends State<RegestrationPage> {
               const Gap(12.0),
               Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 margin:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 decoration: const BoxDecoration(
                   color: AppColors.white,
                   borderRadius:
-                      BorderRadius.all(Radius.circular(AppSize.curveValue)),
+                      BorderRadius.all(Radius.circular(SizeManager.curveValue)),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

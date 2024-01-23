@@ -1,20 +1,16 @@
-import 'package:coffee_shop/core/widgets/primary_text_field.dart';
+
 import 'package:coffee_shop/core/widgets/widgets.dart';
-import 'package:coffee_shop/register/home/cv/resume.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:im_stepper/stepper.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../core/constants/constants.dart';
 
 class PassportUpload extends StatefulWidget {
   
-  PassportUpload({super.key});
+  const PassportUpload({super.key});
 
   @override
   State<PassportUpload> createState() => _PassportUploadState();
@@ -34,7 +30,7 @@ class _PassportUploadState extends State<PassportUpload> {
     });
   }
 
-  //drop down of Expiry calander
+  //Drop down of Expiry calander
   DateTime SelectedDate = DateTime.now();
   DateTime SelectedExpiryDate = DateTime.now();
   //drop down of DOB calander
@@ -43,14 +39,14 @@ class _PassportUploadState extends State<PassportUpload> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-         padding: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+         padding: const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
         child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
           children: [
            
            FormHeadline(title: "Password Upload"),
-              const Gap(AppSize.pagePadding),
+              const Gap(SizeManager.pagePadding),
             DottedBorder(
               borderType: BorderType.RRect,
               dashPattern: const [5, 5],

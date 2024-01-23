@@ -1,5 +1,5 @@
 import 'package:coffee_shop/core/config/colors.dart';
-import 'package:coffee_shop/core/constants/app_size.dart';
+import 'package:coffee_shop/core/constants/size_manager.dart';
 import "package:flutter/material.dart";
 
 final lightTheme = ThemeData(
@@ -23,26 +23,26 @@ final lightTheme = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSize.curveValue),
+        borderRadius: BorderRadius.circular(SizeManager.curveValue),
         borderSide: const BorderSide(color: Colors.grey)),
     enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSize.curveValue),
+        borderRadius: BorderRadius.circular(SizeManager.curveValue),
         borderSide: const BorderSide(color: Colors.grey)),
     focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSize.curveValue),
+        borderRadius: BorderRadius.circular(SizeManager.curveValue),
         borderSide: const BorderSide(color: Colors.grey)),
     errorBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSize.curveValue),
+        borderRadius: BorderRadius.circular(SizeManager.curveValue),
         borderSide: const BorderSide(color: Colors.red)),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
       elevation:const MaterialStatePropertyAll(1.0) ,
         minimumSize: const MaterialStatePropertyAll(
-             Size(double.maxFinite, AppSize.buttonHeight)),
+             Size(double.maxFinite, SizeManager.buttonHeight)),
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSize.curveValue),
+            borderRadius: BorderRadius.circular(SizeManager.curveValue),
           ),
         ),
         backgroundColor: const MaterialStatePropertyAll(AppColors.secondary),

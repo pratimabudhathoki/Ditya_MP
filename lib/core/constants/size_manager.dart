@@ -1,4 +1,4 @@
-class AppSize{
+class SizeManager{
   static const buttonHeight = 50.0;
 
   static const pagePadding = 16.0;

@@ -10,7 +10,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../core/config/colors.dart';
-import '../core/constants/app_size.dart';
+import '../core/constants/size_manager.dart';
 
 class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                 height: height * 0.10,
                 alignment: Alignment.bottomLeft,
                 padding:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 child: Text(
                   "Login",
                   style: Theme.of(context)
@@ -47,13 +47,13 @@ class LoginScreen extends StatelessWidget {
               const Gap(12.0),
               Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 margin:
-                    const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+                    const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 decoration: const BoxDecoration(
                   color: AppColors.white,
                   borderRadius:
-                      BorderRadius.all(Radius.circular(AppSize.curveValue)),
+                      BorderRadius.all(Radius.circular(SizeManager.curveValue)),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

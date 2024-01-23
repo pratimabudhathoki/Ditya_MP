@@ -1,4 +1,4 @@
-import 'package:coffee_shop/core/constants/app_size.dart';
+import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
 import 'package:coffee_shop/register/home/passportUpload.dart';
 import 'package:flutter/material.dart';
@@ -36,13 +36,13 @@ class _MyWidgetState extends State<PhotoUpload> {
     BuildContext context,
   ) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+      padding: const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const FormHeadline(title: "Photo Upload"),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           DottedBorder(
             borderType: BorderType.RRect,
             dashPattern: const [5, 5],
@@ -55,7 +55,7 @@ class _MyWidgetState extends State<PhotoUpload> {
               fit: BoxFit.cover,
             ),
           ),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           // Row(
           //  children: [
           //     InkWell(
@@ -134,7 +134,7 @@ class _MyWidgetState extends State<PhotoUpload> {
                   )),
             ],
           ),
-          const Gap(AppSize.pagePadding),
+          const Gap(SizeManager.pagePadding),
           // ElevatedButton(onPressed: () {}, child: const Text("Next"))
         ],
       ),

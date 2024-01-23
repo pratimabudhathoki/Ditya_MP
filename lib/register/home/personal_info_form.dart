@@ -33,7 +33,7 @@ class _PersonalInfoFormState extends State<PersonalInfoForm> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSize.pagePadding),
+      padding: const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,

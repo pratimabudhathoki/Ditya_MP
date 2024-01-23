@@ -74,37 +74,37 @@ class _HomeScreenState extends State<HomeScreen>
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Gap(AppSize.pagePadding),
+            const Gap(SizeManager.pagePadding),
             const Row(
               children: [
-                Gap(AppSize.pagePadding),
+                Gap(SizeManager.pagePadding),
                 HomeCard(
                   color: Color.fromARGB(255, 248, 104, 94),
                   iconData: Icons.sort,
                   label: "Selected By Company",
                   stats: "24",
                 ),
-                Gap(AppSize.pagePadding),
+                Gap(SizeManager.pagePadding),
                 HomeCard(
                   color: Color.fromARGB(255, 213, 112, 231),
                   iconData: Icons.person_add,
                   label: "Interview Invites",
                   stats: "12",
                 ),
-                Gap(AppSize.pagePadding),
+                Gap(SizeManager.pagePadding),
               ],
             ),
-            const Gap(AppSize.pagePadding),
+            const Gap(SizeManager.pagePadding),
             Row(
               children: [
-                const Gap(AppSize.pagePadding),
+                const Gap(SizeManager.pagePadding),
                 HomeCard(
                   color: Colors.green.shade300,
                   iconData: Icons.event_note,
                   label: "Interview Attendance",
                   stats: "10",
                 ),
-                const Gap(AppSize.pagePadding),
+                const Gap(SizeManager.pagePadding),
                 Expanded(
                   child: Container(
                     padding: const EdgeInsets.all(12.0),
@@ -140,12 +140,12 @@ class _HomeScreenState extends State<HomeScreen>
                     ),
                   ),
                 ),
-                const Gap(AppSize.pagePadding),
+                const Gap(SizeManager.pagePadding),
               ],
             ),
             const Gap(8.0),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:AppSize.pagePadding),
+              padding: const EdgeInsets.symmetric(horizontal:SizeManager.pagePadding),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
