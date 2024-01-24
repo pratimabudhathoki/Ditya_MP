@@ -1,6 +1,6 @@
 import 'package:coffee_shop/core/config/routing.dart';
 import 'package:coffee_shop/core/config/theme.dart';
-import 'package:coffee_shop/form/login_screen.dart';
+import 'package:coffee_shop/features/auth/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,31 +1,28 @@
-import 'package:coffee_shop/core/config/colors.dart';
-import 'package:coffee_shop/core/constants/size_manager.dart';
-import 'package:coffee_shop/core/widgets/widgets.dart';
-import 'package:coffee_shop/form/login_screen.dart';
+import 'package:coffee_shop/core/widgets/primary_text_field.dart';
+import 'package:coffee_shop/register/home/multiStepper.dart';
+
+import 'package:coffee_shop/features/auth/views/screens/signup_screen.dart';
+import 'package:coffee_shop/src/landing_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class RegestrationPage extends StatefulWidget {
-  const RegestrationPage({super.key});
+import '../../../../core/config/colors.dart';
+import '../../../../core/constants/size_manager.dart';
 
-  @override
-  State<RegestrationPage> createState() => _RegestrationPageState();
-}
-
-class _RegestrationPageState extends State<RegestrationPage> {
-  late double height, width;
+class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final TextEditingController _nameController = TextEditingController();
   final TextEditingController _numberController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmpasswordController =
-      TextEditingController();
 
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    height = MediaQuery.of(context).size.height;
-    width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppColors.primary,
       appBar: AppBar(),
@@ -33,7 +30,6 @@ class _RegestrationPageState extends State<RegestrationPage> {
         key: _formKey,
         child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.max,
             children: [
               Container(
                 height: height * 0.10,
@@ -41,7 +37,7 @@ class _RegestrationPageState extends State<RegestrationPage> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
                 child: Text(
-                  "Create your account",
+                  "Login",
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall
@@ -62,35 +58,35 @@ class _RegestrationPageState extends State<RegestrationPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: <Widget>[
                     const Gap(12.0),
                     Container(
-                        alignment: Alignment.topLeft,
-                        height: 85,
-                        width: 300,
+                        alignment: Alignment.centerLeft,
+                        height: 100,
+                        width: 250,
                         child: Image.asset('assets/images/ditya.jpg')),
                     const Gap(24.0),
-                    PrimaryTextField(
-                        controller: _nameController, label: "Full name"),
-                    const Gap(12.0),
                     PrimaryTextField(
                         controller: _numberController, label: "Mobile number"),
                     const Gap(12.0),
                     PrimaryTextField(
                         controller: _passwordController, label: "Password"),
                     const Gap(12.0),
-                    PrimaryTextField(
-                        controller: _confirmpasswordController,
-                        label: "Confirm password"),
-                    const Gap(12.0),
                     ElevatedButton(
-                        onPressed: () {}, child: const Text("Submit")),
+                        onPressed: () {
+                          // context.go('/');
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const MUltiStepperpage()));
+                        },
+                        child: const Text("Log In")),
                     const Gap(12.0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already has account?",
+                          "Dont't have a account?",
                           style: Theme.of(context).textTheme.labelSmall,
                         ),
                         InkWell(
@@ -98,12 +94,12 @@ class _RegestrationPageState extends State<RegestrationPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LoginScreen(),
-                                ));
+                                    builder: (context) =>
+                                        const RegestrationPage()));
                           },
                           child: Center(
                             child: Text(
-                              ' Login',
+                              ' Sign up',
                               style: Theme.of(context)
                                   .textTheme
                                   .labelLarge
