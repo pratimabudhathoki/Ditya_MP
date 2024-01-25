@@ -1,4 +1,4 @@
-import 'package:coffee_shop/register/home/Educationdetail.dart';
+import 'package:coffee_shop/features/upload_documents/views/Educationdetail.dart';
 import 'package:csc_picker/model/select_status_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -203,11 +203,7 @@ class _WorkExperienceState extends State<WorkExperience> {
                     widget.active_index++;
                   });
 
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              EducationDetail(active_index: 8)));
+                 
                 },
                 child: Center(child: Text('Next')),
               ),

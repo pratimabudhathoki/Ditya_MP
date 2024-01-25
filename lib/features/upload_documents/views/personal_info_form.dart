@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../core/constants/constants.dart';
+import '../../../core/constants/constants.dart';
 
 class PersonalInfoForm extends StatefulWidget {
   const PersonalInfoForm({super.key});

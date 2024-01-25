@@ -1,4 +1,5 @@
 import 'package:coffee_shop/core/config/colors.dart';
+import 'package:coffee_shop/core/config/config.dart';
 import 'package:coffee_shop/core/constants/constants.dart';
 import 'package:coffee_shop/core/widgets/home_drawer.dart';
 import 'package:coffee_shop/src/breaking_news.dart';
@@ -106,37 +107,42 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
                 const Gap(SizeManager.pagePadding),
                 Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(12.0),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: const Color.fromARGB(255, 244, 244, 244),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black.withAlpha(35),
-                              offset: const Offset(3, 3),
-                              blurRadius: 10.0,
-                              spreadRadius: 2.0)
-                        ]),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "My Progress",
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodySmall
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const Gap(10.0),
-                        AnimatedBuilder(
-                            animation: _animation,
-                            builder: (context, child) {
-                              return LinearProgressIndicator(
-                                value: _animation.value,
-                              );
-                            }),
-                      ],
+                  child: InkWell(
+                    onTap: (){
+                      context.push(AppRoutes.uploadDocRoute);
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          color: const Color.fromARGB(255, 244, 244, 244),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black.withAlpha(35),
+                                offset: const Offset(3, 3),
+                                blurRadius: 10.0,
+                                spreadRadius: 2.0)
+                          ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "My Progress",
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          const Gap(10.0),
+                          AnimatedBuilder(
+                              animation: _animation,
+                              builder: (context, child) {
+                                return LinearProgressIndicator(
+                                  value: _animation.value,
+                                );
+                              }),
+                        ],
+                      ),
                     ),
                   ),
                 ),

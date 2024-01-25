@@ -1,6 +1,6 @@
 import 'package:coffee_shop/core/constants/constants.dart';
 import 'package:coffee_shop/core/widgets/form_headline.dart';
-import 'package:coffee_shop/register/home/language.dart';
+import 'package:coffee_shop/features/upload_documents/views/language.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';

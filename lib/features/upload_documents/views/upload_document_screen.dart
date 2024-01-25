@@ -1,33 +1,34 @@
 import 'package:coffee_shop/core/config/colors.dart';
 import 'package:coffee_shop/core/constants/size_manager.dart';
-import 'package:coffee_shop/register/home/CompanySelect.dart';
-import 'package:coffee_shop/register/home/Educationdetail.dart';
-import 'package:coffee_shop/register/home/bank/bankDetail.dart';
-import 'package:coffee_shop/register/home/cv/resume.dart';
-import 'package:coffee_shop/register/home/language.dart';
-import 'package:coffee_shop/register/home/passportUpload.dart';
-import 'package:coffee_shop/register/home/personal_info_form.dart';
-import 'package:coffee_shop/register/home/photoUpload.dart';
-import 'package:coffee_shop/register/home/workExperience.dart';
+import 'package:coffee_shop/features/upload_documents/views/CompanySelect.dart';
+import 'package:coffee_shop/features/upload_documents/views/Educationdetail.dart';
+import 'package:coffee_shop/features/upload_documents/views/bankDetail.dart';
+import 'package:coffee_shop/features/upload_documents/views/resume.dart';
+import 'package:coffee_shop/features/upload_documents/views/language.dart';
+import 'package:coffee_shop/features/upload_documents/views/passportUpload.dart';
+import 'package:coffee_shop/features/upload_documents/views/personal_info_form.dart';
+import 'package:coffee_shop/features/upload_documents/views/photoUpload.dart';
+import 'package:coffee_shop/features/upload_documents/views/workExperience.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:im_stepper/stepper.dart';
 
-class MUltiStepperpage extends StatefulWidget {
-  const MUltiStepperpage({super.key});
+class UploadDocumentScreen extends StatefulWidget {
+  const UploadDocumentScreen({super.key});
 
   @override
-  State<MUltiStepperpage> createState() => _MultiStepperState();
+  State<UploadDocumentScreen> createState() => _UploadDocumentScreenState();
 }
 
-class _MultiStepperState extends State<MUltiStepperpage> {
+class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
   int activeIndex = 0;
   List<Widget> forms = [
     const PersonalInfoForm(),
     PhotoUpload(),
-    PassportUpload(),
+    const PassportUpload(),
+    EducationDetail(),
     const CvUpload()
   ];
 
@@ -53,6 +54,10 @@ class _MultiStepperState extends State<MUltiStepperpage> {
                   ),
                   Icon(
                     Icons.edit_document,
+                    color: AppColors.white,
+                  ),
+                  Icon(
+                    Icons.school,
                     color: AppColors.white,
                   ),
                   Icon(
@@ -83,11 +88,11 @@ class _MultiStepperState extends State<MUltiStepperpage> {
         ],
       ),
       bottomNavigationBar: InkWell(
-        onTap: (){
-        if(activeIndex==3){
-         return context.go('/');
-          // return;
-        }
+        onTap: () {
+          if (activeIndex == 4) {
+            return context.go('/');
+            // return;
+          }
           setState(() {
             activeIndex++;
           });

@@ -1,6 +1,9 @@
 import 'package:coffee_shop/features/auth/views/screens/login_screen.dart';
+import 'package:coffee_shop/features/auth/views/screens/otp_screen.dart';
+import 'package:coffee_shop/features/auth/views/screens/signup_screen.dart';
+import 'package:coffee_shop/features/upload_documents/views/upload_document_screen.dart';
 import 'package:coffee_shop/src/home_detail.dart';
-import 'package:coffee_shop/src/home_screen.dart';
+import 'package:coffee_shop/features/home/home_screen.dart';
 import 'package:coffee_shop/src/landing_screen.dart';
 import 'package:coffee_shop/src/profile_detail.dart';
 import 'package:coffee_shop/src/profile_screen.dart';
@@ -11,10 +14,16 @@ final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _shellNavigatorAKey = GlobalKey<NavigatorState>(debugLabel: 'shellA');
 final _shellNavigatorAddKey = GlobalKey<NavigatorState>(debugLabel: 'shellAdd');
 final _shellNavigatorBKey = GlobalKey<NavigatorState>(debugLabel: 'shellB');
-
+abstract class AppRoutes{
+  static const signupRoute = '/signup';
+  static const loginRoute = '/login';
+  static const otpRoute = '/otp';
+  static const homeRoute = '/';
+  static const uploadDocRoute = '/uploadDoc';
+}
 // the one and only GoRouter instance
 final goRouter = GoRouter(
-  initialLocation: '/login',
+  initialLocation: AppRoutes.loginRoute,
   navigatorKey: _rootNavigatorKey,
   routes: [
     // Stateful nested navigation based on:
@@ -58,7 +67,7 @@ final goRouter = GoRouter(
           GoRoute(
             path: '/add',
             builder: (context, state) {
-              return SizedBox.shrink();
+              return const SizedBox.shrink();
             },
           )
         ]),
@@ -85,17 +94,34 @@ final goRouter = GoRouter(
         ),
       ],
     ),
-
+GoRoute(
+      path: AppRoutes.signupRoute,
+      builder: (context, state) {
+        return const SignupScreen();
+      },
+    ),
     GoRoute(
-      path: '/login',
+      path: AppRoutes.loginRoute,
       builder: (context, state) {
         return LoginScreen();
       },
     ),
      GoRoute(
-      path: '/',
+      path: AppRoutes.homeRoute,
       builder: (context, state) {
-        return HomeScreen();
+        return const HomeScreen();
+      },
+    ),
+     GoRoute(
+      path: AppRoutes.uploadDocRoute,
+      builder: (context, state) {
+        return const UploadDocumentScreen();
+      },
+    ),
+     GoRoute(
+      path: AppRoutes.otpRoute,
+      builder: (context, state) {
+        return const OTPScreen();
       },
     ),
   ],

@@ -1,9 +1,12 @@
 import 'package:coffee_shop/core/config/routing.dart';
 import 'package:coffee_shop/core/config/theme.dart';
+import 'package:coffee_shop/dependency_injection.dart' as  di;
 import 'package:coffee_shop/features/auth/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
+
 void main() {
+  di.configureDependencies();
   runApp(const MyApp());
 }
 
