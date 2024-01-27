@@ -9,9 +9,11 @@ part 'login_state.dart';
 
 @injectable
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(LoginInitial()) {
-    final authController = getIt.get<AuthController>();
+  final AuthController authController; 
+  LoginBloc({required this.authController}) : super(LoginInitial()) {
+   
     on<LoginEvent>((event, emit) async {
+      emit(LoginLoading());
       final failureOrSuccess = await authController.login(
           mobileNo: event.mobileNumber, password: event.password);
       failureOrSuccess.fold(

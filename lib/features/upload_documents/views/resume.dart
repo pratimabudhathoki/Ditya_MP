@@ -1,4 +1,5 @@
 import 'package:coffee_shop/core/constants/constants.dart';
+import 'package:coffee_shop/core/shared_components/choose_file_button.dart';
 import 'package:coffee_shop/core/widgets/form_headline.dart';
 import 'package:coffee_shop/features/upload_documents/views/language.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -34,10 +35,12 @@ class _CvUploadState extends State<CvUpload> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: SizeManager.pagePadding),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           const FormHeadline(title: "Resume Upload"),
+          const Gap(SizeManager.pagePadding),
+          const Text("Please attach your resume with the latest updates."),
           const Gap(SizeManager.pagePadding),
           DottedBorder(
             color:
@@ -47,49 +50,18 @@ class _CvUploadState extends State<CvUpload> {
            
             child: Container(
                
-                height: 300, 
-                width: double
-                    .infinity,
+                height: 120, 
+                width:120,
                 color: const Color.fromARGB(213, 253, 253,
-                    252)
+                    252),
+                    child: const Icon(Icons.picture_as_pdf),
                 ),
           ),
           
-          const SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              InkWell(
-                onTap: () {
-                  getImage();
-                },
-                child: Container(
-                   padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 2, 51, 92),
-                      border: Border.all(style: BorderStyle.solid)),
-                  child: Text(
-                    "Choose File",
-                    style: GoogleFonts.lora(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                      border: Border.all(style: BorderStyle.solid)),
-                  child: Text(
-                    "Upload your Cv/Resume",
-                    style: GoogleFonts.lora(),
-                  )),
-            ],
-          ),
+         const Gap(SizeManager.pagePadding),
+         ChooseFileButton(onTap: (file){}),
           const Gap(SizeManager.pagePadding),
-          // ElevatedButton(onPressed: (){}, child: const Text("Next"))
+         
         ],
       ),
     );

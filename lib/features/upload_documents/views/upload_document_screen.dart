@@ -23,92 +23,152 @@ class UploadDocumentScreen extends StatefulWidget {
 }
 
 class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
-  int activeIndex = 0;
+  // int activeIndex = 0;
+  ValueNotifier<int> activeIndex = ValueNotifier<int>(0);
   List<Widget> forms = [
     const PersonalInfoForm(),
     PhotoUpload(),
     const PassportUpload(),
+    const CvUpload(),
     EducationDetail(),
-    const CvUpload()
+    LanguageSelect(),
+    WorkExperience(),
+    BankDetail(),
+    CompanySelect(active_index: 0)
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       body: Column(
         children: [
           Container(
             color: AppColors.primary,
             child: SafeArea(
-              child: IconStepper(
-                icons: const [
-                  Icon(
-                    Icons.person,
-                    color: AppColors.white,
-                  ),
-                  Icon(
-                    Icons.photo,
-                    color: AppColors.white,
-                  ),
-                  Icon(
-                    Icons.edit_document,
-                    color: AppColors.white,
-                  ),
-                  Icon(
-                    Icons.school,
-                    color: AppColors.white,
-                  ),
-                  Icon(
-                    Icons.document_scanner,
-                    color: AppColors.white,
-                  ),
-                ],
-                enableNextPreviousButtons: false,
-                stepRadius: 16.0,
-                lineLength: 30,
-                activeStep: activeIndex,
-                activeStepBorderColor: AppColors.primary,
-                activeStepColor: AppColors.secondary,
-                stepColor: AppColors.primary,
-                onStepReached: (index) {
-                  setState(() {
-                    activeIndex = index;
-                  });
-                },
-              ),
+              child: ValueListenableBuilder<int>(
+                  valueListenable: activeIndex,
+                  builder: (context, value, child) {
+                    return IconStepper(
+                      icons: const [
+                        Icon(
+                          Icons.person,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.photo,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.edit_document,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.school,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.document_scanner,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.language,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.work_history,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.account_balance,
+                          color: AppColors.white,
+                        ),
+                        Icon(
+                          Icons.business,
+                          color: AppColors.white,
+                        ),
+                      ],
+                      enableNextPreviousButtons: false,
+                      stepRadius: 16.0,
+                      lineLength: 30,
+                      activeStep: value,
+                      activeStepBorderColor: AppColors.primary,
+                      activeStepColor: AppColors.secondary,
+                      stepColor: AppColors.primary,
+                      onStepReached: (index) {
+                       activeIndex.value=index;
+                      },
+                    );
+                  }),
             ),
           ),
           const Gap(SizeManager.pagePadding),
           Expanded(
               child: SingleChildScrollView(
-            child: forms[activeIndex],
+            child: ValueListenableBuilder(
+              valueListenable: activeIndex,
+              builder: (context, value, child) => forms[value],
+            ),
           ))
         ],
       ),
-      bottomNavigationBar: InkWell(
-        onTap: () {
-          if (activeIndex == 4) {
-            return context.go('/');
-            // return;
-          }
-          setState(() {
-            activeIndex++;
-          });
-        },
-        child: Container(
-            height: 60.0,
-            alignment: Alignment.center,
-            width: double.maxFinite,
-            color: AppColors.primary,
-            child: Text(
-              "Next",
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-            )),
+      bottomNavigationBar: ValueListenableBuilder(
+         valueListenable: activeIndex,
+        builder: (context, value, child) {
+          return Row(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Flexible(
+                child: InkWell(
+                  splashColor: Colors.black,
+                  onTap: activeIndex.value == 0
+                      ? null
+                      : () {
+                          activeIndex.value--;
+                        },
+                  child: Container(
+                      height: 60.0,
+                      alignment: Alignment.center,
+                      color: activeIndex.value == 0
+                          ? AppColors.secondary.withAlpha(90)
+                          : AppColors.secondary,
+                      child: Text(
+                        "Previous",
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      )),
+                ),
+              ),
+              Flexible(
+                child: InkWell(
+                  onTap: () {
+                    if (activeIndex.value == forms.length - 1) {
+                      return context.go('/');
+                      // return;
+                    }
+                    setState(() {
+                      activeIndex.value++;
+                    });
+                  },
+                  child: Container(
+                      height: 60.0,
+                      alignment: Alignment.center,
+                      color: AppColors.primary,
+                      child: Text(
+                        "Next",
+                        style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      )),
+                ),
+              ),
+            ],
+          );
+        }
       ),
     );
   }

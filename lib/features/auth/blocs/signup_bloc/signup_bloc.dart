@@ -11,8 +11,9 @@ part 'signup_bloc.freezed.dart';
 
 @injectable
 class SignupBloc extends Bloc<SignupEvent, SignupState> {
-  SignupBloc() : super(const SignupState(status: SignupStatus.initial)) {
-    final authController = getIt.get<AuthController>();
+  final AuthController authController; 
+  SignupBloc({required this.authController}) : super(const SignupState(status: SignupStatus.initial)) {
+    // final authController = getIt.get<AuthController>();
     on<RequestSignup>((event, emit) async {
       emit(state.copyWith(status: SignupStatus.requestSignupLoading));
 
@@ -28,8 +29,9 @@ class SignupBloc extends Bloc<SignupEvent, SignupState> {
                 state.copyWith(status: SignupStatus.requestSignupSuccess),
               ));
     });
-    
+
     on<VerifyOTP>((event, emit) async {
+      emit(state.copyWith(status: SignupStatus.verifyOTPLoading));
       final failureOrSuccess =
           await authController.verifyOTP(otpCode: event.otpCode);
       failureOrSuccess.fold(

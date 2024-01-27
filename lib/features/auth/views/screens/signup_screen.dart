@@ -1,11 +1,11 @@
-import 'package:coffee_shop/core/config/colors.dart';
 import 'package:coffee_shop/core/config/config.dart';
 import 'package:coffee_shop/core/constants/size_manager.dart';
+import 'package:coffee_shop/core/extensions/context_extension.dart';
+import 'package:coffee_shop/core/helpers/helpers.dart';
 import 'package:coffee_shop/core/utils/utils.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
 import 'package:coffee_shop/dependency_injection.dart';
 import 'package:coffee_shop/features/auth/blocs/signup_bloc/signup_bloc.dart';
-import 'package:coffee_shop/features/auth/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -18,7 +18,7 @@ class SignupScreen extends StatefulWidget {
   State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _SignupScreenState extends State<SignupScreen> with FormValidators {
   late double height, width;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   // final TextEditingController _nameController = TextEditingController();
@@ -92,31 +92,41 @@ class _SignupScreenState extends State<SignupScreen> {
                               width: 300,
                               child: Image.asset('assets/images/ditya.jpg')),
                           const Gap(24.0),
-                          // PrimaryTextField(
-                          //     controller: _nameController, label: "Full name"),
-                          // const Gap(12.0),
                           PrimaryTextField(
-                              controller: _numberController,
-                              label: "Mobile number"),
+                            controller: _numberController,
+                            validator: validateMobileNumber,
+                            label: "Mobile number",
+                            keyboardType: TextInputType.phone,
+                          ),
                           const Gap(12.0),
                           PrimaryTextField(
                               controller: _passwordController,
+                              validator: validatePassword,
+                              obscure: true,
                               label: "Password"),
                           const Gap(12.0),
                           PrimaryTextField(
                               controller: _confirmpasswordController,
+                              validator: (confirmPassword)=>validateConfirmPassword(_passwordController.text,confirmPassword),
+                              obscure: true,
                               label: "Confirm password"),
                           const Gap(12.0),
-                          ElevatedButton(
-                              onPressed: () {
-                                BlocProvider.of<SignupBloc>(context).add(
-                                    RequestSignup(
-                                        mobileNo: _numberController.text,
-                                        password: _passwordController.text,
-                                        confirmPassword:
-                                            _confirmpasswordController.text));
-                              },
-                              child: const Text("Sign Up")),
+
+                          state.status == SignupStatus.requestSignupLoading
+                              ? const Center(child:  CircularProgressIndicator())
+                              : ElevatedButton(
+                                  onPressed: () {
+                                    if(!_formKey.currentState!.validate())return;
+                                    context.hideKeyboard();
+                                    BlocProvider.of<SignupBloc>(context).add(
+                                        RequestSignup(
+                                            mobileNo: _numberController.text,
+                                            password: _passwordController.text,
+                                            confirmPassword:
+                                                _confirmpasswordController
+                                                    .text));
+                                  },
+                                  child: const Text("Sign Up")),
                           const Gap(12.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

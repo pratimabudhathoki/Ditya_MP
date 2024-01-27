@@ -17,10 +17,9 @@ final lightTheme = ThemeData(
     onSurface: AppColors.textColor,
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: AppColors.primary,
-    elevation: 0,
-    iconTheme: IconThemeData(color: AppColors.white)
-  ),
+      backgroundColor: AppColors.primary,
+      elevation: 0,
+      iconTheme: IconThemeData(color: AppColors.white)),
   inputDecorationTheme: InputDecorationTheme(
     border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(SizeManager.curveValue),
@@ -37,15 +36,21 @@ final lightTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
-      elevation:const MaterialStatePropertyAll(1.0) ,
+        elevation: const MaterialStatePropertyAll(1.0),
         minimumSize: const MaterialStatePropertyAll(
-             Size(double.maxFinite, SizeManager.buttonHeight)),
+            Size(double.maxFinite, SizeManager.buttonHeight)),
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(SizeManager.curveValue),
           ),
         ),
-        backgroundColor: const MaterialStatePropertyAll(AppColors.secondary),
+        backgroundColor: MaterialStateProperty.resolveWith<Color>(
+            (Set<MaterialState> states) {
+          if (states.contains(MaterialState.disabled)) {
+            return Colors.grey;
+          }
+          return AppColors.secondary;
+        }),
         foregroundColor: const MaterialStatePropertyAll(AppColors.white)),
   ),
 );

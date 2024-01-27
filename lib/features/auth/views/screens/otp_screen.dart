@@ -29,7 +29,7 @@ class OTPScreen extends StatefulWidget {
 class _OTPScreenState extends State<OTPScreen> {
   final _otpPinFieldController = GlobalKey<OtpPinFieldState>();
 
-  ValueNotifier otp = ValueNotifier<String>('');
+  ValueNotifier<String> otp = ValueNotifier<String>('');
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,6 @@ class _OTPScreenState extends State<OTPScreen> {
       child: BlocListener<SignupBloc, SignupState>(
         listener: (context, state) {
           if (state.status == SignupStatus.verifyOTPError) {
-          
             showDefaultSnackBar(context);
           } else if (state.status == SignupStatus.verifyOTPSuccess) {
             context.go(AppRoutes.loginRoute);
@@ -103,14 +102,27 @@ class _OTPScreenState extends State<OTPScreen> {
                           onSubmit: (otp) {},
                         ),
                         const Gap(24.0),
-                        ElevatedButton(
-                            onPressed: () {
-                              print(otp.value);
-                              context
-                                  .read<SignupBloc>()
-                                  .add(VerifyOTP(otpCode: otp.value));
-                            },
-                            child: const Text("Verify")),
+                        BlocBuilder<SignupBloc, SignupState>(
+                          builder: (context, state) {
+                            if(state.status==SignupStatus.verifyOTPLoading){
+                              return const Center(child: CircularProgressIndicator());
+                            }
+                            return ValueListenableBuilder(
+                                valueListenable: otp,
+                                builder: (context, value, child) {
+                                  return ElevatedButton(
+                                      onPressed: otp.value.length < 4
+                                          ? null
+                                          : () {
+                                              print(otp.value);
+                                              context.read<SignupBloc>().add(
+                                                  VerifyOTP(
+                                                      otpCode: otp.value));
+                                            },
+                                      child: const Text("Verify"));
+                                });
+                          },
+                        ),
                         const Gap(12.0),
                         const Gap(12.0),
                       ],

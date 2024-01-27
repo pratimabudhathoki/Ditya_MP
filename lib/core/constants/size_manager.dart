@@ -3,5 +3,5 @@ class SizeManager{
 
   static const pagePadding = 16.0;
 
-  static const curveValue = 10.0;
+  static const curveValue = 6.0;
 }

@@ -2,11 +2,17 @@ import "package:coffee_shop/core/network/network.dart";
 import "package:dio/dio.dart";
 import "package:fpdart/fpdart.dart";
 import "package:injectable/injectable.dart";
+import "package:shared_preferences/shared_preferences.dart";
 
 @LazySingleton()
 class AuthController {
   final Dio _dio;
-  AuthController({required Dio dio}) : _dio = dio;
+  final SharedPreferences _sharedPreferences;
+  AuthController(
+      {required Dio dio, required SharedPreferences sharedPreferences})
+      : _dio = dio,
+        _sharedPreferences = sharedPreferences;
+
   Future<Either<String, bool>> signup(
       {required String mobileNo, password, confirmPassword}) async {
     try {
@@ -40,11 +46,7 @@ class AuthController {
       {required String mobileNo, password}) async {
     try {
       final response = await _dio.post(ApiUrls.login,
-      data:{
-        "mobile_no":mobileNo,
-        "password":password
-      }
-      );
+          data: {"mobile_no": mobileNo, "password": password});
       print(response);
       return right(true);
     } catch (e) {

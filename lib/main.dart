@@ -5,8 +5,9 @@ import 'package:coffee_shop/features/auth/views/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 
-void main() {
-  di.configureDependencies();
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+ await di.configureDependencies();
   runApp(const MyApp());
 }
 
@@ -20,7 +21,6 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: lightTheme,
         routerConfig: goRouter,
-        
         );
   }
 }
