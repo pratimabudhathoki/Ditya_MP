@@ -17,7 +17,7 @@ class AuthController {
       {required String mobileNo, password, confirmPassword}) async {
     try {
       final response =
-          await _dio.post(ApiUrls.signup, options: Options(), data: {
+          await _dio.post(APIUrls.signup, options: Options(), data: {
         "mobile_no": mobileNo,
         "password": password,
         "password_confirmation": confirmPassword,
@@ -32,7 +32,7 @@ class AuthController {
   Future<Either<String, bool>> verifyOTP({required String otpCode}) async {
     try {
       final response =
-          await _dio.post(ApiUrls.verifyOTP, options: Options(), data: {
+          await _dio.post(APIUrls.verifyOTP, options: Options(), data: {
         "code": otpCode,
       });
       print(response);
@@ -45,9 +45,10 @@ class AuthController {
   Future<Either<String, bool>> login(
       {required String mobileNo, password}) async {
     try {
-      final response = await _dio.post(ApiUrls.login,
+      final response = await _dio.post(APIUrls.login,
           data: {"mobile_no": mobileNo, "password": password});
       print(response);
+     await  _sharedPreferences.setString("TOKEN",response.data['token']);
       return right(true);
     } catch (e) {
       return left(e.toString());

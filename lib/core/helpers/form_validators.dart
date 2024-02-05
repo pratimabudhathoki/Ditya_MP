@@ -1,6 +1,19 @@
 import 'package:form_validation/form_validation.dart';
 
 class FormValidators {
+
+    String? validateRequired(String? value){
+      final validator = Validator(
+      validators: [
+        const RequiredValidator(),
+      ],
+    );
+    return validator.validate(
+      label: 'Field',
+      value: value,
+    );
+    }
+
   String? validateEmail(String? email) {
     final validator = Validator(
       validators: [

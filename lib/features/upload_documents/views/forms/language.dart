@@ -1,6 +1,6 @@
 import 'package:coffee_shop/core/constants/constants.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
-import 'package:coffee_shop/features/upload_documents/views/CompanySelect.dart';
+import 'package:coffee_shop/features/upload_documents/views/forms/CompanySelect.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

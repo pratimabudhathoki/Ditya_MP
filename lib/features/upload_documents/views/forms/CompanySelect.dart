@@ -1,6 +1,6 @@
 import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
-import 'package:coffee_shop/features/upload_documents/views/bankDetail.dart';
+import 'package:coffee_shop/features/upload_documents/views/forms/bankDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';

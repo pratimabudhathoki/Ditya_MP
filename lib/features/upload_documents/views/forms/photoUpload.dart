@@ -2,7 +2,7 @@ import 'package:coffee_shop/core/config/colors.dart';
 import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/core/shared_components/choose_file_button.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
-import 'package:coffee_shop/features/upload_documents/views/passportUpload.dart';
+import 'package:coffee_shop/features/upload_documents/views/forms/passportUpload.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:im_stepper/stepper.dart';
