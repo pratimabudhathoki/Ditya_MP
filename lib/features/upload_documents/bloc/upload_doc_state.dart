@@ -3,7 +3,7 @@ part of 'upload_doc_bloc.dart';
 @freezed
 class UploadDocState with _$UploadDocState {
   const factory UploadDocState({
-    @Default(0) int step,
+    @Default(1) int step,
     @Default(UploadStatus.initial) UploadStatus uploadStatus,
 
     // Personal Information Form contents
@@ -15,6 +15,10 @@ class UploadDocState with _$UploadDocState {
     String? birthDate,
     @Default(5.6) double height,
     @Default(69.0) double weight,
+
+    //Photo upload states
+    File? ppSizePhoto,
+    File? fullSizePhoto,
 
     
   }) = _UploadDocState;

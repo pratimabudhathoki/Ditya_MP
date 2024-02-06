@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:coffee_shop/features/upload_documents/controllers/upload_docs_controller.dart';
 import 'package:coffee_shop/features/upload_documents/models/personal_info.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +17,10 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
   UploadDocBloc(this.docsController)
       : super(UploadDocState(personalInfoFormKey: GlobalKey<FormState>())) {
     on<UploadDocEvent>((event, emit) async {
-     await event.map(
+      await event.map(
         started: (event) {},
         goToNextStep: (event) => _goToNext(event, emit),
+        // Personal info event to state
         fullNameChanged: (event) => _onFullNameChanged(event, emit),
         permanantAddressChanged: (event) =>
             _onPermanantAddressChanged(event, emit),
@@ -25,7 +28,11 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
             _onTemporaryAddressChanged(event, emit),
         fatherNameChanged: (event) => _onFatherNameChanged(event, emit),
         dobChanged: (event) => _onDOBChanged(event, emit),
-        uploadPersonalInfo: (event)async => _onUploadPersonalInfo(event, emit),
+        uploadPersonalInfo: (event) async => _onUploadPersonalInfo(event, emit),
+
+        // Photo upload event to state
+        ppSizePhotoChanged: ( event)=>_onPPSizePhotoChanged(event,emit),
+        fullSizePhotoChanged: ( event)=>_onFullSizePhotoChanged(event,emit),
       );
     });
   }
@@ -33,7 +40,7 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
     emit(state.copyWith(step: state.step + 1));
   }
 
-//Personal Infor event to state
+//Personal Info event to state
   _onFullNameChanged(_FullNameChanged event, Emitter<UploadDocState> emit) =>
       emit(state.copyWith(fullName: event.fullName));
 
@@ -69,8 +76,11 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
           await docsController.uploadPersonalInfo(personalInfo);
       failureOrSuccess.fold(
           (l) => emit(state.copyWith(uploadStatus: UploadStatus.uploadFailure)),
-          (r) => emit(state.copyWith(
-              uploadStatus: UploadStatus.uploaded, step:  1)));
+          (r) => emit(
+              state.copyWith(uploadStatus: UploadStatus.uploaded, step: 1)));
     }
   }
+  // Upload photo event to state.
+  _onPPSizePhotoChanged(_PPSizePhotoChanged event, Emitter<UploadDocState> emit) => emit(state.copyWith(ppSizePhoto: event.photo));
+  _onFullSizePhotoChanged(_FullSizePhotoChanged event, Emitter<UploadDocState> emit) => emit(state.copyWith(fullSizePhoto: event.photo));
 }

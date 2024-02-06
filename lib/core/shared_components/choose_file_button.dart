@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:coffee_shop/core/config/config.dart';
 import 'package:coffee_shop/core/constants/constants.dart';
+import 'package:coffee_shop/core/helpers/helpers.dart';
 import 'package:flutter/material.dart';
 
 class ChooseFileButton extends StatelessWidget {
@@ -13,7 +16,14 @@ class ChooseFileButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       splashColor: Colors.black,
-      onTap: () => onTap("hello"),
+      onTap: () async {
+        final result = await filePickerHelper();
+        if (result == null) return;
+
+        onTap(result);
+
+        // onTap("hello");
+      },
       child: ClipRRect(
         // borderRadius: BorderRadius.circular(50),
         child: Container(

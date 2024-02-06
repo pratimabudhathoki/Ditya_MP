@@ -26,6 +26,8 @@ mixin _$UploadDocEvent {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,8 @@ mixin _$UploadDocEvent {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,8 @@ mixin _$UploadDocEvent {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -65,6 +71,8 @@ mixin _$UploadDocEvent {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,6 +85,8 @@ mixin _$UploadDocEvent {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,6 +99,8 @@ mixin _$UploadDocEvent {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -158,6 +170,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return started();
   }
@@ -173,6 +187,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return started?.call();
   }
@@ -188,6 +204,8 @@ class _$StartedImpl implements _Started {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -209,6 +227,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return started(this);
   }
@@ -224,6 +244,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return started?.call(this);
   }
@@ -239,6 +261,8 @@ class _$StartedImpl implements _Started {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -298,6 +322,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return goToNextStep();
   }
@@ -313,6 +339,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return goToNextStep?.call();
   }
@@ -328,6 +356,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -349,6 +379,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return goToNextStep(this);
   }
@@ -364,6 +396,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return goToNextStep?.call(this);
   }
@@ -379,6 +413,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -466,6 +502,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return fullNameChanged(fullName);
   }
@@ -481,6 +519,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return fullNameChanged?.call(fullName);
   }
@@ -496,6 +536,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -517,6 +559,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return fullNameChanged(this);
   }
@@ -532,6 +576,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -547,6 +593,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -641,6 +689,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return temporaryAddressChanged(tempAddress);
   }
@@ -656,6 +706,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return temporaryAddressChanged?.call(tempAddress);
   }
@@ -671,6 +723,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -692,6 +746,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return temporaryAddressChanged(this);
   }
@@ -707,6 +763,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return temporaryAddressChanged?.call(this);
   }
@@ -722,6 +780,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -817,6 +877,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return permanantAddressChanged(permAddress);
   }
@@ -832,6 +894,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return permanantAddressChanged?.call(permAddress);
   }
@@ -847,6 +911,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -868,6 +934,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return permanantAddressChanged(this);
   }
@@ -883,6 +951,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return permanantAddressChanged?.call(this);
   }
@@ -898,6 +968,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -991,6 +1063,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return fatherNameChanged(fatherName);
   }
@@ -1006,6 +1080,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return fatherNameChanged?.call(fatherName);
   }
@@ -1021,6 +1097,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1042,6 +1120,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return fatherNameChanged(this);
   }
@@ -1057,6 +1137,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return fatherNameChanged?.call(this);
   }
@@ -1072,6 +1154,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1163,6 +1247,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return dobChanged(dob);
   }
@@ -1178,6 +1264,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return dobChanged?.call(dob);
   }
@@ -1193,6 +1281,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1214,6 +1304,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return dobChanged(this);
   }
@@ -1229,6 +1321,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return dobChanged?.call(this);
   }
@@ -1244,6 +1338,8 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1308,6 +1404,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function(String fatherName) fatherNameChanged,
     required TResult Function(String dob) dobChanged,
     required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
   }) {
     return uploadPersonalInfo();
   }
@@ -1323,6 +1421,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function(String fatherName)? fatherNameChanged,
     TResult? Function(String dob)? dobChanged,
     TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
   }) {
     return uploadPersonalInfo?.call();
   }
@@ -1338,6 +1438,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function(String fatherName)? fatherNameChanged,
     TResult Function(String dob)? dobChanged,
     TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1359,6 +1461,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function(_FatherNameChanged value) fatherNameChanged,
     required TResult Function(_DOBChanged value) dobChanged,
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
   }) {
     return uploadPersonalInfo(this);
   }
@@ -1374,6 +1478,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function(_FatherNameChanged value)? fatherNameChanged,
     TResult? Function(_DOBChanged value)? dobChanged,
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
   }) {
     return uploadPersonalInfo?.call(this);
   }
@@ -1389,6 +1495,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function(_FatherNameChanged value)? fatherNameChanged,
     TResult Function(_DOBChanged value)? dobChanged,
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1400,6 +1508,379 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
 
 abstract class _UploadPersonalInfo implements UploadDocEvent {
   const factory _UploadPersonalInfo() = _$UploadPersonalInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$PPSizePhotoChangedImplCopyWith<$Res> {
+  factory _$$PPSizePhotoChangedImplCopyWith(_$PPSizePhotoChangedImpl value,
+          $Res Function(_$PPSizePhotoChangedImpl) then) =
+      __$$PPSizePhotoChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic photo});
+}
+
+/// @nodoc
+class __$$PPSizePhotoChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$PPSizePhotoChangedImpl>
+    implements _$$PPSizePhotoChangedImplCopyWith<$Res> {
+  __$$PPSizePhotoChangedImplCopyWithImpl(_$PPSizePhotoChangedImpl _value,
+      $Res Function(_$PPSizePhotoChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? photo = freezed,
+  }) {
+    return _then(_$PPSizePhotoChangedImpl(
+      freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
+  const _$PPSizePhotoChangedImpl(this.photo);
+
+  @override
+  final dynamic photo;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.ppSizePhotoChanged(photo: $photo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PPSizePhotoChangedImpl &&
+            const DeepCollectionEquality().equals(other.photo, photo));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(photo));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PPSizePhotoChangedImplCopyWith<_$PPSizePhotoChangedImpl> get copyWith =>
+      __$$PPSizePhotoChangedImplCopyWithImpl<_$PPSizePhotoChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+  }) {
+    return ppSizePhotoChanged(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+  }) {
+    return ppSizePhotoChanged?.call(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    required TResult orElse(),
+  }) {
+    if (ppSizePhotoChanged != null) {
+      return ppSizePhotoChanged(photo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+  }) {
+    return ppSizePhotoChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+  }) {
+    return ppSizePhotoChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    required TResult orElse(),
+  }) {
+    if (ppSizePhotoChanged != null) {
+      return ppSizePhotoChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PPSizePhotoChanged implements UploadDocEvent {
+  const factory _PPSizePhotoChanged(final dynamic photo) =
+      _$PPSizePhotoChangedImpl;
+
+  dynamic get photo;
+  @JsonKey(ignore: true)
+  _$$PPSizePhotoChangedImplCopyWith<_$PPSizePhotoChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FullSizePhotoChangedImplCopyWith<$Res> {
+  factory _$$FullSizePhotoChangedImplCopyWith(_$FullSizePhotoChangedImpl value,
+          $Res Function(_$FullSizePhotoChangedImpl) then) =
+      __$$FullSizePhotoChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic photo});
+}
+
+/// @nodoc
+class __$$FullSizePhotoChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$FullSizePhotoChangedImpl>
+    implements _$$FullSizePhotoChangedImplCopyWith<$Res> {
+  __$$FullSizePhotoChangedImplCopyWithImpl(_$FullSizePhotoChangedImpl _value,
+      $Res Function(_$FullSizePhotoChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? photo = freezed,
+  }) {
+    return _then(_$FullSizePhotoChangedImpl(
+      freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
+  const _$FullSizePhotoChangedImpl(this.photo);
+
+  @override
+  final dynamic photo;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.fullSizePhotoChanged(photo: $photo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FullSizePhotoChangedImpl &&
+            const DeepCollectionEquality().equals(other.photo, photo));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(photo));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FullSizePhotoChangedImplCopyWith<_$FullSizePhotoChangedImpl>
+      get copyWith =>
+          __$$FullSizePhotoChangedImplCopyWithImpl<_$FullSizePhotoChangedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+  }) {
+    return fullSizePhotoChanged(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+  }) {
+    return fullSizePhotoChanged?.call(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    required TResult orElse(),
+  }) {
+    if (fullSizePhotoChanged != null) {
+      return fullSizePhotoChanged(photo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+  }) {
+    return fullSizePhotoChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+  }) {
+    return fullSizePhotoChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    required TResult orElse(),
+  }) {
+    if (fullSizePhotoChanged != null) {
+      return fullSizePhotoChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FullSizePhotoChanged implements UploadDocEvent {
+  const factory _FullSizePhotoChanged(final dynamic photo) =
+      _$FullSizePhotoChangedImpl;
+
+  dynamic get photo;
+  @JsonKey(ignore: true)
+  _$$FullSizePhotoChangedImplCopyWith<_$FullSizePhotoChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1415,7 +1896,9 @@ mixin _$UploadDocState {
   String? get fatherName => throw _privateConstructorUsedError;
   String? get birthDate => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
-  double get weight => throw _privateConstructorUsedError;
+  double get weight => throw _privateConstructorUsedError; //Photo upload states
+  File? get ppSizePhoto => throw _privateConstructorUsedError;
+  File? get fullSizePhoto => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UploadDocStateCopyWith<UploadDocState> get copyWith =>
@@ -1438,7 +1921,9 @@ abstract class $UploadDocStateCopyWith<$Res> {
       String? fatherName,
       String? birthDate,
       double height,
-      double weight});
+      double weight,
+      File? ppSizePhoto,
+      File? fullSizePhoto});
 }
 
 /// @nodoc
@@ -1464,6 +1949,8 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
     Object? birthDate = freezed,
     Object? height = null,
     Object? weight = null,
+    Object? ppSizePhoto = freezed,
+    Object? fullSizePhoto = freezed,
   }) {
     return _then(_value.copyWith(
       step: null == step
@@ -1506,6 +1993,14 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double,
+      ppSizePhoto: freezed == ppSizePhoto
+          ? _value.ppSizePhoto
+          : ppSizePhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      fullSizePhoto: freezed == fullSizePhoto
+          ? _value.fullSizePhoto
+          : fullSizePhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
     ) as $Val);
   }
 }
@@ -1528,7 +2023,9 @@ abstract class _$$UploadDocStateImplCopyWith<$Res>
       String? fatherName,
       String? birthDate,
       double height,
-      double weight});
+      double weight,
+      File? ppSizePhoto,
+      File? fullSizePhoto});
 }
 
 /// @nodoc
@@ -1552,6 +2049,8 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
     Object? birthDate = freezed,
     Object? height = null,
     Object? weight = null,
+    Object? ppSizePhoto = freezed,
+    Object? fullSizePhoto = freezed,
   }) {
     return _then(_$UploadDocStateImpl(
       step: null == step
@@ -1594,6 +2093,14 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double,
+      ppSizePhoto: freezed == ppSizePhoto
+          ? _value.ppSizePhoto
+          : ppSizePhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      fullSizePhoto: freezed == fullSizePhoto
+          ? _value.fullSizePhoto
+          : fullSizePhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
     ));
   }
 }
@@ -1602,7 +2109,7 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
 
 class _$UploadDocStateImpl implements _UploadDocState {
   const _$UploadDocStateImpl(
-      {this.step = 0,
+      {this.step = 1,
       this.uploadStatus = UploadStatus.initial,
       required this.personalInfoFormKey,
       this.fullName,
@@ -1611,7 +2118,9 @@ class _$UploadDocStateImpl implements _UploadDocState {
       this.fatherName,
       this.birthDate,
       this.height = 5.6,
-      this.weight = 69.0});
+      this.weight = 69.0,
+      this.ppSizePhoto,
+      this.fullSizePhoto});
 
   @override
   @JsonKey()
@@ -1638,10 +2147,15 @@ class _$UploadDocStateImpl implements _UploadDocState {
   @override
   @JsonKey()
   final double weight;
+//Photo upload states
+  @override
+  final File? ppSizePhoto;
+  @override
+  final File? fullSizePhoto;
 
   @override
   String toString() {
-    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight)';
+    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight, ppSizePhoto: $ppSizePhoto, fullSizePhoto: $fullSizePhoto)';
   }
 
   @override
@@ -1665,7 +2179,11 @@ class _$UploadDocStateImpl implements _UploadDocState {
             (identical(other.birthDate, birthDate) ||
                 other.birthDate == birthDate) &&
             (identical(other.height, height) || other.height == height) &&
-            (identical(other.weight, weight) || other.weight == weight));
+            (identical(other.weight, weight) || other.weight == weight) &&
+            (identical(other.ppSizePhoto, ppSizePhoto) ||
+                other.ppSizePhoto == ppSizePhoto) &&
+            (identical(other.fullSizePhoto, fullSizePhoto) ||
+                other.fullSizePhoto == fullSizePhoto));
   }
 
   @override
@@ -1680,7 +2198,9 @@ class _$UploadDocStateImpl implements _UploadDocState {
       fatherName,
       birthDate,
       height,
-      weight);
+      weight,
+      ppSizePhoto,
+      fullSizePhoto);
 
   @JsonKey(ignore: true)
   @override
@@ -1701,7 +2221,9 @@ abstract class _UploadDocState implements UploadDocState {
       final String? fatherName,
       final String? birthDate,
       final double height,
-      final double weight}) = _$UploadDocStateImpl;
+      final double weight,
+      final File? ppSizePhoto,
+      final File? fullSizePhoto}) = _$UploadDocStateImpl;
 
   @override
   int get step;
@@ -1723,6 +2245,10 @@ abstract class _UploadDocState implements UploadDocState {
   double get height;
   @override
   double get weight;
+  @override //Photo upload states
+  File? get ppSizePhoto;
+  @override
+  File? get fullSizePhoto;
   @override
   @JsonKey(ignore: true)
   _$$UploadDocStateImplCopyWith<_$UploadDocStateImpl> get copyWith =>
