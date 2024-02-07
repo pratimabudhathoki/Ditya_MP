@@ -3914,7 +3914,7 @@ mixin _$UploadDocState {
       throw _privateConstructorUsedError; // Photo upload states
   File? get ppSizePhoto => throw _privateConstructorUsedError;
   File? get fullSizePhoto =>
-      throw _privateConstructorUsedError; // passport upload state
+      throw _privateConstructorUsedError; // Passport upload state
   GlobalKey<FormState> get passportFormKey =>
       throw _privateConstructorUsedError;
   File? get passportPhoto => throw _privateConstructorUsedError;
@@ -4215,7 +4215,7 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
 
 class _$UploadDocStateImpl implements _UploadDocState {
   const _$UploadDocStateImpl(
-      {this.step = 5,
+      {this.step = 4,
       this.uploadStatus = UploadStatus.initial,
       this.hasValidationError = false,
       this.validationError,
@@ -4271,7 +4271,7 @@ class _$UploadDocStateImpl implements _UploadDocState {
   final File? ppSizePhoto;
   @override
   final File? fullSizePhoto;
-// passport upload state
+// Passport upload state
   @override
   final GlobalKey<FormState> passportFormKey;
   @override
@@ -4412,7 +4412,7 @@ abstract class _UploadDocState implements UploadDocState {
   File? get ppSizePhoto;
   @override
   File? get fullSizePhoto;
-  @override // passport upload state
+  @override // Passport upload state
   GlobalKey<FormState> get passportFormKey;
   @override
   File? get passportPhoto;

@@ -1,3 +1,4 @@
+import 'package:coffee_shop/core/config/colors.dart';
 import 'package:coffee_shop/core/constants/constants.dart';
 import 'package:coffee_shop/core/shared_components/choose_file_button.dart';
 import 'package:coffee_shop/core/widgets/widgets.dart';
@@ -21,13 +22,6 @@ class _EducationDetailState extends State<EducationDetail> {
   XFile? image;
 
   final ImagePicker picker = ImagePicker();
-  Future getImage() async {
-    var img = await picker.pickImage(source: ImageSource.gallery);
-
-    setState(() {
-      image = img;
-    });
-  }
 
 // drop down of level
   String delault = "";
@@ -58,6 +52,10 @@ class _EducationDetailState extends State<EducationDetail> {
       child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
         const FormHeadline(title: "Educational Documents"),
         const Gap(SizeManager.pagePadding),
+        const Text(
+          "Provide your highest educational doucuments",
+        ),
+        const Gap(SizeManager.pagePadding),
         Container(
             padding: const EdgeInsets.all(10), //padding of outer Container
             child: DottedBorder(
@@ -68,185 +66,82 @@ class _EducationDetailState extends State<EducationDetail> {
               //dash patterns, 10 is dash width, 6 is space width
               child: Container(
                   //inner container
-                  height: 100, //height of inner container
-                  width: double
-                      .infinity, //width to 100% match to parent container.
+                  height: 180, //height of inner container
+                  width: MediaQuery.sizeOf(context).width *
+                      0.4, //width to 100% match to parent container.
                   color: const Color.fromARGB(
                       213, 253, 253, 252) //background color of inner container
                   ),
             )),
         ChooseFileButton(onTap: (file) {}),
-        const SizedBox(
-          height: 10,
-        ),
-        Center(
-          child: Text(
-            "Press on choose file to upload a documents",
-            style: GoogleFonts.roboto(color: Colors.black26, fontSize: 13),
-          ),
-        ),
-        const SizedBox(
-          height: 15,
-        ),
-        DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            isDense: true,
-            value: delault,
-            // isExpanded: true,
-            menuMaxHeight: 300,
-            items: [
-              const DropdownMenuItem<String>(
-                value: "",
-                child: Text('Select your level'),
-              ),
-              ...dropDownLevel.map<DropdownMenuItem<String>>((data) {
-                return DropdownMenuItem(
-                  value: data["value"],
-                  child: Text(data["title"]!),
-                );
-              }).toList(),
-            ],
-            onChanged: (Newvalue) {
-              print(Newvalue);
-              setState(() {
-                delault = Newvalue!;
-              });
-            },
-          ),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        const TextField(
-          decoration: InputDecoration(
-            border: UnderlineInputBorder(),
-            hintText: 'Enter School/College Name',
-          ),
-        ),
-        const SizedBox(
-          height: 15,
-        ),
+        const Gap(SizeManager.pagePadding),
         Container(
-          height: 40,
-          decoration: BoxDecoration(
-              border: Border.all(
-                width: 1,
-                color: Colors.black54,
-              ),
-              borderRadius: BorderRadius.circular(10)),
-          width: MediaQuery.of(context).size.width / 2,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(showYear),
-              ),
-              GestureDetector(
-                onTap: () {
-                  SelectYear(context);
-                },
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(Icons.calendar_month),
-                ),
-              )
-            ],
+          width: double.maxFinite,
+         
+          padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 16.0),
+          decoration: BoxDecoration(border: Border.all(color: const Color.fromARGB(255, 148, 148, 148)),
+          borderRadius: BorderRadius.circular(SizeManager.curveValue)
           ),
-        ),
-        Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Container(
-                height: 50,
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton<String>(
-                    menuMaxHeight: 300,
-                    value: 'Select Type',
-                    onChanged: (String? newValue) {
-                      setState(() {
-                        selectedOption = newValue!;
-                        // Clear text fields when switching between GPA and Percentage
-                        gpaController.clear();
-                        percentageController.clear();
-                      });
-                    },
-                    items: ['Select Type', 'GPA', 'Percentage'].map((option) {
-                      return DropdownMenuItem<String>(
-                        value: option,
-                        child: Text(option),
-                      );
-                    }).toList(),
-                  ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<String>(
+              isDense: true,
+              value: delault,
+              // isExpanded: true,
+              menuMaxHeight: 300,
+              items: [
+                const DropdownMenuItem<String>(
+                  value: "",
+                  child: Text('Select your level'),
                 ),
-              ),
-            ),
-            if (selectedOption == 'GPA')
-              Container(
-                width: 150,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(32),
-                ),
-                child: TextField(
-                  controller: gpaController,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    border: InputBorder.none,
-                    labelText: 'Enter GPA',
-                  ),
-                ),
-              ),
-            if (selectedOption == 'Percentage')
-              Container(
-                width: 150,
-                child: TextField(
-                  controller: percentageController,
-                  keyboardType: TextInputType.number,
-                  decoration:
-                      const InputDecoration(labelText: 'Enter Percentage'),
-                ),
-              ),
-          ],
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(10),
-          child: Container(
-            height: 50,
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton<String>(
-                menuMaxHeight: 200,
-                value: selectedSector,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    selectedSector = newValue!;
-                    // Clear text fields when switching
-                    gpaController.clear();
-                    percentageController.clear();
-                  });
-                },
-                items: [
-                  'Select Sector',
-                  'Business',
-                  'IT',
-                  'Marketing',
-                  'HM',
-                  'Science'
-                ].map((sector) {
-                  return DropdownMenuItem<String>(
-                    value: sector,
-                    child: Text(sector),
+                ...dropDownLevel.map<DropdownMenuItem<String>>((data) {
+                  return DropdownMenuItem(
+                    value: data["value"],
+                    child: Text(data["title"]!),
                   );
                 }).toList(),
-              ),
+              ],
+              onChanged: (Newvalue) {
+                print(Newvalue);
+                setState(() {
+                  delault = Newvalue!;
+                });
+              },
             ),
           ),
         ),
-        
-      ]),
+        //  const Gap(SizeManager.pagePadding),
+        const PrimaryTextField(label: "",hintText: 'School/College name',),
+        //  const Gap(SizeManager.pagePadding),
+        // Container(
+        //   height: 40,
+        //   decoration: BoxDecoration(
+        //       border: Border.all(
+        //         width: 1,
+        //         color: Colors.black54,
+        //       ),
+        //       borderRadius: BorderRadius.circular(10)),
+        //   width: MediaQuery.of(context).size.width / 2,
+        //   child: Row(
+        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //     children: [
+        //       Padding(
+        //         padding: const EdgeInsets.all(8.0),
+        //         child: Text(showYear),
+        //       ),
+        //       GestureDetector(
+        //         onTap: () {
+        //           SelectYear(context);
+        //         },
+        //         child: const Padding(
+        //           padding: EdgeInsets.all(8.0),
+        //           child: Icon(Icons.calendar_month),
+        //         ),
+        //       )
+        //     ],
+        //   ),
+        // ),
+         const PrimaryTextField(label: "",hintText: 'School/College name',),
+         ]),
     );
   }
 

@@ -3,7 +3,7 @@ part of 'upload_doc_bloc.dart';
 @freezed
 class UploadDocState with _$UploadDocState {
   const factory UploadDocState({
-    @Default(5) int step,
+    @Default(4) int step,
     @Default(UploadStatus.initial) UploadStatus uploadStatus,
 
     // Errors like not selecting photos , docs
@@ -24,7 +24,7 @@ class UploadDocState with _$UploadDocState {
     File? ppSizePhoto,
     File? fullSizePhoto,
 
-    // passport upload state
+    // Passport upload state
     required GlobalKey<FormState> passportFormKey,
     File? passportPhoto,
     String? passportNumber,
@@ -32,6 +32,8 @@ class UploadDocState with _$UploadDocState {
 
     // Resume
     File? resume,
+
+    // Educational Ducuments
   }) = _UploadDocState;
 }
 
