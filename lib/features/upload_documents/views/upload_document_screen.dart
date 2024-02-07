@@ -39,10 +39,25 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
     BankDetail(),
     CompanySelect(active_index: 0)
   ];
-   _onNext(BuildContext context, int step) {
+  _onNext(BuildContext context, int step) {
     switch (step) {
       case 0:
-        context.read<UploadDocBloc>().add(const UploadDocEvent.uploadPersonalInfo());
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadPersonalInfo());
+        break;
+      case 1:
+        context.read<UploadDocBloc>().add(const UploadDocEvent.uploadPhotos());
+        break;
+      case 2:
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadPassportInfo());
+        break;
+        case 3:
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadResume());
         break;
       default:
         break;
@@ -61,8 +76,12 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
               listener: ((context, state) {
                 if (state.uploadStatus == UploadStatus.uploading) {
                   showLoading();
-                }else if(state.uploadStatus ==UploadStatus.uploadFailure){
+                } else if (state.uploadStatus == UploadStatus.uploadFailure) {
                   hideLoading();
+                  showDefaultSnackBar(context);
+                } else if (state.uploadStatus == UploadStatus.uploaded) {
+                  hideLoading();
+                } else if (state.hasValidationError) {
                   showDefaultSnackBar(context);
                 } else {
                   hideLoading();
@@ -168,7 +187,6 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
                     Flexible(
                       child: InkWell(
                         onTap: () => _onNext(context, state.step),
-                      
                         child: Container(
                             height: 60.0,
                             alignment: Alignment.center,
@@ -192,6 +210,4 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
       }),
     );
   }
-
- 
 }

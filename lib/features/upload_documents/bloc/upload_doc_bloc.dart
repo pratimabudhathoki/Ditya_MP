@@ -15,7 +15,9 @@ part 'upload_doc_bloc.freezed.dart';
 class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
   final UploadDocsController docsController;
   UploadDocBloc(this.docsController)
-      : super(UploadDocState(personalInfoFormKey: GlobalKey<FormState>())) {
+      : super(UploadDocState(
+            personalInfoFormKey: GlobalKey<FormState>(),
+            passportFormKey: GlobalKey<FormState>())) {
     on<UploadDocEvent>((event, emit) async {
       await event.map(
         started: (event) {},
@@ -31,8 +33,20 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
         uploadPersonalInfo: (event) async => _onUploadPersonalInfo(event, emit),
 
         // Photo upload event to state
-        ppSizePhotoChanged: ( event)=>_onPPSizePhotoChanged(event,emit),
-        fullSizePhotoChanged: ( event)=>_onFullSizePhotoChanged(event,emit),
+        ppSizePhotoChanged: (event) => _onPPSizePhotoChanged(event, emit),
+        fullSizePhotoChanged: (event) => _onFullSizePhotoChanged(event, emit),
+        uploadPhotos: (event) => _onUploadPhotos(event, emit),
+
+        // Passport upload event to state
+        passportPhotoChanged: (event) => _onPassportPhotoChanged(event, emit),
+        passportNumberChanged: (event) => _onPassportNumberChanged(event, emit),
+        passportIssueDateChanged: (event) =>
+            _onPassportIssueDateChanged(event, emit),
+        uploadPassportInfo: (event) => _onUploadPassportInfo(event, emit),
+
+        //Resume upload events to state
+        resumeChanged: (event) => _onResumeChanged(event, emit),
+        uploadResume: (event) => _onUploadResume(event, emit),
       );
     });
   }
@@ -80,7 +94,87 @@ class UploadDocBloc extends Bloc<UploadDocEvent, UploadDocState> {
               state.copyWith(uploadStatus: UploadStatus.uploaded, step: 1)));
     }
   }
+
   // Upload photo event to state.
-  _onPPSizePhotoChanged(_PPSizePhotoChanged event, Emitter<UploadDocState> emit) => emit(state.copyWith(ppSizePhoto: event.photo));
-  _onFullSizePhotoChanged(_FullSizePhotoChanged event, Emitter<UploadDocState> emit) => emit(state.copyWith(fullSizePhoto: event.photo));
+  _onPPSizePhotoChanged(
+          _PPSizePhotoChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(ppSizePhoto: event.photo));
+  _onFullSizePhotoChanged(
+          _FullSizePhotoChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(fullSizePhoto: event.photo));
+  _onUploadPhotos(_UploadPhotos event, Emitter<UploadDocState> emit) async {
+    if (state.fullSizePhoto == null || state.ppSizePhoto == null) {
+      emit(state.copyWith(
+          hasValidationError: true,
+          validationError: "Please choose required photos"));
+    } else {
+      emit(state.copyWith(
+        hasValidationError: false,
+        validationError: null,
+        uploadStatus: UploadStatus.uploading,
+      ));
+      final failureOrSuccess = await docsController.uploadPhotos(
+          state.ppSizePhoto!, state.fullSizePhoto!);
+      failureOrSuccess.fold(
+          (l) => emit(state.copyWith(uploadStatus: UploadStatus.uploadFailure)),
+          (r) => emit(state.copyWith(
+              uploadStatus: UploadStatus.uploaded, step: state.step + 1)));
+    }
+  }
+
+  // Upload passport event to state
+  _onPassportPhotoChanged(
+          _PassportPhotoChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(passportPhoto: event.photo));
+
+  _onPassportNumberChanged(
+          _PassportNumberChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(passportNumber: event.passportNumber));
+
+  _onPassportIssueDateChanged(
+          _PassportIssueDateChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(issueDate: event.issueDate));
+
+  _onUploadPassportInfo(
+      _UploadPassportInfo event, Emitter<UploadDocState> emit) async {
+    if (state.passportFormKey.currentState!.validate()) {
+      if (state.passportPhoto == null) {
+        emit(state.copyWith(
+            hasValidationError: true,
+            validationError: "Please choose passport photo"));
+      } else {
+        emit(state.copyWith(
+            hasValidationError: false,
+            validationError: null,
+            uploadStatus: UploadStatus.uploading));
+        final failureOrSuccess = await docsController.uploadPassportInfo(
+            state.passportPhoto!, state.passportNumber!, state.issueDate!);
+        failureOrSuccess.fold(
+            (l) =>
+                emit(state.copyWith(uploadStatus: UploadStatus.uploadFailure)),
+            (r) => emit(state.copyWith(
+                uploadStatus: UploadStatus.uploaded, step: state.step + 1)));
+      }
+    }
+  }
+
+  _onResumeChanged(_ResumeChanged event, Emitter<UploadDocState> emit) =>
+      emit(state.copyWith(resume: event.resume));
+
+  _onUploadResume(_UploadResume event, Emitter<UploadDocState> emit) async {
+    if (state.resume == null) {
+      emit(state.copyWith(
+          hasValidationError: true,
+          validationError: "Please choose recently updated resume"));
+    } else {
+      emit(state.copyWith(
+          hasValidationError: false,
+          validationError: null,
+          uploadStatus: UploadStatus.uploading));
+      final failureOrSuccess = await docsController.uploadResume(state.resume!);
+      failureOrSuccess.fold(
+          (l) => emit(state.copyWith(uploadStatus: UploadStatus.uploadFailure)),
+          (r) => emit(state.copyWith(uploadStatus: UploadStatus.uploaded,step:state.step+1)));
+    }
+  }
 }

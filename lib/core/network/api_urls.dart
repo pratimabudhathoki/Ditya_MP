@@ -8,4 +8,7 @@ abstract class APIUrls{
   // upload doc
 
   static const uploadPersonalInfo = "$baseUrl/api/v1/personal/info";
+  static const uploadPhotos = "$baseUrl/api/v1/upload/photo";
+  static const uploadPassportInfo = "$baseUrl/api/v1/passport/info";
+  static const uploadResume = "$baseUrl/api/v1/resume/info";
 }

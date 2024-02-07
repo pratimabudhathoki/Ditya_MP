@@ -34,13 +34,21 @@ class NetworkClient {
     }
   }
 
-  Future<dynamic> uploadFormData({required String url}) async {
-// try {
-//   final response = await dio.po
-// } catch (e) {
-
-// }
-//TODO:
-    throw UnimplementedError();
+  Future<dynamic> uploadFormData({required String url,
+ required Map<String,dynamic> map,
+  }) async {
+try {
+   final token = cacheManager.getToken();
+  final formData = FormData.fromMap(map);
+  final response = await dio.post(url,data: formData,
+  options: Options(headers: {
+    "Authorization":"Bearer $token",
+    "Content-Type":"multipart/form-data"
+  })
+  );
+  return response;
+} catch (e) {
+  rethrow;
+}
   }
 }

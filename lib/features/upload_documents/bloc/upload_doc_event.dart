@@ -16,6 +16,17 @@ class UploadDocEvent with _$UploadDocEvent {
   // Photo upload events
   const factory UploadDocEvent.ppSizePhotoChanged(dynamic photo)=_PPSizePhotoChanged;
   const factory UploadDocEvent.fullSizePhotoChanged(dynamic photo)=_FullSizePhotoChanged;
+  const factory UploadDocEvent.uploadPhotos( )=_UploadPhotos;
+
+  // Passport upload events
+  const factory UploadDocEvent.passportPhotoChanged(dynamic photo) = _PassportPhotoChanged;
+  const factory UploadDocEvent.passportNumberChanged(String passportNumber)= _PassportNumberChanged;
+  const factory UploadDocEvent.passportIssueDateChanged(String issueDate) = _PassportIssueDateChanged;
+  const factory UploadDocEvent.uploadPassportInfo() = _UploadPassportInfo;
+
+  //  Resume upload events
+  const factory UploadDocEvent.resumeChanged(File resume)  =_ResumeChanged;
+  const factory UploadDocEvent.uploadResume()  =_UploadResume;
   
   
 }

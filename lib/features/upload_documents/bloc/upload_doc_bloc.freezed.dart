@@ -28,6 +28,13 @@ mixin _$UploadDocEvent {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +49,13 @@ mixin _$UploadDocEvent {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +70,13 @@ mixin _$UploadDocEvent {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -73,6 +94,15 @@ mixin _$UploadDocEvent {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -87,6 +117,14 @@ mixin _$UploadDocEvent {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -101,6 +139,13 @@ mixin _$UploadDocEvent {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -172,6 +217,13 @@ class _$StartedImpl implements _Started {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return started();
   }
@@ -189,6 +241,13 @@ class _$StartedImpl implements _Started {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return started?.call();
   }
@@ -206,6 +265,13 @@ class _$StartedImpl implements _Started {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -229,6 +295,15 @@ class _$StartedImpl implements _Started {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return started(this);
   }
@@ -246,6 +321,14 @@ class _$StartedImpl implements _Started {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return started?.call(this);
   }
@@ -263,6 +346,13 @@ class _$StartedImpl implements _Started {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -324,6 +414,13 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return goToNextStep();
   }
@@ -341,6 +438,13 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return goToNextStep?.call();
   }
@@ -358,6 +462,13 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -381,6 +492,15 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return goToNextStep(this);
   }
@@ -398,6 +518,14 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return goToNextStep?.call(this);
   }
@@ -415,6 +543,13 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -504,6 +639,13 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return fullNameChanged(fullName);
   }
@@ -521,6 +663,13 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return fullNameChanged?.call(fullName);
   }
@@ -538,6 +687,13 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -561,6 +717,15 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return fullNameChanged(this);
   }
@@ -578,6 +743,14 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -595,6 +768,13 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -691,6 +871,13 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return temporaryAddressChanged(tempAddress);
   }
@@ -708,6 +895,13 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return temporaryAddressChanged?.call(tempAddress);
   }
@@ -725,6 +919,13 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -748,6 +949,15 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return temporaryAddressChanged(this);
   }
@@ -765,6 +975,14 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return temporaryAddressChanged?.call(this);
   }
@@ -782,6 +1000,13 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -879,6 +1104,13 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return permanantAddressChanged(permAddress);
   }
@@ -896,6 +1128,13 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return permanantAddressChanged?.call(permAddress);
   }
@@ -913,6 +1152,13 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -936,6 +1182,15 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return permanantAddressChanged(this);
   }
@@ -953,6 +1208,14 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return permanantAddressChanged?.call(this);
   }
@@ -970,6 +1233,13 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -1065,6 +1335,13 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return fatherNameChanged(fatherName);
   }
@@ -1082,6 +1359,13 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return fatherNameChanged?.call(fatherName);
   }
@@ -1099,6 +1383,13 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1122,6 +1413,15 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return fatherNameChanged(this);
   }
@@ -1139,6 +1439,14 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return fatherNameChanged?.call(this);
   }
@@ -1156,6 +1464,13 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1249,6 +1564,13 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return dobChanged(dob);
   }
@@ -1266,6 +1588,13 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return dobChanged?.call(dob);
   }
@@ -1283,6 +1612,13 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1306,6 +1642,15 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return dobChanged(this);
   }
@@ -1323,6 +1668,14 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return dobChanged?.call(this);
   }
@@ -1340,6 +1693,13 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1406,6 +1766,13 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return uploadPersonalInfo();
   }
@@ -1423,6 +1790,13 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return uploadPersonalInfo?.call();
   }
@@ -1440,6 +1814,13 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1463,6 +1844,15 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return uploadPersonalInfo(this);
   }
@@ -1480,6 +1870,14 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return uploadPersonalInfo?.call(this);
   }
@@ -1497,6 +1895,13 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1586,6 +1991,13 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return ppSizePhotoChanged(photo);
   }
@@ -1603,6 +2015,13 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return ppSizePhotoChanged?.call(photo);
   }
@@ -1620,6 +2039,13 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (ppSizePhotoChanged != null) {
@@ -1643,6 +2069,15 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return ppSizePhotoChanged(this);
   }
@@ -1660,6 +2095,14 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return ppSizePhotoChanged?.call(this);
   }
@@ -1677,6 +2120,13 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (ppSizePhotoChanged != null) {
@@ -1773,6 +2223,13 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     required TResult Function() uploadPersonalInfo,
     required TResult Function(dynamic photo) ppSizePhotoChanged,
     required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
   }) {
     return fullSizePhotoChanged(photo);
   }
@@ -1790,6 +2247,13 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult? Function()? uploadPersonalInfo,
     TResult? Function(dynamic photo)? ppSizePhotoChanged,
     TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
   }) {
     return fullSizePhotoChanged?.call(photo);
   }
@@ -1807,6 +2271,13 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult Function()? uploadPersonalInfo,
     TResult Function(dynamic photo)? ppSizePhotoChanged,
     TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
     required TResult orElse(),
   }) {
     if (fullSizePhotoChanged != null) {
@@ -1830,6 +2301,15 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
     required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
     required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
   }) {
     return fullSizePhotoChanged(this);
   }
@@ -1847,6 +2327,14 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
   }) {
     return fullSizePhotoChanged?.call(this);
   }
@@ -1864,6 +2352,13 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
     TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
     TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
     required TResult orElse(),
   }) {
     if (fullSizePhotoChanged != null) {
@@ -1884,9 +2379,1528 @@ abstract class _FullSizePhotoChanged implements UploadDocEvent {
 }
 
 /// @nodoc
+abstract class _$$UploadPhotosImplCopyWith<$Res> {
+  factory _$$UploadPhotosImplCopyWith(
+          _$UploadPhotosImpl value, $Res Function(_$UploadPhotosImpl) then) =
+      __$$UploadPhotosImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadPhotosImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadPhotosImpl>
+    implements _$$UploadPhotosImplCopyWith<$Res> {
+  __$$UploadPhotosImplCopyWithImpl(
+      _$UploadPhotosImpl _value, $Res Function(_$UploadPhotosImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadPhotosImpl implements _UploadPhotos {
+  const _$UploadPhotosImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadPhotos()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadPhotosImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return uploadPhotos();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return uploadPhotos?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadPhotos != null) {
+      return uploadPhotos();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return uploadPhotos(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return uploadPhotos?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadPhotos != null) {
+      return uploadPhotos(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadPhotos implements UploadDocEvent {
+  const factory _UploadPhotos() = _$UploadPhotosImpl;
+}
+
+/// @nodoc
+abstract class _$$PassportPhotoChangedImplCopyWith<$Res> {
+  factory _$$PassportPhotoChangedImplCopyWith(_$PassportPhotoChangedImpl value,
+          $Res Function(_$PassportPhotoChangedImpl) then) =
+      __$$PassportPhotoChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({dynamic photo});
+}
+
+/// @nodoc
+class __$$PassportPhotoChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$PassportPhotoChangedImpl>
+    implements _$$PassportPhotoChangedImplCopyWith<$Res> {
+  __$$PassportPhotoChangedImplCopyWithImpl(_$PassportPhotoChangedImpl _value,
+      $Res Function(_$PassportPhotoChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? photo = freezed,
+  }) {
+    return _then(_$PassportPhotoChangedImpl(
+      freezed == photo
+          ? _value.photo
+          : photo // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
+  const _$PassportPhotoChangedImpl(this.photo);
+
+  @override
+  final dynamic photo;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.passportPhotoChanged(photo: $photo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassportPhotoChangedImpl &&
+            const DeepCollectionEquality().equals(other.photo, photo));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(photo));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PassportPhotoChangedImplCopyWith<_$PassportPhotoChangedImpl>
+      get copyWith =>
+          __$$PassportPhotoChangedImplCopyWithImpl<_$PassportPhotoChangedImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return passportPhotoChanged(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return passportPhotoChanged?.call(photo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportPhotoChanged != null) {
+      return passportPhotoChanged(photo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return passportPhotoChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return passportPhotoChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportPhotoChanged != null) {
+      return passportPhotoChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PassportPhotoChanged implements UploadDocEvent {
+  const factory _PassportPhotoChanged(final dynamic photo) =
+      _$PassportPhotoChangedImpl;
+
+  dynamic get photo;
+  @JsonKey(ignore: true)
+  _$$PassportPhotoChangedImplCopyWith<_$PassportPhotoChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PassportNumberChangedImplCopyWith<$Res> {
+  factory _$$PassportNumberChangedImplCopyWith(
+          _$PassportNumberChangedImpl value,
+          $Res Function(_$PassportNumberChangedImpl) then) =
+      __$$PassportNumberChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String passportNumber});
+}
+
+/// @nodoc
+class __$$PassportNumberChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$PassportNumberChangedImpl>
+    implements _$$PassportNumberChangedImplCopyWith<$Res> {
+  __$$PassportNumberChangedImplCopyWithImpl(_$PassportNumberChangedImpl _value,
+      $Res Function(_$PassportNumberChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? passportNumber = null,
+  }) {
+    return _then(_$PassportNumberChangedImpl(
+      null == passportNumber
+          ? _value.passportNumber
+          : passportNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PassportNumberChangedImpl implements _PassportNumberChanged {
+  const _$PassportNumberChangedImpl(this.passportNumber);
+
+  @override
+  final String passportNumber;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.passportNumberChanged(passportNumber: $passportNumber)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassportNumberChangedImpl &&
+            (identical(other.passportNumber, passportNumber) ||
+                other.passportNumber == passportNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, passportNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PassportNumberChangedImplCopyWith<_$PassportNumberChangedImpl>
+      get copyWith => __$$PassportNumberChangedImplCopyWithImpl<
+          _$PassportNumberChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return passportNumberChanged(passportNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return passportNumberChanged?.call(passportNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportNumberChanged != null) {
+      return passportNumberChanged(passportNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return passportNumberChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return passportNumberChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportNumberChanged != null) {
+      return passportNumberChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PassportNumberChanged implements UploadDocEvent {
+  const factory _PassportNumberChanged(final String passportNumber) =
+      _$PassportNumberChangedImpl;
+
+  String get passportNumber;
+  @JsonKey(ignore: true)
+  _$$PassportNumberChangedImplCopyWith<_$PassportNumberChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PassportIssueDateChangedImplCopyWith<$Res> {
+  factory _$$PassportIssueDateChangedImplCopyWith(
+          _$PassportIssueDateChangedImpl value,
+          $Res Function(_$PassportIssueDateChangedImpl) then) =
+      __$$PassportIssueDateChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String issueDate});
+}
+
+/// @nodoc
+class __$$PassportIssueDateChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$PassportIssueDateChangedImpl>
+    implements _$$PassportIssueDateChangedImplCopyWith<$Res> {
+  __$$PassportIssueDateChangedImplCopyWithImpl(
+      _$PassportIssueDateChangedImpl _value,
+      $Res Function(_$PassportIssueDateChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? issueDate = null,
+  }) {
+    return _then(_$PassportIssueDateChangedImpl(
+      null == issueDate
+          ? _value.issueDate
+          : issueDate // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
+  const _$PassportIssueDateChangedImpl(this.issueDate);
+
+  @override
+  final String issueDate;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.passportIssueDateChanged(issueDate: $issueDate)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PassportIssueDateChangedImpl &&
+            (identical(other.issueDate, issueDate) ||
+                other.issueDate == issueDate));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, issueDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PassportIssueDateChangedImplCopyWith<_$PassportIssueDateChangedImpl>
+      get copyWith => __$$PassportIssueDateChangedImplCopyWithImpl<
+          _$PassportIssueDateChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return passportIssueDateChanged(issueDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return passportIssueDateChanged?.call(issueDate);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportIssueDateChanged != null) {
+      return passportIssueDateChanged(issueDate);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return passportIssueDateChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return passportIssueDateChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (passportIssueDateChanged != null) {
+      return passportIssueDateChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _PassportIssueDateChanged implements UploadDocEvent {
+  const factory _PassportIssueDateChanged(final String issueDate) =
+      _$PassportIssueDateChangedImpl;
+
+  String get issueDate;
+  @JsonKey(ignore: true)
+  _$$PassportIssueDateChangedImplCopyWith<_$PassportIssueDateChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadPassportInfoImplCopyWith<$Res> {
+  factory _$$UploadPassportInfoImplCopyWith(_$UploadPassportInfoImpl value,
+          $Res Function(_$UploadPassportInfoImpl) then) =
+      __$$UploadPassportInfoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadPassportInfoImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadPassportInfoImpl>
+    implements _$$UploadPassportInfoImplCopyWith<$Res> {
+  __$$UploadPassportInfoImplCopyWithImpl(_$UploadPassportInfoImpl _value,
+      $Res Function(_$UploadPassportInfoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadPassportInfoImpl implements _UploadPassportInfo {
+  const _$UploadPassportInfoImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadPassportInfo()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadPassportInfoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return uploadPassportInfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return uploadPassportInfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadPassportInfo != null) {
+      return uploadPassportInfo();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return uploadPassportInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return uploadPassportInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadPassportInfo != null) {
+      return uploadPassportInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadPassportInfo implements UploadDocEvent {
+  const factory _UploadPassportInfo() = _$UploadPassportInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$ResumeChangedImplCopyWith<$Res> {
+  factory _$$ResumeChangedImplCopyWith(
+          _$ResumeChangedImpl value, $Res Function(_$ResumeChangedImpl) then) =
+      __$$ResumeChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({File resume});
+}
+
+/// @nodoc
+class __$$ResumeChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$ResumeChangedImpl>
+    implements _$$ResumeChangedImplCopyWith<$Res> {
+  __$$ResumeChangedImplCopyWithImpl(
+      _$ResumeChangedImpl _value, $Res Function(_$ResumeChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? resume = null,
+  }) {
+    return _then(_$ResumeChangedImpl(
+      null == resume
+          ? _value.resume
+          : resume // ignore: cast_nullable_to_non_nullable
+              as File,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ResumeChangedImpl implements _ResumeChanged {
+  const _$ResumeChangedImpl(this.resume);
+
+  @override
+  final File resume;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.resumeChanged(resume: $resume)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResumeChangedImpl &&
+            (identical(other.resume, resume) || other.resume == resume));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, resume);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResumeChangedImplCopyWith<_$ResumeChangedImpl> get copyWith =>
+      __$$ResumeChangedImplCopyWithImpl<_$ResumeChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return resumeChanged(resume);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return resumeChanged?.call(resume);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (resumeChanged != null) {
+      return resumeChanged(resume);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return resumeChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return resumeChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (resumeChanged != null) {
+      return resumeChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResumeChanged implements UploadDocEvent {
+  const factory _ResumeChanged(final File resume) = _$ResumeChangedImpl;
+
+  File get resume;
+  @JsonKey(ignore: true)
+  _$$ResumeChangedImplCopyWith<_$ResumeChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadResumeImplCopyWith<$Res> {
+  factory _$$UploadResumeImplCopyWith(
+          _$UploadResumeImpl value, $Res Function(_$UploadResumeImpl) then) =
+      __$$UploadResumeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadResumeImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadResumeImpl>
+    implements _$$UploadResumeImplCopyWith<$Res> {
+  __$$UploadResumeImplCopyWithImpl(
+      _$UploadResumeImpl _value, $Res Function(_$UploadResumeImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadResumeImpl implements _UploadResume {
+  const _$UploadResumeImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadResume()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadResumeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+  }) {
+    return uploadResume();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+  }) {
+    return uploadResume?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadResume != null) {
+      return uploadResume();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+  }) {
+    return uploadResume(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+  }) {
+    return uploadResume?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    required TResult orElse(),
+  }) {
+    if (uploadResume != null) {
+      return uploadResume(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadResume implements UploadDocEvent {
+  const factory _UploadResume() = _$UploadResumeImpl;
+}
+
+/// @nodoc
 mixin _$UploadDocState {
   int get step => throw _privateConstructorUsedError;
   UploadStatus get uploadStatus =>
+      throw _privateConstructorUsedError; // Errors like not selecting photos , docs
+  bool get hasValidationError => throw _privateConstructorUsedError;
+  String? get validationError =>
       throw _privateConstructorUsedError; // Personal Information Form contents
   GlobalKey<FormState> get personalInfoFormKey =>
       throw _privateConstructorUsedError;
@@ -1896,9 +3910,17 @@ mixin _$UploadDocState {
   String? get fatherName => throw _privateConstructorUsedError;
   String? get birthDate => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
-  double get weight => throw _privateConstructorUsedError; //Photo upload states
+  double get weight =>
+      throw _privateConstructorUsedError; // Photo upload states
   File? get ppSizePhoto => throw _privateConstructorUsedError;
-  File? get fullSizePhoto => throw _privateConstructorUsedError;
+  File? get fullSizePhoto =>
+      throw _privateConstructorUsedError; // passport upload state
+  GlobalKey<FormState> get passportFormKey =>
+      throw _privateConstructorUsedError;
+  File? get passportPhoto => throw _privateConstructorUsedError;
+  String? get passportNumber => throw _privateConstructorUsedError;
+  String? get issueDate => throw _privateConstructorUsedError; // Resume
+  File? get resume => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UploadDocStateCopyWith<UploadDocState> get copyWith =>
@@ -1914,6 +3936,8 @@ abstract class $UploadDocStateCopyWith<$Res> {
   $Res call(
       {int step,
       UploadStatus uploadStatus,
+      bool hasValidationError,
+      String? validationError,
       GlobalKey<FormState> personalInfoFormKey,
       String? fullName,
       String? permanantAddress,
@@ -1923,7 +3947,12 @@ abstract class $UploadDocStateCopyWith<$Res> {
       double height,
       double weight,
       File? ppSizePhoto,
-      File? fullSizePhoto});
+      File? fullSizePhoto,
+      GlobalKey<FormState> passportFormKey,
+      File? passportPhoto,
+      String? passportNumber,
+      String? issueDate,
+      File? resume});
 }
 
 /// @nodoc
@@ -1941,6 +3970,8 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
   $Res call({
     Object? step = null,
     Object? uploadStatus = null,
+    Object? hasValidationError = null,
+    Object? validationError = freezed,
     Object? personalInfoFormKey = null,
     Object? fullName = freezed,
     Object? permanantAddress = freezed,
@@ -1951,6 +3982,11 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
     Object? weight = null,
     Object? ppSizePhoto = freezed,
     Object? fullSizePhoto = freezed,
+    Object? passportFormKey = null,
+    Object? passportPhoto = freezed,
+    Object? passportNumber = freezed,
+    Object? issueDate = freezed,
+    Object? resume = freezed,
   }) {
     return _then(_value.copyWith(
       step: null == step
@@ -1961,6 +3997,14 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
           ? _value.uploadStatus
           : uploadStatus // ignore: cast_nullable_to_non_nullable
               as UploadStatus,
+      hasValidationError: null == hasValidationError
+          ? _value.hasValidationError
+          : hasValidationError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      validationError: freezed == validationError
+          ? _value.validationError
+          : validationError // ignore: cast_nullable_to_non_nullable
+              as String?,
       personalInfoFormKey: null == personalInfoFormKey
           ? _value.personalInfoFormKey
           : personalInfoFormKey // ignore: cast_nullable_to_non_nullable
@@ -2000,6 +4044,26 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
       fullSizePhoto: freezed == fullSizePhoto
           ? _value.fullSizePhoto
           : fullSizePhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      passportFormKey: null == passportFormKey
+          ? _value.passportFormKey
+          : passportFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      passportPhoto: freezed == passportPhoto
+          ? _value.passportPhoto
+          : passportPhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      passportNumber: freezed == passportNumber
+          ? _value.passportNumber
+          : passportNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueDate: freezed == issueDate
+          ? _value.issueDate
+          : issueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      resume: freezed == resume
+          ? _value.resume
+          : resume // ignore: cast_nullable_to_non_nullable
               as File?,
     ) as $Val);
   }
@@ -2016,6 +4080,8 @@ abstract class _$$UploadDocStateImplCopyWith<$Res>
   $Res call(
       {int step,
       UploadStatus uploadStatus,
+      bool hasValidationError,
+      String? validationError,
       GlobalKey<FormState> personalInfoFormKey,
       String? fullName,
       String? permanantAddress,
@@ -2025,7 +4091,12 @@ abstract class _$$UploadDocStateImplCopyWith<$Res>
       double height,
       double weight,
       File? ppSizePhoto,
-      File? fullSizePhoto});
+      File? fullSizePhoto,
+      GlobalKey<FormState> passportFormKey,
+      File? passportPhoto,
+      String? passportNumber,
+      String? issueDate,
+      File? resume});
 }
 
 /// @nodoc
@@ -2041,6 +4112,8 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
   $Res call({
     Object? step = null,
     Object? uploadStatus = null,
+    Object? hasValidationError = null,
+    Object? validationError = freezed,
     Object? personalInfoFormKey = null,
     Object? fullName = freezed,
     Object? permanantAddress = freezed,
@@ -2051,6 +4124,11 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
     Object? weight = null,
     Object? ppSizePhoto = freezed,
     Object? fullSizePhoto = freezed,
+    Object? passportFormKey = null,
+    Object? passportPhoto = freezed,
+    Object? passportNumber = freezed,
+    Object? issueDate = freezed,
+    Object? resume = freezed,
   }) {
     return _then(_$UploadDocStateImpl(
       step: null == step
@@ -2061,6 +4139,14 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
           ? _value.uploadStatus
           : uploadStatus // ignore: cast_nullable_to_non_nullable
               as UploadStatus,
+      hasValidationError: null == hasValidationError
+          ? _value.hasValidationError
+          : hasValidationError // ignore: cast_nullable_to_non_nullable
+              as bool,
+      validationError: freezed == validationError
+          ? _value.validationError
+          : validationError // ignore: cast_nullable_to_non_nullable
+              as String?,
       personalInfoFormKey: null == personalInfoFormKey
           ? _value.personalInfoFormKey
           : personalInfoFormKey // ignore: cast_nullable_to_non_nullable
@@ -2101,6 +4187,26 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
           ? _value.fullSizePhoto
           : fullSizePhoto // ignore: cast_nullable_to_non_nullable
               as File?,
+      passportFormKey: null == passportFormKey
+          ? _value.passportFormKey
+          : passportFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      passportPhoto: freezed == passportPhoto
+          ? _value.passportPhoto
+          : passportPhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      passportNumber: freezed == passportNumber
+          ? _value.passportNumber
+          : passportNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueDate: freezed == issueDate
+          ? _value.issueDate
+          : issueDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      resume: freezed == resume
+          ? _value.resume
+          : resume // ignore: cast_nullable_to_non_nullable
+              as File?,
     ));
   }
 }
@@ -2109,8 +4215,10 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
 
 class _$UploadDocStateImpl implements _UploadDocState {
   const _$UploadDocStateImpl(
-      {this.step = 1,
+      {this.step = 5,
       this.uploadStatus = UploadStatus.initial,
+      this.hasValidationError = false,
+      this.validationError,
       required this.personalInfoFormKey,
       this.fullName,
       this.permanantAddress,
@@ -2120,7 +4228,12 @@ class _$UploadDocStateImpl implements _UploadDocState {
       this.height = 5.6,
       this.weight = 69.0,
       this.ppSizePhoto,
-      this.fullSizePhoto});
+      this.fullSizePhoto,
+      required this.passportFormKey,
+      this.passportPhoto,
+      this.passportNumber,
+      this.issueDate,
+      this.resume});
 
   @override
   @JsonKey()
@@ -2128,6 +4241,12 @@ class _$UploadDocStateImpl implements _UploadDocState {
   @override
   @JsonKey()
   final UploadStatus uploadStatus;
+// Errors like not selecting photos , docs
+  @override
+  @JsonKey()
+  final bool hasValidationError;
+  @override
+  final String? validationError;
 // Personal Information Form contents
   @override
   final GlobalKey<FormState> personalInfoFormKey;
@@ -2147,15 +4266,27 @@ class _$UploadDocStateImpl implements _UploadDocState {
   @override
   @JsonKey()
   final double weight;
-//Photo upload states
+// Photo upload states
   @override
   final File? ppSizePhoto;
   @override
   final File? fullSizePhoto;
+// passport upload state
+  @override
+  final GlobalKey<FormState> passportFormKey;
+  @override
+  final File? passportPhoto;
+  @override
+  final String? passportNumber;
+  @override
+  final String? issueDate;
+// Resume
+  @override
+  final File? resume;
 
   @override
   String toString() {
-    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight, ppSizePhoto: $ppSizePhoto, fullSizePhoto: $fullSizePhoto)';
+    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, hasValidationError: $hasValidationError, validationError: $validationError, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight, ppSizePhoto: $ppSizePhoto, fullSizePhoto: $fullSizePhoto, passportFormKey: $passportFormKey, passportPhoto: $passportPhoto, passportNumber: $passportNumber, issueDate: $issueDate, resume: $resume)';
   }
 
   @override
@@ -2166,6 +4297,10 @@ class _$UploadDocStateImpl implements _UploadDocState {
             (identical(other.step, step) || other.step == step) &&
             (identical(other.uploadStatus, uploadStatus) ||
                 other.uploadStatus == uploadStatus) &&
+            (identical(other.hasValidationError, hasValidationError) ||
+                other.hasValidationError == hasValidationError) &&
+            (identical(other.validationError, validationError) ||
+                other.validationError == validationError) &&
             (identical(other.personalInfoFormKey, personalInfoFormKey) ||
                 other.personalInfoFormKey == personalInfoFormKey) &&
             (identical(other.fullName, fullName) ||
@@ -2183,24 +4318,41 @@ class _$UploadDocStateImpl implements _UploadDocState {
             (identical(other.ppSizePhoto, ppSizePhoto) ||
                 other.ppSizePhoto == ppSizePhoto) &&
             (identical(other.fullSizePhoto, fullSizePhoto) ||
-                other.fullSizePhoto == fullSizePhoto));
+                other.fullSizePhoto == fullSizePhoto) &&
+            (identical(other.passportFormKey, passportFormKey) ||
+                other.passportFormKey == passportFormKey) &&
+            (identical(other.passportPhoto, passportPhoto) ||
+                other.passportPhoto == passportPhoto) &&
+            (identical(other.passportNumber, passportNumber) ||
+                other.passportNumber == passportNumber) &&
+            (identical(other.issueDate, issueDate) ||
+                other.issueDate == issueDate) &&
+            (identical(other.resume, resume) || other.resume == resume));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      step,
-      uploadStatus,
-      personalInfoFormKey,
-      fullName,
-      permanantAddress,
-      temporaryAddress,
-      fatherName,
-      birthDate,
-      height,
-      weight,
-      ppSizePhoto,
-      fullSizePhoto);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        step,
+        uploadStatus,
+        hasValidationError,
+        validationError,
+        personalInfoFormKey,
+        fullName,
+        permanantAddress,
+        temporaryAddress,
+        fatherName,
+        birthDate,
+        height,
+        weight,
+        ppSizePhoto,
+        fullSizePhoto,
+        passportFormKey,
+        passportPhoto,
+        passportNumber,
+        issueDate,
+        resume
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -2214,6 +4366,8 @@ abstract class _UploadDocState implements UploadDocState {
   const factory _UploadDocState(
       {final int step,
       final UploadStatus uploadStatus,
+      final bool hasValidationError,
+      final String? validationError,
       required final GlobalKey<FormState> personalInfoFormKey,
       final String? fullName,
       final String? permanantAddress,
@@ -2223,12 +4377,21 @@ abstract class _UploadDocState implements UploadDocState {
       final double height,
       final double weight,
       final File? ppSizePhoto,
-      final File? fullSizePhoto}) = _$UploadDocStateImpl;
+      final File? fullSizePhoto,
+      required final GlobalKey<FormState> passportFormKey,
+      final File? passportPhoto,
+      final String? passportNumber,
+      final String? issueDate,
+      final File? resume}) = _$UploadDocStateImpl;
 
   @override
   int get step;
   @override
   UploadStatus get uploadStatus;
+  @override // Errors like not selecting photos , docs
+  bool get hasValidationError;
+  @override
+  String? get validationError;
   @override // Personal Information Form contents
   GlobalKey<FormState> get personalInfoFormKey;
   @override
@@ -2245,10 +4408,20 @@ abstract class _UploadDocState implements UploadDocState {
   double get height;
   @override
   double get weight;
-  @override //Photo upload states
+  @override // Photo upload states
   File? get ppSizePhoto;
   @override
   File? get fullSizePhoto;
+  @override // passport upload state
+  GlobalKey<FormState> get passportFormKey;
+  @override
+  File? get passportPhoto;
+  @override
+  String? get passportNumber;
+  @override
+  String? get issueDate;
+  @override // Resume
+  File? get resume;
   @override
   @JsonKey(ignore: true)
   _$$UploadDocStateImplCopyWith<_$UploadDocStateImpl> get copyWith =>
