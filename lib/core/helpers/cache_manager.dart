@@ -18,4 +18,16 @@ class CacheManager {
   Future<bool> removeToken() async {
     return await sp.remove("TOKEN");
   }
+
+  Future<bool> saveUserDocsStatus() async {
+    return await sp.setBool("DOC_SAVED", true);
+  }
+
+  bool? getUserDocsStatus() {
+    return sp.getBool("DOC_SAVED");
+  }
+
+  Future<bool?> removeUserDocsStatus() async {
+    return await sp.remove("DOC_SAVED");
+  }
 }

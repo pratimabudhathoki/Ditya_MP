@@ -20,6 +20,8 @@ mixin _$UploadDocEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -35,12 +37,33 @@ mixin _$UploadDocEvent {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -56,12 +79,33 @@ mixin _$UploadDocEvent {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -77,6 +121,25 @@ mixin _$UploadDocEvent {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -84,6 +147,9 @@ mixin _$UploadDocEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -103,12 +169,38 @@ mixin _$UploadDocEvent {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -125,12 +217,34 @@ mixin _$UploadDocEvent {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -146,6 +260,25 @@ mixin _$UploadDocEvent {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -209,6 +342,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -224,6 +359,25 @@ class _$StartedImpl implements _Started {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return started();
   }
@@ -233,6 +387,8 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -248,6 +404,25 @@ class _$StartedImpl implements _Started {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return started?.call();
   }
@@ -257,6 +432,8 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -272,6 +449,25 @@ class _$StartedImpl implements _Started {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -285,6 +481,9 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -304,6 +503,30 @@ class _$StartedImpl implements _Started {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return started(this);
   }
@@ -313,6 +536,8 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -329,6 +554,26 @@ class _$StartedImpl implements _Started {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return started?.call(this);
   }
@@ -338,6 +583,8 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -353,6 +600,25 @@ class _$StartedImpl implements _Started {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -406,6 +672,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -421,6 +689,25 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return goToNextStep();
   }
@@ -430,6 +717,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -445,6 +734,25 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return goToNextStep?.call();
   }
@@ -454,6 +762,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -469,6 +779,25 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -482,6 +811,9 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -501,6 +833,30 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return goToNextStep(this);
   }
@@ -510,6 +866,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -526,6 +884,26 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return goToNextStep?.call(this);
   }
@@ -535,6 +913,8 @@ class _$GoToNextStepImpl implements _GoToNextStep {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -550,6 +930,25 @@ class _$GoToNextStepImpl implements _GoToNextStep {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (goToNextStep != null) {
@@ -561,6 +960,669 @@ class _$GoToNextStepImpl implements _GoToNextStep {
 
 abstract class _GoToNextStep implements UploadDocEvent {
   const factory _GoToNextStep() = _$GoToNextStepImpl;
+}
+
+/// @nodoc
+abstract class _$$GoToPreviousStepImplCopyWith<$Res> {
+  factory _$$GoToPreviousStepImplCopyWith(_$GoToPreviousStepImpl value,
+          $Res Function(_$GoToPreviousStepImpl) then) =
+      __$$GoToPreviousStepImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GoToPreviousStepImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$GoToPreviousStepImpl>
+    implements _$$GoToPreviousStepImplCopyWith<$Res> {
+  __$$GoToPreviousStepImplCopyWithImpl(_$GoToPreviousStepImpl _value,
+      $Res Function(_$GoToPreviousStepImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GoToPreviousStepImpl implements _GoToPreviousStep {
+  const _$GoToPreviousStepImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.goToPreviousStep()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GoToPreviousStepImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return goToPreviousStep();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return goToPreviousStep?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (goToPreviousStep != null) {
+      return goToPreviousStep();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return goToPreviousStep(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return goToPreviousStep?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (goToPreviousStep != null) {
+      return goToPreviousStep(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GoToPreviousStep implements UploadDocEvent {
+  const factory _GoToPreviousStep() = _$GoToPreviousStepImpl;
+}
+
+/// @nodoc
+abstract class _$$DismissValidationErrorImplCopyWith<$Res> {
+  factory _$$DismissValidationErrorImplCopyWith(
+          _$DismissValidationErrorImpl value,
+          $Res Function(_$DismissValidationErrorImpl) then) =
+      __$$DismissValidationErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DismissValidationErrorImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$DismissValidationErrorImpl>
+    implements _$$DismissValidationErrorImplCopyWith<$Res> {
+  __$$DismissValidationErrorImplCopyWithImpl(
+      _$DismissValidationErrorImpl _value,
+      $Res Function(_$DismissValidationErrorImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DismissValidationErrorImpl implements _DismissValidationError {
+  const _$DismissValidationErrorImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.dismissValidationError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DismissValidationErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return dismissValidationError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return dismissValidationError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (dismissValidationError != null) {
+      return dismissValidationError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return dismissValidationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return dismissValidationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (dismissValidationError != null) {
+      return dismissValidationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DismissValidationError implements UploadDocEvent {
+  const factory _DismissValidationError() = _$DismissValidationErrorImpl;
 }
 
 /// @nodoc
@@ -631,6 +1693,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -646,6 +1710,25 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return fullNameChanged(fullName);
   }
@@ -655,6 +1738,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -670,6 +1755,25 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return fullNameChanged?.call(fullName);
   }
@@ -679,6 +1783,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -694,6 +1800,25 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -707,6 +1832,9 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -726,6 +1854,30 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return fullNameChanged(this);
   }
@@ -735,6 +1887,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -751,6 +1905,26 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return fullNameChanged?.call(this);
   }
@@ -760,6 +1934,8 @@ class _$FullNameChangedImpl implements _FullNameChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -775,6 +1951,25 @@ class _$FullNameChangedImpl implements _FullNameChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fullNameChanged != null) {
@@ -863,6 +2058,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -878,6 +2075,25 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return temporaryAddressChanged(tempAddress);
   }
@@ -887,6 +2103,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -902,6 +2120,25 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return temporaryAddressChanged?.call(tempAddress);
   }
@@ -911,6 +2148,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -926,6 +2165,25 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -939,6 +2197,9 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -958,6 +2219,30 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return temporaryAddressChanged(this);
   }
@@ -967,6 +2252,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -983,6 +2270,26 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return temporaryAddressChanged?.call(this);
   }
@@ -992,6 +2299,8 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1007,6 +2316,25 @@ class _$TemporaryAddressChangedImpl implements _TemporaryAddressChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (temporaryAddressChanged != null) {
@@ -1096,6 +2424,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -1111,6 +2441,25 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return permanantAddressChanged(permAddress);
   }
@@ -1120,6 +2469,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -1135,6 +2486,25 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return permanantAddressChanged?.call(permAddress);
   }
@@ -1144,6 +2514,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -1159,6 +2531,25 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -1172,6 +2563,9 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -1191,6 +2585,30 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return permanantAddressChanged(this);
   }
@@ -1200,6 +2618,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1216,6 +2636,26 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return permanantAddressChanged?.call(this);
   }
@@ -1225,6 +2665,8 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1240,6 +2682,25 @@ class _$PermanantAddressChangedImpl implements _PermanantAddressChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (permanantAddressChanged != null) {
@@ -1327,6 +2788,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -1342,6 +2805,25 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return fatherNameChanged(fatherName);
   }
@@ -1351,6 +2833,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -1366,6 +2850,25 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return fatherNameChanged?.call(fatherName);
   }
@@ -1375,6 +2878,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -1390,6 +2895,25 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1403,6 +2927,9 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -1422,6 +2949,30 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return fatherNameChanged(this);
   }
@@ -1431,6 +2982,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1447,6 +3000,26 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return fatherNameChanged?.call(this);
   }
@@ -1456,6 +3029,8 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1471,6 +3046,25 @@ class _$FatherNameChangedImpl implements _FatherNameChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fatherNameChanged != null) {
@@ -1556,6 +3150,8 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -1571,6 +3167,25 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return dobChanged(dob);
   }
@@ -1580,6 +3195,8 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -1595,6 +3212,25 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return dobChanged?.call(dob);
   }
@@ -1604,6 +3240,8 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -1619,6 +3257,25 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1632,6 +3289,9 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -1651,6 +3311,30 @@ class _$DOBChangedImpl implements _DOBChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return dobChanged(this);
   }
@@ -1660,6 +3344,8 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1676,6 +3362,26 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return dobChanged?.call(this);
   }
@@ -1685,6 +3391,8 @@ class _$DOBChangedImpl implements _DOBChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1700,6 +3408,25 @@ class _$DOBChangedImpl implements _DOBChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (dobChanged != null) {
@@ -1758,6 +3485,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -1773,6 +3502,25 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return uploadPersonalInfo();
   }
@@ -1782,6 +3530,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -1797,6 +3547,25 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return uploadPersonalInfo?.call();
   }
@@ -1806,6 +3575,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -1821,6 +3592,25 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1834,6 +3624,9 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -1853,6 +3646,30 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return uploadPersonalInfo(this);
   }
@@ -1862,6 +3679,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1878,6 +3697,26 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return uploadPersonalInfo?.call(this);
   }
@@ -1887,6 +3726,8 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -1902,6 +3743,25 @@ class _$UploadPersonalInfoImpl implements _UploadPersonalInfo {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPersonalInfo != null) {
@@ -1983,6 +3843,8 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -1998,6 +3860,25 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return ppSizePhotoChanged(photo);
   }
@@ -2007,6 +3888,8 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -2022,6 +3905,25 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return ppSizePhotoChanged?.call(photo);
   }
@@ -2031,6 +3933,8 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -2046,6 +3950,25 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (ppSizePhotoChanged != null) {
@@ -2059,6 +3982,9 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -2078,6 +4004,30 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return ppSizePhotoChanged(this);
   }
@@ -2087,6 +4037,8 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2103,6 +4055,26 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return ppSizePhotoChanged?.call(this);
   }
@@ -2112,6 +4084,8 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2127,6 +4101,25 @@ class _$PPSizePhotoChangedImpl implements _PPSizePhotoChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (ppSizePhotoChanged != null) {
@@ -2215,6 +4208,8 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -2230,6 +4225,25 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return fullSizePhotoChanged(photo);
   }
@@ -2239,6 +4253,8 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -2254,6 +4270,25 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return fullSizePhotoChanged?.call(photo);
   }
@@ -2263,6 +4298,8 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -2278,6 +4315,25 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fullSizePhotoChanged != null) {
@@ -2291,6 +4347,9 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -2310,6 +4369,30 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return fullSizePhotoChanged(this);
   }
@@ -2319,6 +4402,8 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2335,6 +4420,26 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return fullSizePhotoChanged?.call(this);
   }
@@ -2344,6 +4449,8 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2359,6 +4466,25 @@ class _$FullSizePhotoChangedImpl implements _FullSizePhotoChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (fullSizePhotoChanged != null) {
@@ -2418,6 +4544,8 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -2433,6 +4561,25 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return uploadPhotos();
   }
@@ -2442,6 +4589,8 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -2457,6 +4606,25 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return uploadPhotos?.call();
   }
@@ -2466,6 +4634,8 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -2481,6 +4651,25 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPhotos != null) {
@@ -2494,6 +4683,9 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -2513,6 +4705,30 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return uploadPhotos(this);
   }
@@ -2522,6 +4738,8 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2538,6 +4756,26 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return uploadPhotos?.call(this);
   }
@@ -2547,6 +4785,8 @@ class _$UploadPhotosImpl implements _UploadPhotos {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2562,6 +4802,25 @@ class _$UploadPhotosImpl implements _UploadPhotos {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPhotos != null) {
@@ -2644,6 +4903,8 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -2659,6 +4920,25 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return passportPhotoChanged(photo);
   }
@@ -2668,6 +4948,8 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -2683,6 +4965,25 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return passportPhotoChanged?.call(photo);
   }
@@ -2692,6 +4993,8 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -2707,6 +5010,25 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportPhotoChanged != null) {
@@ -2720,6 +5042,9 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -2739,6 +5064,30 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return passportPhotoChanged(this);
   }
@@ -2748,6 +5097,8 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2764,6 +5115,26 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return passportPhotoChanged?.call(this);
   }
@@ -2773,6 +5144,8 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2788,6 +5161,25 @@ class _$PassportPhotoChangedImpl implements _PassportPhotoChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportPhotoChanged != null) {
@@ -2876,6 +5268,8 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -2891,6 +5285,25 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return passportNumberChanged(passportNumber);
   }
@@ -2900,6 +5313,8 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -2915,6 +5330,25 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return passportNumberChanged?.call(passportNumber);
   }
@@ -2924,6 +5358,8 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -2939,6 +5375,25 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportNumberChanged != null) {
@@ -2952,6 +5407,9 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -2971,6 +5429,30 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return passportNumberChanged(this);
   }
@@ -2980,6 +5462,8 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -2996,6 +5480,26 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return passportNumberChanged?.call(this);
   }
@@ -3005,6 +5509,8 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3020,6 +5526,25 @@ class _$PassportNumberChangedImpl implements _PassportNumberChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportNumberChanged != null) {
@@ -3109,6 +5634,8 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -3124,6 +5651,25 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return passportIssueDateChanged(issueDate);
   }
@@ -3133,6 +5679,8 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -3148,6 +5696,25 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return passportIssueDateChanged?.call(issueDate);
   }
@@ -3157,6 +5724,8 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -3172,6 +5741,25 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportIssueDateChanged != null) {
@@ -3185,6 +5773,9 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -3204,6 +5795,30 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return passportIssueDateChanged(this);
   }
@@ -3213,6 +5828,8 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3229,6 +5846,26 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return passportIssueDateChanged?.call(this);
   }
@@ -3238,6 +5875,8 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3253,6 +5892,25 @@ class _$PassportIssueDateChangedImpl implements _PassportIssueDateChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (passportIssueDateChanged != null) {
@@ -3312,6 +5970,8 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -3327,6 +5987,25 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return uploadPassportInfo();
   }
@@ -3336,6 +6015,8 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -3351,6 +6032,25 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return uploadPassportInfo?.call();
   }
@@ -3360,6 +6060,8 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -3375,6 +6077,25 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPassportInfo != null) {
@@ -3388,6 +6109,9 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -3407,6 +6131,30 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return uploadPassportInfo(this);
   }
@@ -3416,6 +6164,8 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3432,6 +6182,26 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return uploadPassportInfo?.call(this);
   }
@@ -3441,6 +6211,8 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3456,6 +6228,25 @@ class _$UploadPassportInfoImpl implements _UploadPassportInfo {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadPassportInfo != null) {
@@ -3535,6 +6326,8 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -3550,6 +6343,25 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return resumeChanged(resume);
   }
@@ -3559,6 +6371,8 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -3574,6 +6388,25 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return resumeChanged?.call(resume);
   }
@@ -3583,6 +6416,8 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -3598,6 +6433,25 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (resumeChanged != null) {
@@ -3611,6 +6465,9 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -3630,6 +6487,30 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return resumeChanged(this);
   }
@@ -3639,6 +6520,8 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3655,6 +6538,26 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return resumeChanged?.call(this);
   }
@@ -3664,6 +6567,8 @@ class _$ResumeChangedImpl implements _ResumeChanged {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3679,6 +6584,25 @@ class _$ResumeChangedImpl implements _ResumeChanged {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (resumeChanged != null) {
@@ -3737,6 +6661,8 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult when<TResult extends Object?>({
     required TResult Function() started,
     required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
     required TResult Function(String fullName) fullNameChanged,
     required TResult Function(String tempAddress) temporaryAddressChanged,
     required TResult Function(String permAddress) permanantAddressChanged,
@@ -3752,6 +6678,25 @@ class _$UploadResumeImpl implements _UploadResume {
     required TResult Function() uploadPassportInfo,
     required TResult Function(File resume) resumeChanged,
     required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
   }) {
     return uploadResume();
   }
@@ -3761,6 +6706,8 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
     TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
     TResult? Function(String fullName)? fullNameChanged,
     TResult? Function(String tempAddress)? temporaryAddressChanged,
     TResult? Function(String permAddress)? permanantAddressChanged,
@@ -3776,6 +6723,25 @@ class _$UploadResumeImpl implements _UploadResume {
     TResult? Function()? uploadPassportInfo,
     TResult? Function(File resume)? resumeChanged,
     TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
   }) {
     return uploadResume?.call();
   }
@@ -3785,6 +6751,8 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
     TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
     TResult Function(String fullName)? fullNameChanged,
     TResult Function(String tempAddress)? temporaryAddressChanged,
     TResult Function(String permAddress)? permanantAddressChanged,
@@ -3800,6 +6768,25 @@ class _$UploadResumeImpl implements _UploadResume {
     TResult Function()? uploadPassportInfo,
     TResult Function(File resume)? resumeChanged,
     TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadResume != null) {
@@ -3813,6 +6800,9 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
     required TResult Function(_FullNameChanged value) fullNameChanged,
     required TResult Function(_TemporaryAddressChanged value)
         temporaryAddressChanged,
@@ -3832,6 +6822,30 @@ class _$UploadResumeImpl implements _UploadResume {
     required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
     required TResult Function(_ResumeChanged value) resumeChanged,
     required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
   }) {
     return uploadResume(this);
   }
@@ -3841,6 +6855,8 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
     TResult? Function(_FullNameChanged value)? fullNameChanged,
     TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3857,6 +6873,26 @@ class _$UploadResumeImpl implements _UploadResume {
     TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult? Function(_ResumeChanged value)? resumeChanged,
     TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
   }) {
     return uploadResume?.call(this);
   }
@@ -3866,6 +6902,8 @@ class _$UploadResumeImpl implements _UploadResume {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
     TResult Function(_FullNameChanged value)? fullNameChanged,
     TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
     TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
@@ -3881,6 +6919,25 @@ class _$UploadResumeImpl implements _UploadResume {
     TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
     TResult Function(_ResumeChanged value)? resumeChanged,
     TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
     required TResult orElse(),
   }) {
     if (uploadResume != null) {
@@ -3892,6 +6949,6759 @@ class _$UploadResumeImpl implements _UploadResume {
 
 abstract class _UploadResume implements UploadDocEvent {
   const factory _UploadResume() = _$UploadResumeImpl;
+}
+
+/// @nodoc
+abstract class _$$EduDocPhotoChangedImplCopyWith<$Res> {
+  factory _$$EduDocPhotoChangedImplCopyWith(_$EduDocPhotoChangedImpl value,
+          $Res Function(_$EduDocPhotoChangedImpl) then) =
+      __$$EduDocPhotoChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({File document});
+}
+
+/// @nodoc
+class __$$EduDocPhotoChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$EduDocPhotoChangedImpl>
+    implements _$$EduDocPhotoChangedImplCopyWith<$Res> {
+  __$$EduDocPhotoChangedImplCopyWithImpl(_$EduDocPhotoChangedImpl _value,
+      $Res Function(_$EduDocPhotoChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? document = null,
+  }) {
+    return _then(_$EduDocPhotoChangedImpl(
+      null == document
+          ? _value.document
+          : document // ignore: cast_nullable_to_non_nullable
+              as File,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EduDocPhotoChangedImpl implements _EduDocPhotoChanged {
+  const _$EduDocPhotoChangedImpl(this.document);
+
+  @override
+  final File document;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.eduDocPhotoChanged(document: $document)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EduDocPhotoChangedImpl &&
+            (identical(other.document, document) ||
+                other.document == document));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, document);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EduDocPhotoChangedImplCopyWith<_$EduDocPhotoChangedImpl> get copyWith =>
+      __$$EduDocPhotoChangedImplCopyWithImpl<_$EduDocPhotoChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return eduDocPhotoChanged(document);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return eduDocPhotoChanged?.call(document);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduDocPhotoChanged != null) {
+      return eduDocPhotoChanged(document);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return eduDocPhotoChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return eduDocPhotoChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduDocPhotoChanged != null) {
+      return eduDocPhotoChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EduDocPhotoChanged implements UploadDocEvent {
+  const factory _EduDocPhotoChanged(final File document) =
+      _$EduDocPhotoChangedImpl;
+
+  File get document;
+  @JsonKey(ignore: true)
+  _$$EduDocPhotoChangedImplCopyWith<_$EduDocPhotoChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EduLevelChangedImplCopyWith<$Res> {
+  factory _$$EduLevelChangedImplCopyWith(_$EduLevelChangedImpl value,
+          $Res Function(_$EduLevelChangedImpl) then) =
+      __$$EduLevelChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String level});
+}
+
+/// @nodoc
+class __$$EduLevelChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$EduLevelChangedImpl>
+    implements _$$EduLevelChangedImplCopyWith<$Res> {
+  __$$EduLevelChangedImplCopyWithImpl(
+      _$EduLevelChangedImpl _value, $Res Function(_$EduLevelChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? level = null,
+  }) {
+    return _then(_$EduLevelChangedImpl(
+      null == level
+          ? _value.level
+          : level // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EduLevelChangedImpl implements _EduLevelChanged {
+  const _$EduLevelChangedImpl(this.level);
+
+  @override
+  final String level;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.eduLevelChanged(level: $level)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EduLevelChangedImpl &&
+            (identical(other.level, level) || other.level == level));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, level);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EduLevelChangedImplCopyWith<_$EduLevelChangedImpl> get copyWith =>
+      __$$EduLevelChangedImplCopyWithImpl<_$EduLevelChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return eduLevelChanged(level);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return eduLevelChanged?.call(level);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduLevelChanged != null) {
+      return eduLevelChanged(level);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return eduLevelChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return eduLevelChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduLevelChanged != null) {
+      return eduLevelChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EduLevelChanged implements UploadDocEvent {
+  const factory _EduLevelChanged(final String level) = _$EduLevelChangedImpl;
+
+  String get level;
+  @JsonKey(ignore: true)
+  _$$EduLevelChangedImplCopyWith<_$EduLevelChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EduPassYearChangedImplCopyWith<$Res> {
+  factory _$$EduPassYearChangedImplCopyWith(_$EduPassYearChangedImpl value,
+          $Res Function(_$EduPassYearChangedImpl) then) =
+      __$$EduPassYearChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String passyear});
+}
+
+/// @nodoc
+class __$$EduPassYearChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$EduPassYearChangedImpl>
+    implements _$$EduPassYearChangedImplCopyWith<$Res> {
+  __$$EduPassYearChangedImplCopyWithImpl(_$EduPassYearChangedImpl _value,
+      $Res Function(_$EduPassYearChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? passyear = null,
+  }) {
+    return _then(_$EduPassYearChangedImpl(
+      null == passyear
+          ? _value.passyear
+          : passyear // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EduPassYearChangedImpl implements _EduPassYearChanged {
+  const _$EduPassYearChangedImpl(this.passyear);
+
+  @override
+  final String passyear;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.eduPassYearChanged(passyear: $passyear)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EduPassYearChangedImpl &&
+            (identical(other.passyear, passyear) ||
+                other.passyear == passyear));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, passyear);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EduPassYearChangedImplCopyWith<_$EduPassYearChangedImpl> get copyWith =>
+      __$$EduPassYearChangedImplCopyWithImpl<_$EduPassYearChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return eduPassYearChanged(passyear);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return eduPassYearChanged?.call(passyear);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduPassYearChanged != null) {
+      return eduPassYearChanged(passyear);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return eduPassYearChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return eduPassYearChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduPassYearChanged != null) {
+      return eduPassYearChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EduPassYearChanged implements UploadDocEvent {
+  const factory _EduPassYearChanged(final String passyear) =
+      _$EduPassYearChangedImpl;
+
+  String get passyear;
+  @JsonKey(ignore: true)
+  _$$EduPassYearChangedImplCopyWith<_$EduPassYearChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EduInstituteNameChangedImplCopyWith<$Res> {
+  factory _$$EduInstituteNameChangedImplCopyWith(
+          _$EduInstituteNameChangedImpl value,
+          $Res Function(_$EduInstituteNameChangedImpl) then) =
+      __$$EduInstituteNameChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String institutename});
+}
+
+/// @nodoc
+class __$$EduInstituteNameChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$EduInstituteNameChangedImpl>
+    implements _$$EduInstituteNameChangedImplCopyWith<$Res> {
+  __$$EduInstituteNameChangedImplCopyWithImpl(
+      _$EduInstituteNameChangedImpl _value,
+      $Res Function(_$EduInstituteNameChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? institutename = null,
+  }) {
+    return _then(_$EduInstituteNameChangedImpl(
+      null == institutename
+          ? _value.institutename
+          : institutename // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EduInstituteNameChangedImpl implements _EduInstituteNameChanged {
+  const _$EduInstituteNameChangedImpl(this.institutename);
+
+  @override
+  final String institutename;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.eduInstituteNameChanged(institutename: $institutename)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EduInstituteNameChangedImpl &&
+            (identical(other.institutename, institutename) ||
+                other.institutename == institutename));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, institutename);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EduInstituteNameChangedImplCopyWith<_$EduInstituteNameChangedImpl>
+      get copyWith => __$$EduInstituteNameChangedImplCopyWithImpl<
+          _$EduInstituteNameChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return eduInstituteNameChanged(institutename);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return eduInstituteNameChanged?.call(institutename);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduInstituteNameChanged != null) {
+      return eduInstituteNameChanged(institutename);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return eduInstituteNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return eduInstituteNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (eduInstituteNameChanged != null) {
+      return eduInstituteNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _EduInstituteNameChanged implements UploadDocEvent {
+  const factory _EduInstituteNameChanged(final String institutename) =
+      _$EduInstituteNameChangedImpl;
+
+  String get institutename;
+  @JsonKey(ignore: true)
+  _$$EduInstituteNameChangedImplCopyWith<_$EduInstituteNameChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadEduDocsImplCopyWith<$Res> {
+  factory _$$UploadEduDocsImplCopyWith(
+          _$UploadEduDocsImpl value, $Res Function(_$UploadEduDocsImpl) then) =
+      __$$UploadEduDocsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadEduDocsImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadEduDocsImpl>
+    implements _$$UploadEduDocsImplCopyWith<$Res> {
+  __$$UploadEduDocsImplCopyWithImpl(
+      _$UploadEduDocsImpl _value, $Res Function(_$UploadEduDocsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadEduDocsImpl implements _UploadEduDocs {
+  const _$UploadEduDocsImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadEduDocs()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadEduDocsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return uploadEduDocs();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return uploadEduDocs?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadEduDocs != null) {
+      return uploadEduDocs();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return uploadEduDocs(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return uploadEduDocs?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadEduDocs != null) {
+      return uploadEduDocs(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadEduDocs implements UploadDocEvent {
+  const factory _UploadEduDocs() = _$UploadEduDocsImpl;
+}
+
+/// @nodoc
+abstract class _$$LanguageSelectedImplCopyWith<$Res> {
+  factory _$$LanguageSelectedImplCopyWith(_$LanguageSelectedImpl value,
+          $Res Function(_$LanguageSelectedImpl) then) =
+      __$$LanguageSelectedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String language});
+}
+
+/// @nodoc
+class __$$LanguageSelectedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$LanguageSelectedImpl>
+    implements _$$LanguageSelectedImplCopyWith<$Res> {
+  __$$LanguageSelectedImplCopyWithImpl(_$LanguageSelectedImpl _value,
+      $Res Function(_$LanguageSelectedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? language = null,
+  }) {
+    return _then(_$LanguageSelectedImpl(
+      null == language
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LanguageSelectedImpl implements _LanguageSelected {
+  const _$LanguageSelectedImpl(this.language);
+
+  @override
+  final String language;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.languageSelected(language: $language)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LanguageSelectedImpl &&
+            (identical(other.language, language) ||
+                other.language == language));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, language);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LanguageSelectedImplCopyWith<_$LanguageSelectedImpl> get copyWith =>
+      __$$LanguageSelectedImplCopyWithImpl<_$LanguageSelectedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return languageSelected(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return languageSelected?.call(language);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (languageSelected != null) {
+      return languageSelected(language);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return languageSelected(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return languageSelected?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (languageSelected != null) {
+      return languageSelected(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LanguageSelected implements UploadDocEvent {
+  const factory _LanguageSelected(final String language) =
+      _$LanguageSelectedImpl;
+
+  String get language;
+  @JsonKey(ignore: true)
+  _$$LanguageSelectedImplCopyWith<_$LanguageSelectedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadLanguageImplCopyWith<$Res> {
+  factory _$$UploadLanguageImplCopyWith(_$UploadLanguageImpl value,
+          $Res Function(_$UploadLanguageImpl) then) =
+      __$$UploadLanguageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadLanguageImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadLanguageImpl>
+    implements _$$UploadLanguageImplCopyWith<$Res> {
+  __$$UploadLanguageImplCopyWithImpl(
+      _$UploadLanguageImpl _value, $Res Function(_$UploadLanguageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadLanguageImpl implements _UploadLanguage {
+  const _$UploadLanguageImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadLanguage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadLanguageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return uploadLanguage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return uploadLanguage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadLanguage != null) {
+      return uploadLanguage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return uploadLanguage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return uploadLanguage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadLanguage != null) {
+      return uploadLanguage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadLanguage implements UploadDocEvent {
+  const factory _UploadLanguage() = _$UploadLanguageImpl;
+}
+
+/// @nodoc
+abstract class _$$WorkPositionChangedImplCopyWith<$Res> {
+  factory _$$WorkPositionChangedImplCopyWith(_$WorkPositionChangedImpl value,
+          $Res Function(_$WorkPositionChangedImpl) then) =
+      __$$WorkPositionChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String position});
+}
+
+/// @nodoc
+class __$$WorkPositionChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$WorkPositionChangedImpl>
+    implements _$$WorkPositionChangedImplCopyWith<$Res> {
+  __$$WorkPositionChangedImplCopyWithImpl(_$WorkPositionChangedImpl _value,
+      $Res Function(_$WorkPositionChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? position = null,
+  }) {
+    return _then(_$WorkPositionChangedImpl(
+      null == position
+          ? _value.position
+          : position // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkPositionChangedImpl implements _WorkPositionChanged {
+  const _$WorkPositionChangedImpl(this.position);
+
+  @override
+  final String position;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.workPositionChanged(position: $position)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkPositionChangedImpl &&
+            (identical(other.position, position) ||
+                other.position == position));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, position);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkPositionChangedImplCopyWith<_$WorkPositionChangedImpl> get copyWith =>
+      __$$WorkPositionChangedImplCopyWithImpl<_$WorkPositionChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return workPositionChanged(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return workPositionChanged?.call(position);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workPositionChanged != null) {
+      return workPositionChanged(position);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return workPositionChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return workPositionChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workPositionChanged != null) {
+      return workPositionChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WorkPositionChanged implements UploadDocEvent {
+  const factory _WorkPositionChanged(final String position) =
+      _$WorkPositionChangedImpl;
+
+  String get position;
+  @JsonKey(ignore: true)
+  _$$WorkPositionChangedImplCopyWith<_$WorkPositionChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkCompanyChangedImplCopyWith<$Res> {
+  factory _$$WorkCompanyChangedImplCopyWith(_$WorkCompanyChangedImpl value,
+          $Res Function(_$WorkCompanyChangedImpl) then) =
+      __$$WorkCompanyChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String company});
+}
+
+/// @nodoc
+class __$$WorkCompanyChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$WorkCompanyChangedImpl>
+    implements _$$WorkCompanyChangedImplCopyWith<$Res> {
+  __$$WorkCompanyChangedImplCopyWithImpl(_$WorkCompanyChangedImpl _value,
+      $Res Function(_$WorkCompanyChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? company = null,
+  }) {
+    return _then(_$WorkCompanyChangedImpl(
+      null == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkCompanyChangedImpl implements _WorkCompanyChanged {
+  const _$WorkCompanyChangedImpl(this.company);
+
+  @override
+  final String company;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.workCompanyChanged(company: $company)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkCompanyChangedImpl &&
+            (identical(other.company, company) || other.company == company));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, company);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkCompanyChangedImplCopyWith<_$WorkCompanyChangedImpl> get copyWith =>
+      __$$WorkCompanyChangedImplCopyWithImpl<_$WorkCompanyChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return workCompanyChanged(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return workCompanyChanged?.call(company);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workCompanyChanged != null) {
+      return workCompanyChanged(company);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return workCompanyChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return workCompanyChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workCompanyChanged != null) {
+      return workCompanyChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WorkCompanyChanged implements UploadDocEvent {
+  const factory _WorkCompanyChanged(final String company) =
+      _$WorkCompanyChangedImpl;
+
+  String get company;
+  @JsonKey(ignore: true)
+  _$$WorkCompanyChangedImplCopyWith<_$WorkCompanyChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkAddressChangedImplCopyWith<$Res> {
+  factory _$$WorkAddressChangedImplCopyWith(_$WorkAddressChangedImpl value,
+          $Res Function(_$WorkAddressChangedImpl) then) =
+      __$$WorkAddressChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String workAddress});
+}
+
+/// @nodoc
+class __$$WorkAddressChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$WorkAddressChangedImpl>
+    implements _$$WorkAddressChangedImplCopyWith<$Res> {
+  __$$WorkAddressChangedImplCopyWithImpl(_$WorkAddressChangedImpl _value,
+      $Res Function(_$WorkAddressChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? workAddress = null,
+  }) {
+    return _then(_$WorkAddressChangedImpl(
+      null == workAddress
+          ? _value.workAddress
+          : workAddress // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkAddressChangedImpl implements _WorkAddressChanged {
+  const _$WorkAddressChangedImpl(this.workAddress);
+
+  @override
+  final String workAddress;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.workAddressChanged(workAddress: $workAddress)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkAddressChangedImpl &&
+            (identical(other.workAddress, workAddress) ||
+                other.workAddress == workAddress));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, workAddress);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkAddressChangedImplCopyWith<_$WorkAddressChangedImpl> get copyWith =>
+      __$$WorkAddressChangedImplCopyWithImpl<_$WorkAddressChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return workAddressChanged(workAddress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return workAddressChanged?.call(workAddress);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workAddressChanged != null) {
+      return workAddressChanged(workAddress);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return workAddressChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return workAddressChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workAddressChanged != null) {
+      return workAddressChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WorkAddressChanged implements UploadDocEvent {
+  const factory _WorkAddressChanged(final String workAddress) =
+      _$WorkAddressChangedImpl;
+
+  String get workAddress;
+  @JsonKey(ignore: true)
+  _$$WorkAddressChangedImplCopyWith<_$WorkAddressChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$WorkDescriptionChangedImplCopyWith<$Res> {
+  factory _$$WorkDescriptionChangedImplCopyWith(
+          _$WorkDescriptionChangedImpl value,
+          $Res Function(_$WorkDescriptionChangedImpl) then) =
+      __$$WorkDescriptionChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String description});
+}
+
+/// @nodoc
+class __$$WorkDescriptionChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$WorkDescriptionChangedImpl>
+    implements _$$WorkDescriptionChangedImplCopyWith<$Res> {
+  __$$WorkDescriptionChangedImplCopyWithImpl(
+      _$WorkDescriptionChangedImpl _value,
+      $Res Function(_$WorkDescriptionChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? description = null,
+  }) {
+    return _then(_$WorkDescriptionChangedImpl(
+      null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$WorkDescriptionChangedImpl implements _WorkDescriptionChanged {
+  const _$WorkDescriptionChangedImpl(this.description);
+
+  @override
+  final String description;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.workDescriptionChanged(description: $description)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$WorkDescriptionChangedImpl &&
+            (identical(other.description, description) ||
+                other.description == description));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, description);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$WorkDescriptionChangedImplCopyWith<_$WorkDescriptionChangedImpl>
+      get copyWith => __$$WorkDescriptionChangedImplCopyWithImpl<
+          _$WorkDescriptionChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return workDescriptionChanged(description);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return workDescriptionChanged?.call(description);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workDescriptionChanged != null) {
+      return workDescriptionChanged(description);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return workDescriptionChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return workDescriptionChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (workDescriptionChanged != null) {
+      return workDescriptionChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WorkDescriptionChanged implements UploadDocEvent {
+  const factory _WorkDescriptionChanged(final String description) =
+      _$WorkDescriptionChangedImpl;
+
+  String get description;
+  @JsonKey(ignore: true)
+  _$$WorkDescriptionChangedImplCopyWith<_$WorkDescriptionChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadWorkHistoryImplCopyWith<$Res> {
+  factory _$$UploadWorkHistoryImplCopyWith(_$UploadWorkHistoryImpl value,
+          $Res Function(_$UploadWorkHistoryImpl) then) =
+      __$$UploadWorkHistoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadWorkHistoryImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadWorkHistoryImpl>
+    implements _$$UploadWorkHistoryImplCopyWith<$Res> {
+  __$$UploadWorkHistoryImplCopyWithImpl(_$UploadWorkHistoryImpl _value,
+      $Res Function(_$UploadWorkHistoryImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadWorkHistoryImpl implements _UploadWorkHistory {
+  const _$UploadWorkHistoryImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadWorkHistory()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadWorkHistoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return uploadWorkHistory();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return uploadWorkHistory?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadWorkHistory != null) {
+      return uploadWorkHistory();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return uploadWorkHistory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return uploadWorkHistory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadWorkHistory != null) {
+      return uploadWorkHistory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadWorkHistory implements UploadDocEvent {
+  const factory _UploadWorkHistory() = _$UploadWorkHistoryImpl;
+}
+
+/// @nodoc
+abstract class _$$BankNameChangedImplCopyWith<$Res> {
+  factory _$$BankNameChangedImplCopyWith(_$BankNameChangedImpl value,
+          $Res Function(_$BankNameChangedImpl) then) =
+      __$$BankNameChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String bankName});
+}
+
+/// @nodoc
+class __$$BankNameChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$BankNameChangedImpl>
+    implements _$$BankNameChangedImplCopyWith<$Res> {
+  __$$BankNameChangedImplCopyWithImpl(
+      _$BankNameChangedImpl _value, $Res Function(_$BankNameChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? bankName = null,
+  }) {
+    return _then(_$BankNameChangedImpl(
+      null == bankName
+          ? _value.bankName
+          : bankName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BankNameChangedImpl implements _BankNameChanged {
+  const _$BankNameChangedImpl(this.bankName);
+
+  @override
+  final String bankName;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.bankNameChanged(bankName: $bankName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BankNameChangedImpl &&
+            (identical(other.bankName, bankName) ||
+                other.bankName == bankName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, bankName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BankNameChangedImplCopyWith<_$BankNameChangedImpl> get copyWith =>
+      __$$BankNameChangedImplCopyWithImpl<_$BankNameChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return bankNameChanged(bankName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return bankNameChanged?.call(bankName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankNameChanged != null) {
+      return bankNameChanged(bankName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return bankNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return bankNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankNameChanged != null) {
+      return bankNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BankNameChanged implements UploadDocEvent {
+  const factory _BankNameChanged(final String bankName) = _$BankNameChangedImpl;
+
+  String get bankName;
+  @JsonKey(ignore: true)
+  _$$BankNameChangedImplCopyWith<_$BankNameChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BankBranchChangedImplCopyWith<$Res> {
+  factory _$$BankBranchChangedImplCopyWith(_$BankBranchChangedImpl value,
+          $Res Function(_$BankBranchChangedImpl) then) =
+      __$$BankBranchChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String branchName});
+}
+
+/// @nodoc
+class __$$BankBranchChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$BankBranchChangedImpl>
+    implements _$$BankBranchChangedImplCopyWith<$Res> {
+  __$$BankBranchChangedImplCopyWithImpl(_$BankBranchChangedImpl _value,
+      $Res Function(_$BankBranchChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? branchName = null,
+  }) {
+    return _then(_$BankBranchChangedImpl(
+      null == branchName
+          ? _value.branchName
+          : branchName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BankBranchChangedImpl implements _BankBranchChanged {
+  const _$BankBranchChangedImpl(this.branchName);
+
+  @override
+  final String branchName;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.bankBranchChanged(branchName: $branchName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BankBranchChangedImpl &&
+            (identical(other.branchName, branchName) ||
+                other.branchName == branchName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, branchName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BankBranchChangedImplCopyWith<_$BankBranchChangedImpl> get copyWith =>
+      __$$BankBranchChangedImplCopyWithImpl<_$BankBranchChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return bankBranchChanged(branchName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return bankBranchChanged?.call(branchName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankBranchChanged != null) {
+      return bankBranchChanged(branchName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return bankBranchChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return bankBranchChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankBranchChanged != null) {
+      return bankBranchChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BankBranchChanged implements UploadDocEvent {
+  const factory _BankBranchChanged(final String branchName) =
+      _$BankBranchChangedImpl;
+
+  String get branchName;
+  @JsonKey(ignore: true)
+  _$$BankBranchChangedImplCopyWith<_$BankBranchChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BankAcHoldersNameChangedImplCopyWith<$Res> {
+  factory _$$BankAcHoldersNameChangedImplCopyWith(
+          _$BankAcHoldersNameChangedImpl value,
+          $Res Function(_$BankAcHoldersNameChangedImpl) then) =
+      __$$BankAcHoldersNameChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String holdersName});
+}
+
+/// @nodoc
+class __$$BankAcHoldersNameChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$BankAcHoldersNameChangedImpl>
+    implements _$$BankAcHoldersNameChangedImplCopyWith<$Res> {
+  __$$BankAcHoldersNameChangedImplCopyWithImpl(
+      _$BankAcHoldersNameChangedImpl _value,
+      $Res Function(_$BankAcHoldersNameChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? holdersName = null,
+  }) {
+    return _then(_$BankAcHoldersNameChangedImpl(
+      null == holdersName
+          ? _value.holdersName
+          : holdersName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BankAcHoldersNameChangedImpl implements _BankAcHoldersNameChanged {
+  const _$BankAcHoldersNameChangedImpl(this.holdersName);
+
+  @override
+  final String holdersName;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.bankAcHoldersNameChanged(holdersName: $holdersName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BankAcHoldersNameChangedImpl &&
+            (identical(other.holdersName, holdersName) ||
+                other.holdersName == holdersName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, holdersName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BankAcHoldersNameChangedImplCopyWith<_$BankAcHoldersNameChangedImpl>
+      get copyWith => __$$BankAcHoldersNameChangedImplCopyWithImpl<
+          _$BankAcHoldersNameChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return bankAcHoldersNameChanged(holdersName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return bankAcHoldersNameChanged?.call(holdersName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankAcHoldersNameChanged != null) {
+      return bankAcHoldersNameChanged(holdersName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return bankAcHoldersNameChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return bankAcHoldersNameChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankAcHoldersNameChanged != null) {
+      return bankAcHoldersNameChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BankAcHoldersNameChanged implements UploadDocEvent {
+  const factory _BankAcHoldersNameChanged(final String holdersName) =
+      _$BankAcHoldersNameChangedImpl;
+
+  String get holdersName;
+  @JsonKey(ignore: true)
+  _$$BankAcHoldersNameChangedImplCopyWith<_$BankAcHoldersNameChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$BankAcNumberChangedImplCopyWith<$Res> {
+  factory _$$BankAcNumberChangedImplCopyWith(_$BankAcNumberChangedImpl value,
+          $Res Function(_$BankAcNumberChangedImpl) then) =
+      __$$BankAcNumberChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String acNumber});
+}
+
+/// @nodoc
+class __$$BankAcNumberChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$BankAcNumberChangedImpl>
+    implements _$$BankAcNumberChangedImplCopyWith<$Res> {
+  __$$BankAcNumberChangedImplCopyWithImpl(_$BankAcNumberChangedImpl _value,
+      $Res Function(_$BankAcNumberChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? acNumber = null,
+  }) {
+    return _then(_$BankAcNumberChangedImpl(
+      null == acNumber
+          ? _value.acNumber
+          : acNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$BankAcNumberChangedImpl implements _BankAcNumberChanged {
+  const _$BankAcNumberChangedImpl(this.acNumber);
+
+  @override
+  final String acNumber;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.bankAcNumberChanged(acNumber: $acNumber)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BankAcNumberChangedImpl &&
+            (identical(other.acNumber, acNumber) ||
+                other.acNumber == acNumber));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, acNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BankAcNumberChangedImplCopyWith<_$BankAcNumberChangedImpl> get copyWith =>
+      __$$BankAcNumberChangedImplCopyWithImpl<_$BankAcNumberChangedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return bankAcNumberChanged(acNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return bankAcNumberChanged?.call(acNumber);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankAcNumberChanged != null) {
+      return bankAcNumberChanged(acNumber);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return bankAcNumberChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return bankAcNumberChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (bankAcNumberChanged != null) {
+      return bankAcNumberChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _BankAcNumberChanged implements UploadDocEvent {
+  const factory _BankAcNumberChanged(final String acNumber) =
+      _$BankAcNumberChangedImpl;
+
+  String get acNumber;
+  @JsonKey(ignore: true)
+  _$$BankAcNumberChangedImplCopyWith<_$BankAcNumberChangedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadBankDetailsImplCopyWith<$Res> {
+  factory _$$UploadBankDetailsImplCopyWith(_$UploadBankDetailsImpl value,
+          $Res Function(_$UploadBankDetailsImpl) then) =
+      __$$UploadBankDetailsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadBankDetailsImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadBankDetailsImpl>
+    implements _$$UploadBankDetailsImplCopyWith<$Res> {
+  __$$UploadBankDetailsImplCopyWithImpl(_$UploadBankDetailsImpl _value,
+      $Res Function(_$UploadBankDetailsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadBankDetailsImpl implements _UploadBankDetails {
+  const _$UploadBankDetailsImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadBankDetails()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UploadBankDetailsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return uploadBankDetails();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return uploadBankDetails?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadBankDetails != null) {
+      return uploadBankDetails();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return uploadBankDetails(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return uploadBankDetails?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadBankDetails != null) {
+      return uploadBankDetails(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadBankDetails implements UploadDocEvent {
+  const factory _UploadBankDetails() = _$UploadBankDetailsImpl;
+}
+
+/// @nodoc
+abstract class _$$CompanyCategoryChangedImplCopyWith<$Res> {
+  factory _$$CompanyCategoryChangedImplCopyWith(
+          _$CompanyCategoryChangedImpl value,
+          $Res Function(_$CompanyCategoryChangedImpl) then) =
+      __$$CompanyCategoryChangedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String companyCategory});
+}
+
+/// @nodoc
+class __$$CompanyCategoryChangedImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$CompanyCategoryChangedImpl>
+    implements _$$CompanyCategoryChangedImplCopyWith<$Res> {
+  __$$CompanyCategoryChangedImplCopyWithImpl(
+      _$CompanyCategoryChangedImpl _value,
+      $Res Function(_$CompanyCategoryChangedImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? companyCategory = null,
+  }) {
+    return _then(_$CompanyCategoryChangedImpl(
+      null == companyCategory
+          ? _value.companyCategory
+          : companyCategory // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$CompanyCategoryChangedImpl implements _CompanyCategoryChanged {
+  const _$CompanyCategoryChangedImpl(this.companyCategory);
+
+  @override
+  final String companyCategory;
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.companyCategoryChanged(companyCategory: $companyCategory)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompanyCategoryChangedImpl &&
+            (identical(other.companyCategory, companyCategory) ||
+                other.companyCategory == companyCategory));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, companyCategory);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompanyCategoryChangedImplCopyWith<_$CompanyCategoryChangedImpl>
+      get copyWith => __$$CompanyCategoryChangedImplCopyWithImpl<
+          _$CompanyCategoryChangedImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return companyCategoryChanged(companyCategory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return companyCategoryChanged?.call(companyCategory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (companyCategoryChanged != null) {
+      return companyCategoryChanged(companyCategory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return companyCategoryChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return companyCategoryChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (companyCategoryChanged != null) {
+      return companyCategoryChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CompanyCategoryChanged implements UploadDocEvent {
+  const factory _CompanyCategoryChanged(final String companyCategory) =
+      _$CompanyCategoryChangedImpl;
+
+  String get companyCategory;
+  @JsonKey(ignore: true)
+  _$$CompanyCategoryChangedImplCopyWith<_$CompanyCategoryChangedImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UploadCompanyCategoriesImplCopyWith<$Res> {
+  factory _$$UploadCompanyCategoriesImplCopyWith(
+          _$UploadCompanyCategoriesImpl value,
+          $Res Function(_$UploadCompanyCategoriesImpl) then) =
+      __$$UploadCompanyCategoriesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadCompanyCategoriesImplCopyWithImpl<$Res>
+    extends _$UploadDocEventCopyWithImpl<$Res, _$UploadCompanyCategoriesImpl>
+    implements _$$UploadCompanyCategoriesImplCopyWith<$Res> {
+  __$$UploadCompanyCategoriesImplCopyWithImpl(
+      _$UploadCompanyCategoriesImpl _value,
+      $Res Function(_$UploadCompanyCategoriesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UploadCompanyCategoriesImpl implements _UploadCompanyCategories {
+  const _$UploadCompanyCategoriesImpl();
+
+  @override
+  String toString() {
+    return 'UploadDocEvent.uploadCompanyCategories()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadCompanyCategoriesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() goToNextStep,
+    required TResult Function() goToPreviousStep,
+    required TResult Function() dismissValidationError,
+    required TResult Function(String fullName) fullNameChanged,
+    required TResult Function(String tempAddress) temporaryAddressChanged,
+    required TResult Function(String permAddress) permanantAddressChanged,
+    required TResult Function(String fatherName) fatherNameChanged,
+    required TResult Function(String dob) dobChanged,
+    required TResult Function() uploadPersonalInfo,
+    required TResult Function(dynamic photo) ppSizePhotoChanged,
+    required TResult Function(dynamic photo) fullSizePhotoChanged,
+    required TResult Function() uploadPhotos,
+    required TResult Function(dynamic photo) passportPhotoChanged,
+    required TResult Function(String passportNumber) passportNumberChanged,
+    required TResult Function(String issueDate) passportIssueDateChanged,
+    required TResult Function() uploadPassportInfo,
+    required TResult Function(File resume) resumeChanged,
+    required TResult Function() uploadResume,
+    required TResult Function(File document) eduDocPhotoChanged,
+    required TResult Function(String level) eduLevelChanged,
+    required TResult Function(String passyear) eduPassYearChanged,
+    required TResult Function(String institutename) eduInstituteNameChanged,
+    required TResult Function() uploadEduDocs,
+    required TResult Function(String language) languageSelected,
+    required TResult Function() uploadLanguage,
+    required TResult Function(String position) workPositionChanged,
+    required TResult Function(String company) workCompanyChanged,
+    required TResult Function(String workAddress) workAddressChanged,
+    required TResult Function(String description) workDescriptionChanged,
+    required TResult Function() uploadWorkHistory,
+    required TResult Function(String bankName) bankNameChanged,
+    required TResult Function(String branchName) bankBranchChanged,
+    required TResult Function(String holdersName) bankAcHoldersNameChanged,
+    required TResult Function(String acNumber) bankAcNumberChanged,
+    required TResult Function() uploadBankDetails,
+    required TResult Function(String companyCategory) companyCategoryChanged,
+    required TResult Function() uploadCompanyCategories,
+  }) {
+    return uploadCompanyCategories();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? goToNextStep,
+    TResult? Function()? goToPreviousStep,
+    TResult? Function()? dismissValidationError,
+    TResult? Function(String fullName)? fullNameChanged,
+    TResult? Function(String tempAddress)? temporaryAddressChanged,
+    TResult? Function(String permAddress)? permanantAddressChanged,
+    TResult? Function(String fatherName)? fatherNameChanged,
+    TResult? Function(String dob)? dobChanged,
+    TResult? Function()? uploadPersonalInfo,
+    TResult? Function(dynamic photo)? ppSizePhotoChanged,
+    TResult? Function(dynamic photo)? fullSizePhotoChanged,
+    TResult? Function()? uploadPhotos,
+    TResult? Function(dynamic photo)? passportPhotoChanged,
+    TResult? Function(String passportNumber)? passportNumberChanged,
+    TResult? Function(String issueDate)? passportIssueDateChanged,
+    TResult? Function()? uploadPassportInfo,
+    TResult? Function(File resume)? resumeChanged,
+    TResult? Function()? uploadResume,
+    TResult? Function(File document)? eduDocPhotoChanged,
+    TResult? Function(String level)? eduLevelChanged,
+    TResult? Function(String passyear)? eduPassYearChanged,
+    TResult? Function(String institutename)? eduInstituteNameChanged,
+    TResult? Function()? uploadEduDocs,
+    TResult? Function(String language)? languageSelected,
+    TResult? Function()? uploadLanguage,
+    TResult? Function(String position)? workPositionChanged,
+    TResult? Function(String company)? workCompanyChanged,
+    TResult? Function(String workAddress)? workAddressChanged,
+    TResult? Function(String description)? workDescriptionChanged,
+    TResult? Function()? uploadWorkHistory,
+    TResult? Function(String bankName)? bankNameChanged,
+    TResult? Function(String branchName)? bankBranchChanged,
+    TResult? Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult? Function(String acNumber)? bankAcNumberChanged,
+    TResult? Function()? uploadBankDetails,
+    TResult? Function(String companyCategory)? companyCategoryChanged,
+    TResult? Function()? uploadCompanyCategories,
+  }) {
+    return uploadCompanyCategories?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? goToNextStep,
+    TResult Function()? goToPreviousStep,
+    TResult Function()? dismissValidationError,
+    TResult Function(String fullName)? fullNameChanged,
+    TResult Function(String tempAddress)? temporaryAddressChanged,
+    TResult Function(String permAddress)? permanantAddressChanged,
+    TResult Function(String fatherName)? fatherNameChanged,
+    TResult Function(String dob)? dobChanged,
+    TResult Function()? uploadPersonalInfo,
+    TResult Function(dynamic photo)? ppSizePhotoChanged,
+    TResult Function(dynamic photo)? fullSizePhotoChanged,
+    TResult Function()? uploadPhotos,
+    TResult Function(dynamic photo)? passportPhotoChanged,
+    TResult Function(String passportNumber)? passportNumberChanged,
+    TResult Function(String issueDate)? passportIssueDateChanged,
+    TResult Function()? uploadPassportInfo,
+    TResult Function(File resume)? resumeChanged,
+    TResult Function()? uploadResume,
+    TResult Function(File document)? eduDocPhotoChanged,
+    TResult Function(String level)? eduLevelChanged,
+    TResult Function(String passyear)? eduPassYearChanged,
+    TResult Function(String institutename)? eduInstituteNameChanged,
+    TResult Function()? uploadEduDocs,
+    TResult Function(String language)? languageSelected,
+    TResult Function()? uploadLanguage,
+    TResult Function(String position)? workPositionChanged,
+    TResult Function(String company)? workCompanyChanged,
+    TResult Function(String workAddress)? workAddressChanged,
+    TResult Function(String description)? workDescriptionChanged,
+    TResult Function()? uploadWorkHistory,
+    TResult Function(String bankName)? bankNameChanged,
+    TResult Function(String branchName)? bankBranchChanged,
+    TResult Function(String holdersName)? bankAcHoldersNameChanged,
+    TResult Function(String acNumber)? bankAcNumberChanged,
+    TResult Function()? uploadBankDetails,
+    TResult Function(String companyCategory)? companyCategoryChanged,
+    TResult Function()? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadCompanyCategories != null) {
+      return uploadCompanyCategories();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_GoToNextStep value) goToNextStep,
+    required TResult Function(_GoToPreviousStep value) goToPreviousStep,
+    required TResult Function(_DismissValidationError value)
+        dismissValidationError,
+    required TResult Function(_FullNameChanged value) fullNameChanged,
+    required TResult Function(_TemporaryAddressChanged value)
+        temporaryAddressChanged,
+    required TResult Function(_PermanantAddressChanged value)
+        permanantAddressChanged,
+    required TResult Function(_FatherNameChanged value) fatherNameChanged,
+    required TResult Function(_DOBChanged value) dobChanged,
+    required TResult Function(_UploadPersonalInfo value) uploadPersonalInfo,
+    required TResult Function(_PPSizePhotoChanged value) ppSizePhotoChanged,
+    required TResult Function(_FullSizePhotoChanged value) fullSizePhotoChanged,
+    required TResult Function(_UploadPhotos value) uploadPhotos,
+    required TResult Function(_PassportPhotoChanged value) passportPhotoChanged,
+    required TResult Function(_PassportNumberChanged value)
+        passportNumberChanged,
+    required TResult Function(_PassportIssueDateChanged value)
+        passportIssueDateChanged,
+    required TResult Function(_UploadPassportInfo value) uploadPassportInfo,
+    required TResult Function(_ResumeChanged value) resumeChanged,
+    required TResult Function(_UploadResume value) uploadResume,
+    required TResult Function(_EduDocPhotoChanged value) eduDocPhotoChanged,
+    required TResult Function(_EduLevelChanged value) eduLevelChanged,
+    required TResult Function(_EduPassYearChanged value) eduPassYearChanged,
+    required TResult Function(_EduInstituteNameChanged value)
+        eduInstituteNameChanged,
+    required TResult Function(_UploadEduDocs value) uploadEduDocs,
+    required TResult Function(_LanguageSelected value) languageSelected,
+    required TResult Function(_UploadLanguage value) uploadLanguage,
+    required TResult Function(_WorkPositionChanged value) workPositionChanged,
+    required TResult Function(_WorkCompanyChanged value) workCompanyChanged,
+    required TResult Function(_WorkAddressChanged value) workAddressChanged,
+    required TResult Function(_WorkDescriptionChanged value)
+        workDescriptionChanged,
+    required TResult Function(_UploadWorkHistory value) uploadWorkHistory,
+    required TResult Function(_BankNameChanged value) bankNameChanged,
+    required TResult Function(_BankBranchChanged value) bankBranchChanged,
+    required TResult Function(_BankAcHoldersNameChanged value)
+        bankAcHoldersNameChanged,
+    required TResult Function(_BankAcNumberChanged value) bankAcNumberChanged,
+    required TResult Function(_UploadBankDetails value) uploadBankDetails,
+    required TResult Function(_CompanyCategoryChanged value)
+        companyCategoryChanged,
+    required TResult Function(_UploadCompanyCategories value)
+        uploadCompanyCategories,
+  }) {
+    return uploadCompanyCategories(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_GoToNextStep value)? goToNextStep,
+    TResult? Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult? Function(_DismissValidationError value)? dismissValidationError,
+    TResult? Function(_FullNameChanged value)? fullNameChanged,
+    TResult? Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult? Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult? Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult? Function(_DOBChanged value)? dobChanged,
+    TResult? Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult? Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult? Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult? Function(_UploadPhotos value)? uploadPhotos,
+    TResult? Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult? Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult? Function(_PassportIssueDateChanged value)?
+        passportIssueDateChanged,
+    TResult? Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult? Function(_ResumeChanged value)? resumeChanged,
+    TResult? Function(_UploadResume value)? uploadResume,
+    TResult? Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult? Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult? Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult? Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult? Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult? Function(_LanguageSelected value)? languageSelected,
+    TResult? Function(_UploadLanguage value)? uploadLanguage,
+    TResult? Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult? Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult? Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult? Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult? Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult? Function(_BankNameChanged value)? bankNameChanged,
+    TResult? Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult? Function(_BankAcHoldersNameChanged value)?
+        bankAcHoldersNameChanged,
+    TResult? Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult? Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult? Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult? Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+  }) {
+    return uploadCompanyCategories?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_GoToNextStep value)? goToNextStep,
+    TResult Function(_GoToPreviousStep value)? goToPreviousStep,
+    TResult Function(_DismissValidationError value)? dismissValidationError,
+    TResult Function(_FullNameChanged value)? fullNameChanged,
+    TResult Function(_TemporaryAddressChanged value)? temporaryAddressChanged,
+    TResult Function(_PermanantAddressChanged value)? permanantAddressChanged,
+    TResult Function(_FatherNameChanged value)? fatherNameChanged,
+    TResult Function(_DOBChanged value)? dobChanged,
+    TResult Function(_UploadPersonalInfo value)? uploadPersonalInfo,
+    TResult Function(_PPSizePhotoChanged value)? ppSizePhotoChanged,
+    TResult Function(_FullSizePhotoChanged value)? fullSizePhotoChanged,
+    TResult Function(_UploadPhotos value)? uploadPhotos,
+    TResult Function(_PassportPhotoChanged value)? passportPhotoChanged,
+    TResult Function(_PassportNumberChanged value)? passportNumberChanged,
+    TResult Function(_PassportIssueDateChanged value)? passportIssueDateChanged,
+    TResult Function(_UploadPassportInfo value)? uploadPassportInfo,
+    TResult Function(_ResumeChanged value)? resumeChanged,
+    TResult Function(_UploadResume value)? uploadResume,
+    TResult Function(_EduDocPhotoChanged value)? eduDocPhotoChanged,
+    TResult Function(_EduLevelChanged value)? eduLevelChanged,
+    TResult Function(_EduPassYearChanged value)? eduPassYearChanged,
+    TResult Function(_EduInstituteNameChanged value)? eduInstituteNameChanged,
+    TResult Function(_UploadEduDocs value)? uploadEduDocs,
+    TResult Function(_LanguageSelected value)? languageSelected,
+    TResult Function(_UploadLanguage value)? uploadLanguage,
+    TResult Function(_WorkPositionChanged value)? workPositionChanged,
+    TResult Function(_WorkCompanyChanged value)? workCompanyChanged,
+    TResult Function(_WorkAddressChanged value)? workAddressChanged,
+    TResult Function(_WorkDescriptionChanged value)? workDescriptionChanged,
+    TResult Function(_UploadWorkHistory value)? uploadWorkHistory,
+    TResult Function(_BankNameChanged value)? bankNameChanged,
+    TResult Function(_BankBranchChanged value)? bankBranchChanged,
+    TResult Function(_BankAcHoldersNameChanged value)? bankAcHoldersNameChanged,
+    TResult Function(_BankAcNumberChanged value)? bankAcNumberChanged,
+    TResult Function(_UploadBankDetails value)? uploadBankDetails,
+    TResult Function(_CompanyCategoryChanged value)? companyCategoryChanged,
+    TResult Function(_UploadCompanyCategories value)? uploadCompanyCategories,
+    required TResult orElse(),
+  }) {
+    if (uploadCompanyCategories != null) {
+      return uploadCompanyCategories(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UploadCompanyCategories implements UploadDocEvent {
+  const factory _UploadCompanyCategories() = _$UploadCompanyCategoriesImpl;
 }
 
 /// @nodoc
@@ -3920,7 +13730,31 @@ mixin _$UploadDocState {
   File? get passportPhoto => throw _privateConstructorUsedError;
   String? get passportNumber => throw _privateConstructorUsedError;
   String? get issueDate => throw _privateConstructorUsedError; // Resume
-  File? get resume => throw _privateConstructorUsedError;
+  File? get resume =>
+      throw _privateConstructorUsedError; // Educational Documents
+  GlobalKey<FormState> get eduFormKey => throw _privateConstructorUsedError;
+  File? get eduDocPhoto => throw _privateConstructorUsedError;
+  String? get eduLevel => throw _privateConstructorUsedError;
+  String? get eduPassYear => throw _privateConstructorUsedError;
+  String? get eduInstituteName =>
+      throw _privateConstructorUsedError; // Language
+  List<String> get languages =>
+      throw _privateConstructorUsedError; //Work Experience
+  GlobalKey<FormState> get workExperienceFormKey =>
+      throw _privateConstructorUsedError;
+  String? get workPosition => throw _privateConstructorUsedError;
+  String? get workCompany => throw _privateConstructorUsedError;
+  String? get workAddress => throw _privateConstructorUsedError;
+  String? get workDescription =>
+      throw _privateConstructorUsedError; //Bank Details
+  GlobalKey<FormState> get bankDetailFormKey =>
+      throw _privateConstructorUsedError;
+  String? get bankName => throw _privateConstructorUsedError;
+  String? get bankBranch => throw _privateConstructorUsedError;
+  String? get bankAcHoldersName => throw _privateConstructorUsedError;
+  String? get bankAcNumber =>
+      throw _privateConstructorUsedError; // Work/Company category
+  List<String> get companyCategories => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UploadDocStateCopyWith<UploadDocState> get copyWith =>
@@ -3952,7 +13786,24 @@ abstract class $UploadDocStateCopyWith<$Res> {
       File? passportPhoto,
       String? passportNumber,
       String? issueDate,
-      File? resume});
+      File? resume,
+      GlobalKey<FormState> eduFormKey,
+      File? eduDocPhoto,
+      String? eduLevel,
+      String? eduPassYear,
+      String? eduInstituteName,
+      List<String> languages,
+      GlobalKey<FormState> workExperienceFormKey,
+      String? workPosition,
+      String? workCompany,
+      String? workAddress,
+      String? workDescription,
+      GlobalKey<FormState> bankDetailFormKey,
+      String? bankName,
+      String? bankBranch,
+      String? bankAcHoldersName,
+      String? bankAcNumber,
+      List<String> companyCategories});
 }
 
 /// @nodoc
@@ -3987,6 +13838,23 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
     Object? passportNumber = freezed,
     Object? issueDate = freezed,
     Object? resume = freezed,
+    Object? eduFormKey = null,
+    Object? eduDocPhoto = freezed,
+    Object? eduLevel = freezed,
+    Object? eduPassYear = freezed,
+    Object? eduInstituteName = freezed,
+    Object? languages = null,
+    Object? workExperienceFormKey = null,
+    Object? workPosition = freezed,
+    Object? workCompany = freezed,
+    Object? workAddress = freezed,
+    Object? workDescription = freezed,
+    Object? bankDetailFormKey = null,
+    Object? bankName = freezed,
+    Object? bankBranch = freezed,
+    Object? bankAcHoldersName = freezed,
+    Object? bankAcNumber = freezed,
+    Object? companyCategories = null,
   }) {
     return _then(_value.copyWith(
       step: null == step
@@ -4065,6 +13933,74 @@ class _$UploadDocStateCopyWithImpl<$Res, $Val extends UploadDocState>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as File?,
+      eduFormKey: null == eduFormKey
+          ? _value.eduFormKey
+          : eduFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      eduDocPhoto: freezed == eduDocPhoto
+          ? _value.eduDocPhoto
+          : eduDocPhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      eduLevel: freezed == eduLevel
+          ? _value.eduLevel
+          : eduLevel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eduPassYear: freezed == eduPassYear
+          ? _value.eduPassYear
+          : eduPassYear // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eduInstituteName: freezed == eduInstituteName
+          ? _value.eduInstituteName
+          : eduInstituteName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      languages: null == languages
+          ? _value.languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      workExperienceFormKey: null == workExperienceFormKey
+          ? _value.workExperienceFormKey
+          : workExperienceFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      workPosition: freezed == workPosition
+          ? _value.workPosition
+          : workPosition // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workCompany: freezed == workCompany
+          ? _value.workCompany
+          : workCompany // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workAddress: freezed == workAddress
+          ? _value.workAddress
+          : workAddress // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workDescription: freezed == workDescription
+          ? _value.workDescription
+          : workDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankDetailFormKey: null == bankDetailFormKey
+          ? _value.bankDetailFormKey
+          : bankDetailFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      bankName: freezed == bankName
+          ? _value.bankName
+          : bankName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankBranch: freezed == bankBranch
+          ? _value.bankBranch
+          : bankBranch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankAcHoldersName: freezed == bankAcHoldersName
+          ? _value.bankAcHoldersName
+          : bankAcHoldersName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankAcNumber: freezed == bankAcNumber
+          ? _value.bankAcNumber
+          : bankAcNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyCategories: null == companyCategories
+          ? _value.companyCategories
+          : companyCategories // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -4096,7 +14032,24 @@ abstract class _$$UploadDocStateImplCopyWith<$Res>
       File? passportPhoto,
       String? passportNumber,
       String? issueDate,
-      File? resume});
+      File? resume,
+      GlobalKey<FormState> eduFormKey,
+      File? eduDocPhoto,
+      String? eduLevel,
+      String? eduPassYear,
+      String? eduInstituteName,
+      List<String> languages,
+      GlobalKey<FormState> workExperienceFormKey,
+      String? workPosition,
+      String? workCompany,
+      String? workAddress,
+      String? workDescription,
+      GlobalKey<FormState> bankDetailFormKey,
+      String? bankName,
+      String? bankBranch,
+      String? bankAcHoldersName,
+      String? bankAcNumber,
+      List<String> companyCategories});
 }
 
 /// @nodoc
@@ -4129,6 +14082,23 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
     Object? passportNumber = freezed,
     Object? issueDate = freezed,
     Object? resume = freezed,
+    Object? eduFormKey = null,
+    Object? eduDocPhoto = freezed,
+    Object? eduLevel = freezed,
+    Object? eduPassYear = freezed,
+    Object? eduInstituteName = freezed,
+    Object? languages = null,
+    Object? workExperienceFormKey = null,
+    Object? workPosition = freezed,
+    Object? workCompany = freezed,
+    Object? workAddress = freezed,
+    Object? workDescription = freezed,
+    Object? bankDetailFormKey = null,
+    Object? bankName = freezed,
+    Object? bankBranch = freezed,
+    Object? bankAcHoldersName = freezed,
+    Object? bankAcNumber = freezed,
+    Object? companyCategories = null,
   }) {
     return _then(_$UploadDocStateImpl(
       step: null == step
@@ -4207,6 +14177,74 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
           ? _value.resume
           : resume // ignore: cast_nullable_to_non_nullable
               as File?,
+      eduFormKey: null == eduFormKey
+          ? _value.eduFormKey
+          : eduFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      eduDocPhoto: freezed == eduDocPhoto
+          ? _value.eduDocPhoto
+          : eduDocPhoto // ignore: cast_nullable_to_non_nullable
+              as File?,
+      eduLevel: freezed == eduLevel
+          ? _value.eduLevel
+          : eduLevel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eduPassYear: freezed == eduPassYear
+          ? _value.eduPassYear
+          : eduPassYear // ignore: cast_nullable_to_non_nullable
+              as String?,
+      eduInstituteName: freezed == eduInstituteName
+          ? _value.eduInstituteName
+          : eduInstituteName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      languages: null == languages
+          ? _value._languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      workExperienceFormKey: null == workExperienceFormKey
+          ? _value.workExperienceFormKey
+          : workExperienceFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      workPosition: freezed == workPosition
+          ? _value.workPosition
+          : workPosition // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workCompany: freezed == workCompany
+          ? _value.workCompany
+          : workCompany // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workAddress: freezed == workAddress
+          ? _value.workAddress
+          : workAddress // ignore: cast_nullable_to_non_nullable
+              as String?,
+      workDescription: freezed == workDescription
+          ? _value.workDescription
+          : workDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankDetailFormKey: null == bankDetailFormKey
+          ? _value.bankDetailFormKey
+          : bankDetailFormKey // ignore: cast_nullable_to_non_nullable
+              as GlobalKey<FormState>,
+      bankName: freezed == bankName
+          ? _value.bankName
+          : bankName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankBranch: freezed == bankBranch
+          ? _value.bankBranch
+          : bankBranch // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankAcHoldersName: freezed == bankAcHoldersName
+          ? _value.bankAcHoldersName
+          : bankAcHoldersName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bankAcNumber: freezed == bankAcNumber
+          ? _value.bankAcNumber
+          : bankAcNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      companyCategories: null == companyCategories
+          ? _value._companyCategories
+          : companyCategories // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -4215,7 +14253,7 @@ class __$$UploadDocStateImplCopyWithImpl<$Res>
 
 class _$UploadDocStateImpl implements _UploadDocState {
   const _$UploadDocStateImpl(
-      {this.step = 4,
+      {this.step = 0,
       this.uploadStatus = UploadStatus.initial,
       this.hasValidationError = false,
       this.validationError,
@@ -4233,7 +14271,26 @@ class _$UploadDocStateImpl implements _UploadDocState {
       this.passportPhoto,
       this.passportNumber,
       this.issueDate,
-      this.resume});
+      this.resume,
+      required this.eduFormKey,
+      this.eduDocPhoto,
+      this.eduLevel,
+      this.eduPassYear,
+      this.eduInstituteName,
+      final List<String> languages = const [],
+      required this.workExperienceFormKey,
+      this.workPosition,
+      this.workCompany,
+      this.workAddress,
+      this.workDescription,
+      required this.bankDetailFormKey,
+      this.bankName,
+      this.bankBranch,
+      this.bankAcHoldersName,
+      this.bankAcNumber,
+      final List<String> companyCategories = const []})
+      : _languages = languages,
+        _companyCategories = companyCategories;
 
   @override
   @JsonKey()
@@ -4283,10 +14340,65 @@ class _$UploadDocStateImpl implements _UploadDocState {
 // Resume
   @override
   final File? resume;
+// Educational Documents
+  @override
+  final GlobalKey<FormState> eduFormKey;
+  @override
+  final File? eduDocPhoto;
+  @override
+  final String? eduLevel;
+  @override
+  final String? eduPassYear;
+  @override
+  final String? eduInstituteName;
+// Language
+  final List<String> _languages;
+// Language
+  @override
+  @JsonKey()
+  List<String> get languages {
+    if (_languages is EqualUnmodifiableListView) return _languages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languages);
+  }
+
+//Work Experience
+  @override
+  final GlobalKey<FormState> workExperienceFormKey;
+  @override
+  final String? workPosition;
+  @override
+  final String? workCompany;
+  @override
+  final String? workAddress;
+  @override
+  final String? workDescription;
+//Bank Details
+  @override
+  final GlobalKey<FormState> bankDetailFormKey;
+  @override
+  final String? bankName;
+  @override
+  final String? bankBranch;
+  @override
+  final String? bankAcHoldersName;
+  @override
+  final String? bankAcNumber;
+// Work/Company category
+  final List<String> _companyCategories;
+// Work/Company category
+  @override
+  @JsonKey()
+  List<String> get companyCategories {
+    if (_companyCategories is EqualUnmodifiableListView)
+      return _companyCategories;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_companyCategories);
+  }
 
   @override
   String toString() {
-    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, hasValidationError: $hasValidationError, validationError: $validationError, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight, ppSizePhoto: $ppSizePhoto, fullSizePhoto: $fullSizePhoto, passportFormKey: $passportFormKey, passportPhoto: $passportPhoto, passportNumber: $passportNumber, issueDate: $issueDate, resume: $resume)';
+    return 'UploadDocState(step: $step, uploadStatus: $uploadStatus, hasValidationError: $hasValidationError, validationError: $validationError, personalInfoFormKey: $personalInfoFormKey, fullName: $fullName, permanantAddress: $permanantAddress, temporaryAddress: $temporaryAddress, fatherName: $fatherName, birthDate: $birthDate, height: $height, weight: $weight, ppSizePhoto: $ppSizePhoto, fullSizePhoto: $fullSizePhoto, passportFormKey: $passportFormKey, passportPhoto: $passportPhoto, passportNumber: $passportNumber, issueDate: $issueDate, resume: $resume, eduFormKey: $eduFormKey, eduDocPhoto: $eduDocPhoto, eduLevel: $eduLevel, eduPassYear: $eduPassYear, eduInstituteName: $eduInstituteName, languages: $languages, workExperienceFormKey: $workExperienceFormKey, workPosition: $workPosition, workCompany: $workCompany, workAddress: $workAddress, workDescription: $workDescription, bankDetailFormKey: $bankDetailFormKey, bankName: $bankName, bankBranch: $bankBranch, bankAcHoldersName: $bankAcHoldersName, bankAcNumber: $bankAcNumber, companyCategories: $companyCategories)';
   }
 
   @override
@@ -4327,7 +14439,41 @@ class _$UploadDocStateImpl implements _UploadDocState {
                 other.passportNumber == passportNumber) &&
             (identical(other.issueDate, issueDate) ||
                 other.issueDate == issueDate) &&
-            (identical(other.resume, resume) || other.resume == resume));
+            (identical(other.resume, resume) || other.resume == resume) &&
+            (identical(other.eduFormKey, eduFormKey) ||
+                other.eduFormKey == eduFormKey) &&
+            (identical(other.eduDocPhoto, eduDocPhoto) ||
+                other.eduDocPhoto == eduDocPhoto) &&
+            (identical(other.eduLevel, eduLevel) ||
+                other.eduLevel == eduLevel) &&
+            (identical(other.eduPassYear, eduPassYear) ||
+                other.eduPassYear == eduPassYear) &&
+            (identical(other.eduInstituteName, eduInstituteName) ||
+                other.eduInstituteName == eduInstituteName) &&
+            const DeepCollectionEquality()
+                .equals(other._languages, _languages) &&
+            (identical(other.workExperienceFormKey, workExperienceFormKey) ||
+                other.workExperienceFormKey == workExperienceFormKey) &&
+            (identical(other.workPosition, workPosition) ||
+                other.workPosition == workPosition) &&
+            (identical(other.workCompany, workCompany) ||
+                other.workCompany == workCompany) &&
+            (identical(other.workAddress, workAddress) ||
+                other.workAddress == workAddress) &&
+            (identical(other.workDescription, workDescription) ||
+                other.workDescription == workDescription) &&
+            (identical(other.bankDetailFormKey, bankDetailFormKey) ||
+                other.bankDetailFormKey == bankDetailFormKey) &&
+            (identical(other.bankName, bankName) ||
+                other.bankName == bankName) &&
+            (identical(other.bankBranch, bankBranch) ||
+                other.bankBranch == bankBranch) &&
+            (identical(other.bankAcHoldersName, bankAcHoldersName) ||
+                other.bankAcHoldersName == bankAcHoldersName) &&
+            (identical(other.bankAcNumber, bankAcNumber) ||
+                other.bankAcNumber == bankAcNumber) &&
+            const DeepCollectionEquality()
+                .equals(other._companyCategories, _companyCategories));
   }
 
   @override
@@ -4351,7 +14497,24 @@ class _$UploadDocStateImpl implements _UploadDocState {
         passportPhoto,
         passportNumber,
         issueDate,
-        resume
+        resume,
+        eduFormKey,
+        eduDocPhoto,
+        eduLevel,
+        eduPassYear,
+        eduInstituteName,
+        const DeepCollectionEquality().hash(_languages),
+        workExperienceFormKey,
+        workPosition,
+        workCompany,
+        workAddress,
+        workDescription,
+        bankDetailFormKey,
+        bankName,
+        bankBranch,
+        bankAcHoldersName,
+        bankAcNumber,
+        const DeepCollectionEquality().hash(_companyCategories)
       ]);
 
   @JsonKey(ignore: true)
@@ -4382,7 +14545,24 @@ abstract class _UploadDocState implements UploadDocState {
       final File? passportPhoto,
       final String? passportNumber,
       final String? issueDate,
-      final File? resume}) = _$UploadDocStateImpl;
+      final File? resume,
+      required final GlobalKey<FormState> eduFormKey,
+      final File? eduDocPhoto,
+      final String? eduLevel,
+      final String? eduPassYear,
+      final String? eduInstituteName,
+      final List<String> languages,
+      required final GlobalKey<FormState> workExperienceFormKey,
+      final String? workPosition,
+      final String? workCompany,
+      final String? workAddress,
+      final String? workDescription,
+      required final GlobalKey<FormState> bankDetailFormKey,
+      final String? bankName,
+      final String? bankBranch,
+      final String? bankAcHoldersName,
+      final String? bankAcNumber,
+      final List<String> companyCategories}) = _$UploadDocStateImpl;
 
   @override
   int get step;
@@ -4422,6 +14602,40 @@ abstract class _UploadDocState implements UploadDocState {
   String? get issueDate;
   @override // Resume
   File? get resume;
+  @override // Educational Documents
+  GlobalKey<FormState> get eduFormKey;
+  @override
+  File? get eduDocPhoto;
+  @override
+  String? get eduLevel;
+  @override
+  String? get eduPassYear;
+  @override
+  String? get eduInstituteName;
+  @override // Language
+  List<String> get languages;
+  @override //Work Experience
+  GlobalKey<FormState> get workExperienceFormKey;
+  @override
+  String? get workPosition;
+  @override
+  String? get workCompany;
+  @override
+  String? get workAddress;
+  @override
+  String? get workDescription;
+  @override //Bank Details
+  GlobalKey<FormState> get bankDetailFormKey;
+  @override
+  String? get bankName;
+  @override
+  String? get bankBranch;
+  @override
+  String? get bankAcHoldersName;
+  @override
+  String? get bankAcNumber;
+  @override // Work/Company category
+  List<String> get companyCategories;
   @override
   @JsonKey(ignore: true)
   _$$UploadDocStateImplCopyWith<_$UploadDocStateImpl> get copyWith =>

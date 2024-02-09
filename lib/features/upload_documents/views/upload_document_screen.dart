@@ -1,11 +1,12 @@
 import 'package:coffee_shop/core/config/colors.dart';
+import 'package:coffee_shop/core/config/routing.dart';
 import 'package:coffee_shop/core/constants/size_manager.dart';
 import 'package:coffee_shop/core/utils/easy_loading_dialog.dart';
 import 'package:coffee_shop/core/utils/utils.dart';
 import 'package:coffee_shop/dependency_injection.dart';
 import 'package:coffee_shop/features/upload_documents/bloc/upload_doc_bloc.dart';
 import 'package:coffee_shop/features/upload_documents/views/forms/CompanySelect.dart';
-import 'package:coffee_shop/features/upload_documents/views/forms/Educationdetail.dart';
+import 'package:coffee_shop/features/upload_documents/views/forms/education_detail.dart';
 import 'package:coffee_shop/features/upload_documents/views/forms/bankDetail.dart';
 import 'package:coffee_shop/features/upload_documents/views/forms/resume.dart';
 import 'package:coffee_shop/features/upload_documents/views/forms/language.dart';
@@ -33,7 +34,7 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
     PhotoUpload(),
     const PassportUpload(),
     const CvUpload(),
-    EducationDetail(),
+    const EducationDetail(),
     LanguageSelect(),
     const WorkExperience(),
     BankDetail(),
@@ -54,10 +55,31 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
             .read<UploadDocBloc>()
             .add(const UploadDocEvent.uploadPassportInfo());
         break;
-        case 3:
+      case 3:
+        context.read<UploadDocBloc>().add(const UploadDocEvent.uploadResume());
+        break;
+      case 4:
+        context.read<UploadDocBloc>().add(const UploadDocEvent.uploadEduDocs());
+        break;
+      case 5:
         context
             .read<UploadDocBloc>()
-            .add(const UploadDocEvent.uploadResume());
+            .add(const UploadDocEvent.uploadLanguage());
+        break;
+      case 6:
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadWorkHistory());
+        break;
+      case 7:
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadBankDetails());
+        break;
+      case 8:
+        context
+            .read<UploadDocBloc>()
+            .add(const UploadDocEvent.uploadCompanyCategories());
         break;
       default:
         break;
@@ -73,7 +95,11 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
             resizeToAvoidBottomInset: true,
             backgroundColor: Colors.white,
             body: BlocConsumer<UploadDocBloc, UploadDocState>(
+              listenWhen: (previous, current) =>
+                  previous.uploadStatus != current.uploadStatus,
               listener: ((context, state) {
+                // show loading
+               
                 if (state.uploadStatus == UploadStatus.uploading) {
                   showLoading();
                 } else if (state.uploadStatus == UploadStatus.uploadFailure) {
@@ -81,8 +107,9 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
                   showDefaultSnackBar(context);
                 } else if (state.uploadStatus == UploadStatus.uploaded) {
                   hideLoading();
-                } else if (state.hasValidationError) {
-                  showDefaultSnackBar(context);
+                   if(state.step==8){
+                    context.go(AppRoutes.homeRoute);
+                   }
                 } else {
                   hideLoading();
                 }
@@ -143,6 +170,38 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
                         ),
                       ),
                     ),
+                    state.hasValidationError
+                        ? Container(
+                            width: double.maxFinite,
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 16.0),
+                            color: AppColors.error,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Flexible(
+                                  child: Text(
+                                    state.validationError ?? '',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .labelMedium
+                                        ?.copyWith(color: AppColors.white),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12.0),
+                                  child: InkWell(
+                                      onTap: () {
+                                        context.read<UploadDocBloc>().add(
+                                            UploadDocEvent
+                                                .dismissValidationError());
+                                      },
+                                      child: Icon(Icons.clear,
+                                          color: Colors.white)),
+                                )
+                              ],
+                            ))
+                        : const SizedBox.shrink(),
                     const Gap(SizeManager.pagePadding),
                     Expanded(
                         child: SingleChildScrollView(
@@ -160,12 +219,12 @@ class _UploadDocumentScreenState extends State<UploadDocumentScreen> {
                     Flexible(
                       child: InkWell(
                         splashColor: Colors.black,
-                        // onTap: activeIndex.value == 0
-                        //     ? null
-                        //     : () {
-                        //         activeIndex.value--;
-                        //       },
-
+                        onTap: state.step == 0
+                            ? null
+                            : () {
+                                context.read<UploadDocBloc>().add(
+                                    const UploadDocEvent.goToPreviousStep());
+                              },
                         child: Container(
                             height: 60.0,
                             alignment: Alignment.center,

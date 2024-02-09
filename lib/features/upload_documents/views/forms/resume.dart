@@ -55,12 +55,19 @@ class _CvUploadState extends State<CvUpload> {
                   height: 120,
                   width: 120,
                   color: const Color.fromARGB(213, 253, 253, 252),
-                  child: state.resume==null? const Icon(Icons.picture_as_pdf):Image.file(state.resume!),
+                  child: state.resume == null
+                      ? const Icon(Icons.picture_as_pdf)
+                      : Image.file(
+                          state.resume!,
+                          fit: BoxFit.cover,
+                        ),
                 ),
               ),
               const Gap(SizeManager.pagePadding),
               ChooseFileButton(onTap: (file) {
-                context.read<UploadDocBloc>().add(UploadDocEvent.resumeChanged(file));
+                context
+                    .read<UploadDocBloc>()
+                    .add(UploadDocEvent.resumeChanged(file));
               }),
               const Gap(SizeManager.pagePadding),
             ],

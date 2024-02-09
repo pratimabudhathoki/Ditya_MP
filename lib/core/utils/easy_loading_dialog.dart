@@ -5,9 +5,9 @@ showLoading() {
 }
 
 hideLoading() {
-  EasyLoading.addStatusCallback((status) {
-    if (status == EasyLoadingStatus.show) {
+  // EasyLoading.addStatusCallback((status) {
+    // if (status == EasyLoadingStatus.show) {
       EasyLoading.dismiss();
-    }
-  });
+    // }
+  // });
 }

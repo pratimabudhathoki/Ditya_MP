@@ -45,18 +45,19 @@ class _PassportUploadState extends State<PassportUpload> with FormValidators {
                     width: 120.0,
                     child: state.passportPhoto == null
                         ? Icon(Icons.photo)
-                        : Image.file(state.passportPhoto!),
+                        : Image.file(state.passportPhoto!, fit: BoxFit.cover),
                   ),
                 ),
                 const Gap(16.0),
                 ChooseFileButton(
                   onTap: (file) {
                     print(file);
-                    context.read<UploadDocBloc>().add(UploadDocEvent.passportPhotoChanged(file));
+                    context
+                        .read<UploadDocBloc>()
+                        .add(UploadDocEvent.passportPhotoChanged(file));
                   },
                 ),
                 PrimaryTextField(
-                   
                     validator: validateRequired,
                     onChanged: (val) {
                       context
@@ -66,7 +67,6 @@ class _PassportUploadState extends State<PassportUpload> with FormValidators {
                     label: "Passport Number"),
                 const Gap(12.0),
                 PrimaryTextField(
-                  
                   onChanged: (val) {
                     context
                         .read<UploadDocBloc>()
